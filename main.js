@@ -100,7 +100,7 @@
     //***********************************************COOLSTUFF***********************************************//
     //***********************************************COOLSTUFF***********************************************//
     
-    import './style.css'
+    import './style.scss'
     //import library
     import * as THREE from 'three'
     
@@ -160,9 +160,15 @@ const material = new THREE.MeshBasicMaterial({color:0xFF6347, wireframe:true} ) 
 
 //create a mesh to combine the geometry with the material
 const torus = new THREE.Mesh(geometry, material)
-
+const SphereGeometry = new THREE.SphereGeometry(35,25,25)
+const sphereTexture = new THREE.MeshBasicMaterial({color:'blue', wireframe:true})
+const sphere = new THREE.Mesh(SphereGeometry, sphereTexture)
+sphere.position.x = 0
+sphere.position.y = 40
+sphere.position.z = 0
 //add object to screen
-scene.add(torus)
+scene.add(sphere)
+//scene.add(torus)
 // to see it gotta rerender(draw) the scene but you dont wanna do that its tideous so we finna set up a recursive function to do that
 //renderer.render(scene)
 
@@ -184,6 +190,15 @@ scene.add(ambientLight)
 scene.add(lightHelper, gridHelper)
 //scene.add(buffer)
 const controls = new OrbitControls(camera, renderer.domElement)// instanate that class
+const texture = new THREE.TextureLoader().load('./images/selfie.jpg')
+//scene.background = texture
+
+// const gunish = new THREE.Mesh(
+//   new THREE.BoxGeometry(3,3,3),
+//   new THREE.MeshBasicMaterial({map:texture})
+// )
+
+// scene.add(gunish)
 
 const randomNumbers = (min, max) => {
 	return Math.round(Math.random() * (max - min)) + min;
@@ -193,7 +208,7 @@ const randomNumbers = (min, max) => {
 
 function addStar(){
   //create star object:
-  const starGeometry = new THREE.SphereGeometry(0.24, 24,24)
+  const starGeometry = new THREE.SphereGeometry(0.1, 24,24)
   const starMaterial= new THREE.MeshStandardMaterial({color:'red', wireframe:true})
   //combine
   const star = new THREE.Mesh(starGeometry,starMaterial)
@@ -208,17 +223,28 @@ function addStar(){
   scene.add(star)
 }
 
-Array(200).fill().forEach(addStar)
+function moveCamera(){
+  const webPage =  document.body.getBoundingClientRect().top
+  sphere.position.y -= 1
+  
+  camera.position.z = webPage * -0.1
+  camera.position.x = webPage * -0.0002
+  camera.position.y = webPage * -0.0002
+}
+
+document.body.onscroll = moveCamera
+
+Array(500).fill().forEach(addStar)
 
 function animate(){
 
   requestAnimationFrame(animate)// calls request animation frame from the browser which basically tells the browser we're gonna do some animations
   renderer.render(scene, camera)
 
-  torus.rotation.x += 0.01
-  torus.rotation.y += 0.05
-  torus.rotation.z += 0.01
-  buffer.rotation.x += 0.05
+  sphere.rotation.x += 0.01
+  sphere.rotation.y += 0.05
+  sphere.rotation.z += 0.01
+
   controls.update() // to show our mouse manipulations of the scene is captured
 }
 
