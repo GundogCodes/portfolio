@@ -8,11 +8,33 @@ canvas{
 main{
   position: absolute;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 99;
   width: 100%;
   margin: 0px auto;
+  color: white;
+  header{
 
+    color: white;
+    background-color: red;
+    display: flex;
+    position: fixed;
+    top:60px;
+    h1{
+      color: palegreen;
+    }
+  }
+  .name{
+    font-size: 5vmin;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+
+  }
 
 }

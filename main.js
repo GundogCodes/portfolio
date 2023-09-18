@@ -164,7 +164,7 @@ const SphereGeometry = new THREE.SphereGeometry(35,25,25)
 const sphereTexture = new THREE.MeshBasicMaterial({color:'blue', wireframe:true})
 const sphere = new THREE.Mesh(SphereGeometry, sphereTexture)
 sphere.position.x = 0
-sphere.position.y = 40
+sphere.position.y = 30
 sphere.position.z = 0
 //add object to screen
 scene.add(sphere)
@@ -225,7 +225,7 @@ function addStar(){
 
 function moveCamera(){
   const webPage =  document.body.getBoundingClientRect().top
-  sphere.position.y -= 1
+  sphere.position.y -= 0.1
   
   camera.position.z = webPage * -0.1
   camera.position.x = webPage * -0.0002
