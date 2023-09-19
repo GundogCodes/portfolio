@@ -38,7 +38,7 @@ main{
       align-items: center;
       img{
       
-        padding:2vmin;
+        margin:2vmin;
           
       }
       .linkedIn{
@@ -51,14 +51,29 @@ main{
         height: 60px;
         filter: invert(1);
       }
+      .instagram{
+        filter: invert(1);
+        width: 70px;
+        height: 70px;
+
+      }
+
+     
       .linkedIn:hover{
+        width: 85px;
+        height: 85px;
+        cursor: pointer;
+      }
+      .instagram:hover{
+        cursor: pointer;
         width: 85px;
         height: 85px;
       }
       .gitHub:hover{
+        cursor: pointer;
         width: 85px;
         height: 85px;
-
+  
       }
     }
     .name{
@@ -146,7 +161,7 @@ main{
   .page2{
 
     width: 100vw;
-    height: 50vh;
+    height: 100vh;
     h1{
       width: 100vw;
       margin-left: 60px;

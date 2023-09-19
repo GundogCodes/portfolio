@@ -124,7 +124,7 @@ const scene = new THREE.Scene()
 // Aspect Ratio - based of the user's browser window : window.innerWidth / window.innerHeight
 // View Frustum - to Control which objects are visible relative to the camera itself (0.1,1000 we can see everything)  
 
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1,1000)
+const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1,1000)
 
 
 //Render out the graphics to the scene - make things happen
@@ -164,7 +164,7 @@ const SphereGeometry = new THREE.SphereGeometry(35,25,25)
 const sphereTexture = new THREE.MeshBasicMaterial({color:'blue', wireframe:true})
 const sphere = new THREE.Mesh(SphereGeometry, sphereTexture)
 sphere.position.x = 0
-sphere.position.y = 30
+sphere.position.y = 35
 sphere.position.z = 0
 //add object to screen
 scene.add(sphere)
@@ -193,12 +193,12 @@ const controls = new OrbitControls(camera, renderer.domElement)// instanate that
 const texture = new THREE.TextureLoader().load('./images/selfie.jpg')
 //scene.background = texture
 
-// const gunish = new THREE.Mesh(
-//   new THREE.BoxGeometry(3,3,3),
-//   new THREE.MeshBasicMaterial({map:texture})
-// )
+const gunish = new THREE.Mesh(
+  new THREE.BoxGeometry(3,3,3),
+  new THREE.MeshBasicMaterial({map:texture})
+)
 
-// scene.add(gunish)
+//scene.add(gunish)
 
 const randomNumbers = (min, max) => {
 	return Math.round(Math.random() * (max - min)) + min;
@@ -215,9 +215,10 @@ function addStar(){
   
   //get random x,y,z positions
   //const [x,y,z] = Array(2).fill().map(()=> THREE.MathUtils.randFloatSpread(100)) // creates an array which fills each element with random floats between -100 and 100
-  let x = randomNumbers(-50,50)
-  let y = randomNumbers(-50,50)
-  let z = randomNumbers(-50,50)
+  const starRange = 100
+  let x = randomNumbers(-starRange,starRange)
+  let y = randomNumbers(-starRange,starRange)
+  let z = randomNumbers(-starRange,starRange)
   star.position.set(x,y,z)
   //add to scene
   scene.add(star)
@@ -234,7 +235,7 @@ function moveCamera(){
 
 document.body.onscroll = moveCamera
 
-Array(600).fill().forEach(addStar)
+Array(5000).fill().forEach(addStar)
 
 function animate(){
 
