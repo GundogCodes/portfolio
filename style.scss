@@ -3,9 +3,11 @@ canvas{
   top: 0;
   left: 0;
   background-color: pink;
+
 }
 
 main{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -15,26 +17,183 @@ main{
   width: 100%;
   margin: 0px auto;
   color: white;
-  header{
+  top: 0;
+  left: 0;
+  .page1, .quotePage .page2, .page3, .page4, .page5, .page6{
+    
+    width: 100vw;
+    height: 100vh;
+  }
 
-    color: white;
-    background-color: red;
+  .page1{
+
+
+    header{
+      width: 100vw;
+      color: white;
+
+      display: flex;
+      position: fixed;
+      justify-content: center;
+      align-items: center;
+      img{
+      
+        padding:2vmin;
+          
+      }
+      .linkedIn{
+        width: 60px;
+        height: 60px;
+        filter: invert(1);
+      }
+      .gitHub{
+        width: 60px;
+        height: 60px;
+        filter: invert(1);
+      }
+      .linkedIn:hover{
+        width: 85px;
+        height: 85px;
+      }
+      .gitHub:hover{
+        width: 85px;
+        height: 85px;
+
+      }
+    }
+    .name{
+      font-size: 5vmin;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      height: 100vh;
+      background-image: linear-gradient(45deg, red, blue);
+
+      background-repeat: repeat;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; 
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+      
+    }
+
+  }
+  .quotePage{
+
+    width: 100vw;
+    height: 100vw;
     display: flex;
-    position: fixed;
-    top:60px;
-    h1{
-      color: palegreen;
+    justify-content: center;
+    align-items: center;
+    .quotePageSection{
+      background-color: black;
+      width: 100vw;
+      height: 700px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      h2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 700px;
+        border-radius: 8px;
+        width: 33vw;
+        padding-left: 10px;
+        background-color: black;
+        font-size: 5vmin;
+      }
+      .imgDiv{
+        display: flex;
+
+        .img1{
+          border-radius: 8px;
+          margin: 20px;
+          background-color: black;
+          width: 600px;
+          height: 600px;
+          align-self: center;
+          padding: 1vmin;
+        }
+        .smallerImgDiv{
+          display: flex;
+          flex-direction: column;
+          .img2{
+            border-radius: 8px;
+            padding: 1vmin;
+            margin: 20px;
+            background-color: black;
+            width: 300px;
+            height: 300px;
+            
+          }
+          .img3{
+            border-radius: 8px;
+            padding: 1vmin;
+            margin: 20px;
+            background-color: black;
+            width: 300px;
+            height: 300px;
+            
+          }
+        }
+      }
     }
   }
-  .name{
-    font-size: 5vmin;
+  .page2{
+
     width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    height: 100vh;
+    height: 50vh;
+    h1{
+      width: 100vw;
+      margin-left: 60px;
+    }
+    article{
+      margin-left: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: black;
+      width: 700px;
+      height: 700px;
+      font-size: 2vmin;
+    }
+    footer{
+      font-size: 1vmin;
+      display: flex;
+      justify-content: center;
+      padding-top: 10vh;
+      width: 100vw;
 
+
+    }
   }
+  .page3{
+    background-color: green;
+    h1{
 
+    }
+    
+  }
+  .page4{
+    background-color: indigo;
+    h1{
+
+    }
+  }
+  .page5{
+    background-color: pink;
+    h1{
+
+    }
+  }
+  .page6{
+    background-color: purple;
+    h1{
+
+    }
+  }
 }

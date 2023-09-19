@@ -215,9 +215,9 @@ function addStar(){
   
   //get random x,y,z positions
   //const [x,y,z] = Array(2).fill().map(()=> THREE.MathUtils.randFloatSpread(100)) // creates an array which fills each element with random floats between -100 and 100
-  let x = randomNumbers(-25,25)
-  let y = randomNumbers(-25,25)
-  let z = randomNumbers(-25,25)
+  let x = randomNumbers(-50,50)
+  let y = randomNumbers(-50,50)
+  let z = randomNumbers(-50,50)
   star.position.set(x,y,z)
   //add to scene
   scene.add(star)
@@ -234,16 +234,16 @@ function moveCamera(){
 
 document.body.onscroll = moveCamera
 
-Array(500).fill().forEach(addStar)
+Array(600).fill().forEach(addStar)
 
 function animate(){
 
   requestAnimationFrame(animate)// calls request animation frame from the browser which basically tells the browser we're gonna do some animations
   renderer.render(scene, camera)
 
-  sphere.rotation.x += 0.01
-  sphere.rotation.y += 0.05
-  sphere.rotation.z += 0.01
+  sphere.rotation.x += 0.001
+  sphere.rotation.y += 0.005
+  sphere.rotation.z += 0.001
 
   controls.update() // to show our mouse manipulations of the scene is captured
 }
