@@ -203,6 +203,14 @@ const plane2Geometry = new THREE.PlaneGeometry( 500, 20, 5,5 );
 const plane2Material = new THREE.MeshBasicMaterial( {color: 'black', side: THREE.DoubleSide} );
 const plane2 = new THREE.Mesh( plane2Geometry, plane2Material );
 
+const icoGeo = new THREE.IcosahedronGeometry(1,1)
+const icoMat = new THREE.MeshBasicMaterial({color:'white', wireframe:true})
+const ico = new THREE.Mesh(icoGeo,icoMat)
+
+ico.position.x = -5
+ico.position.y = 50
+ico.position.z = 20
+
 
 selfieBox.position.x = 5
 selfieBox.position.y = 55
@@ -269,6 +277,7 @@ scene.add(capsule)
 scene.add(tetra)
 scene.add(box)
 scene.add(selfieBox)
+scene.add(ico)
 // scene.add(plane)
 // scene.add(plane2)
 // to see it gotta rerender(draw) the scene but you dont wanna do that its tideous so we finna set up a recursive function to do that
@@ -390,6 +399,21 @@ function animate(){
   
   controls.update() // to show our mouse manipulations of the scene is captured
 }
+
+opacity: 0;
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach((entry)=>{
+    console.log(entry)
+    if (entry.isIntersecting){
+      entry.target.classList.add('show')
+    } else{
+      entry.target.classList.remove('show')
+    }
+  })
+})
+
+const hiddenElements = document.querySelectorAll('.hidden')
+hiddenElements.forEach((el)=>observer.observe(el))
 
 // This is like a Game loop 
 animate()

@@ -76,7 +76,7 @@ main{
   
       }
     }
-    .name{
+    #name{
       font-size: 5vmin;
       width: 100vw;
       display: flex;
@@ -104,7 +104,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    .quotePageSection{
+    #quotePageSection{
 
       width: 100vw;
       height: 700px;
@@ -167,7 +167,8 @@ main{
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+
     h1{
       width: 100vw;
       margin-left: 60px;
@@ -184,18 +185,26 @@ main{
       font-size: 2vmin;
     }
     footer{
-      padding-top: 8vmin;
+      padding: 10px;
+      border-radius: 15px;
+      background-color: rgb(149, 149, 149);
       font-size: 15px;
       display: flex;
-      justify-content: center;
+      justify-content: space-evenly;
+      align-items: center;
+      align-items: center;
       width: 100vw;
-      animation-name: jumping;
-      animation-duration: 4s;
-      animation-iteration-count: infinite;
+
+     img{
+
+      width: 50px;
+      height: 50px;
+     }
     }
   }
   .page3{
-    // background-color: green;
+    background-color: red;
+    margin-right: 0;
      display: flex;
      flex-direction: column;
      justify-content: center;
@@ -206,7 +215,7 @@ main{
     
   }
   .page4{
-    // background-color: indigo;
+     background-color: indigo;
     h1{
 
     }
@@ -223,4 +232,14 @@ main{
 
     }
   }
+}
+
+.hidden{
+  opacity: 0;
+  transition: all 2.5s;
+}
+
+.show{
+  opacity: 1;
+
 }
