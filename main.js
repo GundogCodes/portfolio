@@ -150,7 +150,7 @@ renderer.render(scene, camera)
 //  (there are some built in ones)
 
 // heres a Torus
-const geometry = new THREE.TorusGeometry(5,3,10,50)
+const geometry = new THREE.TorusGeometry(2,1,16,50)
 // define a material to give it color and or texture (wrapping paper for geometry)
 //most materials rely on a light source to bounce off of them
 
@@ -163,7 +163,7 @@ const torus = new THREE.Mesh(geometry, material)
 const torus2 = new THREE.Mesh(geometry, material)
 
 const knotGeometry = new THREE.TorusKnotGeometry( 1, 1, 10, 10 ); 
-const knotMaterial = new THREE.MeshBasicMaterial( { color: 'pink', wireframe:true } ); 
+const knotMaterial = new THREE.MeshBasicMaterial( { color: 'aqua', wireframe:true } ); 
 const torusKnot = new THREE.Mesh( knotGeometry, knotMaterial ); 
 
 const SphereGeometry = new THREE.SphereGeometry(35,25,25)
@@ -178,6 +178,10 @@ const sphere2Geometry = new THREE.SphereGeometry(10,10,15)
 const sphere2Texture = new THREE.MeshBasicMaterial({color:'orange', wireframe:true})
 const sphere2 = new THREE.Mesh(sphere2Geometry, sphere2Texture)
 
+const sphere3Geometry = new THREE.SphereGeometry(20,30,15)
+const sphere3Texture = new THREE.MeshBasicMaterial({color:'orange', wireframe:true})
+const sphere3 = new THREE.Mesh(sphere3Geometry, sphere3Texture)
+
 const capsuleGeo = new THREE.CapsuleGeometry(2, 5,2)
 const capsuleMat = new THREE.MeshBasicMaterial({color:'yellow', wireframe:true})
 const capsule = new THREE.Mesh(capsuleGeo,capsuleMat)
@@ -191,9 +195,17 @@ const selfieBoxGeo = new THREE.BoxGeometry(3,3,3)
 const selfieBoxMat = new THREE.MeshBasicMaterial({map:selfie})
 const selfieBox = new THREE.Mesh(selfieBoxGeo,selfieBoxMat)
 
+const planeGeometry = new THREE.PlaneGeometry( 500, 25, 5,5 );
+const planeMaterial = new THREE.MeshBasicMaterial( {color: 'red', side: THREE.DoubleSide} );
+const plane = new THREE.Mesh( planeGeometry, planeMaterial );
+
+const plane2Geometry = new THREE.PlaneGeometry( 500, 20, 5,5 );
+const plane2Material = new THREE.MeshBasicMaterial( {color: 'black', side: THREE.DoubleSide} );
+const plane2 = new THREE.Mesh( plane2Geometry, plane2Material );
+
 
 selfieBox.position.x = 5
-selfieBox.position.y = 50
+selfieBox.position.y = 55
 selfieBox.position.z = 20
 
 sphere2.position.x = -100
@@ -212,9 +224,14 @@ sphere.position.x = 0
 sphere.position.y = -40
 sphere.position.z = -10
 
-torus.position.x = 0
-torus.position.y = -40
-torus.position.z = -10
+sphere3.position.x = 25
+sphere3.position.y = 200
+sphere3.position.z = 0
+
+torus.position.x = -9
+torus.position.y = 20
+torus.position.z = 10
+
 torus2.position.x = 0
 torus2.position.y = -40
 torus2.position.z = -10
@@ -226,16 +243,34 @@ torusKnot.position.z = -10
 tetra.position.x = -15
 tetra.position.y = 5
 tetra.position.z = 50
+
+plane.position.x = 0
+plane.position.y = 40
+plane.position.z = 40
+plane.rotation.x = 2.7
+
+plane2.position.x = 0
+plane2.position.y = 50
+plane2.position.z = 20
+plane2.rotation.x = 2.7
+
+
+
+
+
 //add object to screen
 scene.add(sphere)
 scene.add(sphere2)
+scene.add(sphere3)
 scene.add(torus)
-scene.add(torus2)
+//scene.add(torus2)
 scene.add( torusKnot );
 scene.add(capsule)
 scene.add(tetra)
 scene.add(box)
 scene.add(selfieBox)
+// scene.add(plane)
+// scene.add(plane2)
 // to see it gotta rerender(draw) the scene but you dont wanna do that its tideous so we finna set up a recursive function to do that
 //renderer.render(scene)
 
@@ -315,14 +350,15 @@ function animate(){
   capsule.position.z += 0.9
   
   torus.rotation.x += 0.03
-  torus.rotation.y += 0.10
+  torus.rotation.y += 0.010
   torus.rotation.z += 0.02
-  torus.position.z += 0.09
+  torus.position.x += 0.09
 
-  torus2.rotation.x -= 0.03
-  torus2.rotation.y -= 0.10
-  torus2.rotation.z -= 0.02
-  torus2.position.z += 0.09
+
+  // torus2.rotation.x -= 0.03
+  // torus2.rotation.y -= 0.10
+  // torus2.rotation.z -= 0.02
+  // torus2.position.z += 0.09
 
   box.position.x -=0.110
   box.position.y += 0.1
@@ -347,6 +383,10 @@ function animate(){
   selfieBox.rotation.x +=0.01
   selfieBox.rotation.y +=0.01
   selfieBox.rotation.z -=0.01
+
+  sphere3.rotation.z += 0.001
+  sphere3.rotation.z += 0.005
+  sphere3.rotation.z -= 0.001
   
   controls.update() // to show our mouse manipulations of the scene is captured
 }
