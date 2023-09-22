@@ -204,13 +204,22 @@ main{
   }
   .page3{
     background-color: red;
-    margin-right: 0;
      display: flex;
      flex-direction: column;
-     justify-content: center;
-     align-items: center;
-    h1{
+     justify-content: space-around;
 
+    h1{
+      width: 100vw;
+      display: flex;
+      margin-left: 60px;
+    }
+    article{
+      width: 500px;
+      background-color: purple;
+    }
+    .carouselExampleAutoplaying{
+      width: 500px;
+      height: 500px;
     }
     
   }
