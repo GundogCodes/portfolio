@@ -4,11 +4,8 @@ const express = require('express');
 //created a express app
 const app = express();
 
-//import path to use and manipulate the file paths on our system
-const path = require('path');
 
-//import log http requests with morgan
-const logger = require('morgan');
+
 
 //using json packages to communicate with server/clients
 app.use(express.json());
@@ -23,7 +20,6 @@ app.use((req, res, next) => {
 
 
 //use logger to log http requests
-app.use(logger('dev'));
 
 //check if there is a user in the requests
 

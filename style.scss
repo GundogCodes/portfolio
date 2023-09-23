@@ -98,14 +98,14 @@ main{
 
   }
   .quotePage{
-
     width: 100vw;
     height: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     #quotePageSection{
-
+      background-color: white;
+      padding: 50px;
       width: 100vw;
       height: 700px;
       display: flex;
@@ -162,7 +162,6 @@ main{
     }
   }
   .page2{
-
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -203,42 +202,129 @@ main{
     }
   }
   .page3{
-    background-color: red;
      display: flex;
      flex-direction: column;
-     justify-content: space-around;
+     justify-content: center;
+     align-items: center;
 
     h1{
       width: 100vw;
+      height: 200px;
+      font-size: 40px;
+      margin-left:60px;
+    }
+    .imageSection{
+      border-radius: 15px;
+      background-color: white;
+      width: 100vw;
+      height: 700px;
       display: flex;
-      margin-left: 60px;
+      justify-content: space-around;
+      align-items: center;
+      article{
+        color: black;
+      border-radius: 15px;
+      display: flex;
+      width: 450px;
+      height: 550px;
+      justify-content: center;
+      align-items: center;
     }
-    article{
-      width: 500px;
-      background-color: purple;
-    }
-    .carouselExampleAutoplaying{
-      width: 500px;
-      height: 500px;
+    #scamPics{
+      img{
+          border-radius: 15px;
+          
+          width: 400px;
+          height: 500px;
+        }
+      }
     }
     
   }
   .page4{
-     background-color: indigo;
-    h1{
-
-    }
+     
+    
   }
   .page5{
     // background-color: pink;
-    h1{
 
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+
+    h1{
+      width: 100vw;
+      height: 200px;
+      font-size: 40px;
+      margin-left:60px;
     }
+    .imageSection{
+      border-radius: 15px;
+      background-color: white;
+      width: 100vw;
+      height: 700px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      article{
+        color: black;
+      border-radius: 15px;
+      display: flex;
+      width: 450px;
+      height: 550px;
+      justify-content: center;
+      align-items: center;
+    }
+    #loopedPics{
+      img{
+          border-radius: 15px;
+          
+          width: 600px;
+          height: 400px;
+        }
+      }
+    }
+ 
   }
   .page6{
-    // background-color: purple;
-    h1{
 
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+
+    h1{
+      width: 100vw;
+      height: 200px;
+      font-size: 40px;
+      margin-left:60px;
+    }
+    .imageSection{
+      border-radius: 15px;
+      background-color: white;
+      width: 100vw;
+      height: 700px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      article{
+        color: black;
+      border-radius: 15px;
+      display: flex;
+      width: 450px;
+      height: 550px;
+      justify-content: center;
+      align-items: center;
+    }
+    #loopedPics{
+      img{
+          border-radius: 15px;
+          
+          width: 600px;
+          height: 400px;
+        }
+      }
     }
   }
 }
