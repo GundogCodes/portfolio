@@ -171,7 +171,7 @@ const knotMaterial = new THREE.MeshBasicMaterial( { color: 'aqua', wireframe:tru
 const torusKnot = new THREE.Mesh( knotGeometry, knotMaterial ); 
 
 const SphereGeometry = new THREE.SphereGeometry(35,25,25)
-const sphereTexture = new THREE.MeshBasicMaterial({color:'blue', wireframe:true})
+const sphereTexture = new THREE.MeshBasicMaterial({color:'red', wireframe:true})
 const sphere = new THREE.Mesh(SphereGeometry, sphereTexture)
 
 const tetraGeo = new THREE.TetrahedronGeometry(2,0)
@@ -214,14 +214,19 @@ const ico = new THREE.Mesh(icoGeo,icoMat)
 
 
 function createAtoms(){
-const ring1Geo = new THREE.RingGeometry(0.69,0.7,150)
+const ring1Geo = new THREE.RingGeometry(0.5,0.49,150)
 const ring1Mat = new THREE.MeshBasicMaterial({color:'blue', wireframe:true})
 const ring1 = new THREE.Mesh(ring1Geo,ring1Mat)
-const ring2Geo = new THREE.RingGeometry(0.69,0.7,150)
+const ring2Geo = new THREE.RingGeometry(0.5,0.49,150)
 const ring2Mat = new THREE.MeshBasicMaterial({color:'blue', wireframe:true})
 const ring2 = new THREE.Mesh(ring2Geo,ring2Mat)
+const ring3Geo = new THREE.RingGeometry(0.5,0.49,150)
+const ring3Mat = new THREE.MeshBasicMaterial({color:'blue', wireframe:true})
+const ring3 = new THREE.Mesh(ring3Geo,ring3Mat)
 scene.add(ring1)
 scene.add(ring2)
+scene.add(ring3)
+
 const nucleon1Geo = new THREE.SphereGeometry(0.05,10,10)
 const nucleon1Mat = new THREE.MeshBasicMaterial({color:'orange', wireframe:true})
 const nucleon1 = new THREE.Mesh(nucleon1Geo,nucleon1Mat)
@@ -231,6 +236,7 @@ const nucleonGeo = new THREE.SphereGeometry(0.05,10,10)
 const nucleonMat = new THREE.MeshBasicMaterial({color:'orange', wireframe:true})
 const nucleon = new THREE.Mesh(nucleonGeo,nucleonMat)
 scene.add(nucleon)
+
 const nucleon2Geo = new THREE.SphereGeometry(0.05,10,10)
 const nucleon2Mat = new THREE.MeshBasicMaterial({color:'orange', wireframe:true})
 const nucleon2 = new THREE.Mesh(nucleon2Geo,nucleon2Mat)
@@ -253,6 +259,11 @@ ring2.position.y = y
 ring2.position.z = z
 ring2.rotation.y = 180
 
+ring3.position.x = x
+ring3.position.y = y
+ring3.position.z = z
+ring3.rotation.z = 180
+
 nucleon1.position.x = x
 nucleon1.position.y = y + 0.05
 nucleon1.position.z = z
@@ -265,7 +276,7 @@ nucleon2.position.x = x
 nucleon2.position.y = y
 nucleon2.position.z = z + 0.05
 
-return {nucleon, nucleon1, nucleon2, ring1, ring2}
+return {nucleon, nucleon1, nucleon2, ring1, ring2, ring3}
 }
 
 
@@ -280,9 +291,9 @@ selfieBox.position.x = 5
 selfieBox.position.y = 55
 selfieBox.position.z = 20
 
-sphere2.position.x = -100
-sphere2.position.y = 200
-sphere2.position.z = -500
+sphere2.position.x = 80
+sphere2.position.y = 30
+sphere2.position.z = -100
 
 box.position.x =150
 box.position.y = 100
@@ -331,17 +342,17 @@ plane2.rotation.x = 2.7
 
 
 //add object to screen
-// scene.add(sphere)
-// scene.add(sphere2)
-// scene.add(sphere3)
-// scene.add(torus)
-// //scene.add(torus2)
-// scene.add( torusKnot );
-// scene.add(capsule)
-// scene.add(tetra)
-// scene.add(box)
-// scene.add(selfieBox)
-// scene.add(ico)
+scene.add(sphere)
+scene.add(sphere2)
+scene.add(sphere3)
+//scene.add(torus)
+//scene.add(torus2)
+//scene.add( torusKnot );
+//scene.add(capsule)
+//scene.add(tetra)
+//scene.add(box)
+scene.add(selfieBox)
+//scene.add(ico)
 
 // scene.add(plane)
 // scene.add(plane2)
@@ -406,7 +417,7 @@ document.body.onscroll = moveCamera
 
 //  Array(5000).fill().forEach(createAtoms)
 const atomsArr = []
-for(let i=0; i<5000; i++){
+for(let i=0; i<2500; i++){
   let newAtom = createAtoms()
   console.log(newAtom)
   atomsArr.push(newAtom)
@@ -421,50 +432,50 @@ function animate(){
   requestAnimationFrame(animate)// calls request animation frame from the browser which basically tells the browser we're gonna do some animations
   renderer.render(scene, camera)
 
-  // sphere.rotation.x += 0.001
-  // sphere.rotation.y += 0.005
-  // sphere.rotation.z += 0.001
+   sphere.rotation.x += 0.001
+   sphere.rotation.y += 0.005
+   sphere.rotation.z += 0.001
   // sphere.position.z += 0.09
   
-  // capsule.rotation.x += 0.01
-  // capsule.rotation.y += 0.05
-  // capsule.rotation.z += 0.01
-  // capsule.position.z += 0.9
+  capsule.rotation.x += 0.01
+  capsule.rotation.y += 0.05
+  capsule.rotation.z += 0.01
+  capsule.position.z += 0.9
   
-  // torus.rotation.x += 0.03
-  // torus.rotation.y += 0.010
-  // torus.rotation.z += 0.02
-  // torus.position.x += 0.09
+  torus.rotation.x += 0.03
+  torus.rotation.y += 0.010
+  torus.rotation.z += 0.02
+  torus.position.x += 0.09
 
 
-  // torus2.rotation.x -= 0.03
-  // torus2.rotation.y -= 0.10
-  // torus2.rotation.z -= 0.02
-  // torus2.position.z += 0.09
+  torus2.rotation.x -= 0.03
+  torus2.rotation.y -= 0.10
+  torus2.rotation.z -= 0.02
+  torus2.position.z += 0.09
 
-  // box.position.x -=0.110
-  // box.position.y += 0.1
-  // box.position.z -= 0.001
-  // box.rotation.x -=0.0110
-  // box.rotation.y += 0.01
-  // box.rotation.z -= 0.001
+  box.position.x -=0.110
+  box.position.y += 0.1
+  box.position.z -= 0.001
+  box.rotation.x -=0.0110
+  box.rotation.y += 0.01
+  box.rotation.z -= 0.001
 
-  // torusKnot.position.x += 0.10
-  // torusKnot.position.z += 0.01
-  // torusKnot.rotation.y += 0.01
-  // torusKnot.rotation.x -= 0.02
-  // torusKnot.rotation.z += 0.01
+  torusKnot.position.x += 0.10
+  torusKnot.position.z += 0.01
+  torusKnot.rotation.y += 0.01
+  torusKnot.rotation.x -= 0.02
+  torusKnot.rotation.z += 0.01
 
-  // sphere2.position.x += 0.500
-  // sphere2.position.y -= 0.200
-  // sphere2.rotation.y -= 0.200
+  sphere2.rotation.x += 0.05
+  sphere2.rotation.y -= 0.02
+  sphere2.rotation.z -= 0.02
 
   // tetra.position.x += 0.1
   // tetra.position.z -= 0.5
 
-  // selfieBox.rotation.x +=0.01
-  // selfieBox.rotation.y +=0.01
-  // selfieBox.rotation.z -=0.01
+  selfieBox.rotation.x +=0.01
+  selfieBox.rotation.y +=0.01
+  selfieBox.rotation.z -=0.01
 
   // sphere3.rotation.z += 0.001
   // sphere3.rotation.z += 0.005
@@ -479,6 +490,10 @@ function animate(){
     let randoNum2y = randomNumbers(-0.06,0.06)
     let randoNum2z = randomNumbers(-0.02,0.02)
 
+    let randoNum3x = randomNumbers(-0.03,0.03)
+    let randoNum3y = randomNumbers(-0.09,0.09)
+    let randoNum3z = randomNumbers(-0.1,0.1)
+
     atom.ring1.rotation.x += randoNum1x
     atom.ring1.rotation.y += randoNum1y
     atom.ring1.rotation.z += randoNum1z
@@ -486,6 +501,10 @@ function animate(){
     atom.ring2.rotation.x += randoNum2x
     atom.ring2.rotation.y += randoNum2y
     atom.ring2.rotation.z += randoNum2z
+
+    atom.ring3.rotation.x += randoNum3x
+    atom.ring3.rotation.y += randoNum3y
+    atom.ring3.rotation.z += randoNum3z
 
     atom.nucleon.rotation.x +=0.01
     atom.nucleon.rotation.y += 0.01
