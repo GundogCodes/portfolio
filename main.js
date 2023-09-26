@@ -174,8 +174,8 @@ const SphereGeometry = new THREE.SphereGeometry(35,25,25)
 const sphereTexture = new THREE.MeshBasicMaterial({color:'red', wireframe:true})
 const sphere = new THREE.Mesh(SphereGeometry, sphereTexture)
 
-const tetraGeo = new THREE.TetrahedronGeometry(2,0)
-const tetraMat = new THREE.MeshBasicMaterial({color:'purple', wireframe:true})
+const tetraGeo = new THREE.TetrahedronGeometry(2,1)
+const tetraMat = new THREE.MeshBasicMaterial({color:'white', wireframe:true})
 const tetra  = new THREE.Mesh(tetraGeo,tetraMat)
 
 const sphere2Geometry = new THREE.SphereGeometry(10,10,15)
@@ -279,7 +279,66 @@ nucleon2.position.z = z + 0.05
 return {nucleon, nucleon1, nucleon2, ring1, ring2, ring3}
 }
 
+///
+const mainAtomRing1Geo = new THREE.RingGeometry(2.5,2.4,150)
+const mainAtomRing1Mat = new THREE.MeshBasicMaterial({color:'purple', wireframe:true})
+const mainAtomRing1 = new THREE.Mesh(mainAtomRing1Geo,mainAtomRing1Mat)
 
+const mainAtomRing2Geo = new THREE.RingGeometry(2.5,2.4,150)
+const mainAtomRing2Mat = new THREE.MeshBasicMaterial({color:'purple', wireframe:true})
+const mainAtomRing2 = new THREE.Mesh(mainAtomRing2Geo,mainAtomRing2Mat)
+
+const mainAtomRing3Geo = new THREE.RingGeometry(2.5,2.4,150)
+const mainAtomRing3Mat = new THREE.MeshBasicMaterial({color:'purple', wireframe:true})
+const mainAtomRing3 = new THREE.Mesh(mainAtomRing3Geo,mainAtomRing3Mat)
+
+scene.add(mainAtomRing1)
+scene.add(mainAtomRing2)
+scene.add(mainAtomRing3)
+
+const mainAtomNucleon1Geo = new THREE.SphereGeometry(0.2,10,10)
+const mainAtomNucleon1Mat = new THREE.MeshBasicMaterial({color:'yellow', wireframe:true})
+const mainAtomNucleon1 = new THREE.Mesh(mainAtomNucleon1Geo,mainAtomNucleon1Mat)
+scene.add(mainAtomNucleon1)
+
+const mainAtomNucleonGeo = new THREE.SphereGeometry(0.2,10,10)
+const mainAtomNucleonMat = new THREE.MeshBasicMaterial({color:'yellow', wireframe:true})
+const mainAtomNucleon = new THREE.Mesh(mainAtomNucleonGeo,mainAtomNucleonMat)
+scene.add(mainAtomNucleon)
+
+const mainAtomNucleon2Geo = new THREE.SphereGeometry(0.2,10,10)
+const mainAtomNucleon2Mat = new THREE.MeshBasicMaterial({color:'yellow', wireframe:true})
+const mainAtomNucleon2 = new THREE.Mesh(mainAtomNucleon2Geo,mainAtomNucleon2Mat)
+scene.add(mainAtomNucleon2)
+
+
+
+mainAtomRing1.position.x = -12
+mainAtomRing1.position.y = 5
+mainAtomRing1.position.z = 5
+mainAtomRing1.rotation.x = 180
+
+mainAtomRing2.position.x = -12
+mainAtomRing2.position.y = 5
+mainAtomRing2.position.z = 5
+mainAtomRing2.rotation.y = 180
+
+mainAtomRing3.position.x = -12
+mainAtomRing3.position.y = 5
+mainAtomRing3.position.z = 5
+mainAtomRing3.rotation.z = 180
+
+mainAtomNucleon1.position.x = -12 
+mainAtomNucleon1.position.y = 5+0.19
+mainAtomNucleon1.position.z = 5
+
+mainAtomNucleon.position.x = -12 + 0.19
+mainAtomNucleon.position.y = 5
+mainAtomNucleon.position.z = 5
+
+mainAtomNucleon2.position.x = -12 
+mainAtomNucleon2.position.y = 5
+mainAtomNucleon2.position.z =  5+ 0.19
 
 
 ico.position.x = -5
@@ -303,8 +362,8 @@ capsule.position.x = -100
 capsule.position.y = -20
 capsule.position.z= -300
 
-sphere.position.x = 0
-sphere.position.y = -40
+sphere.position.x = 25
+sphere.position.y = -35
 sphere.position.z = -10
 
 sphere3.position.x = 25
@@ -343,16 +402,16 @@ plane2.rotation.x = 2.7
 
 //add object to screen
 scene.add(sphere)
-scene.add(sphere2)
+//scene.add(sphere2)
 scene.add(sphere3)
 //scene.add(torus)
 //scene.add(torus2)
 //scene.add( torusKnot );
 //scene.add(capsule)
-//scene.add(tetra)
+scene.add(tetra)
 //scene.add(box)
 scene.add(selfieBox)
-//scene.add(ico)
+//scene.add(ico
 
 // scene.add(plane)
 // scene.add(plane2)
@@ -470,8 +529,8 @@ function animate(){
   sphere2.rotation.y -= 0.02
   sphere2.rotation.z -= 0.02
 
-  // tetra.position.x += 0.1
-  // tetra.position.z -= 0.5
+  tetra.position.x += 0.1
+  tetra.position.z -= 0.5
 
   selfieBox.rotation.x +=0.01
   selfieBox.rotation.y +=0.01
@@ -482,9 +541,10 @@ function animate(){
   // sphere3.rotation.z -= 0.001
 
   atomsArr.forEach((atom)=>{
-    let randoNum1x = randomNumbers(-0.06,0.06)
-    let randoNum1y = randomNumbers(-0.05,0.05)
-    let randoNum1z = randomNumbers(-0.04,0.04)
+    let randoNum1x = randomNumbers(0.06,-0.06)
+    let randoNum1y = randomNumbers(0.05,-0.05)
+    let randoNum1z = randomNumbers(0.04,-0.04)
+
 
     let randoNum2x = randomNumbers(-0.07,0.07)
     let randoNum2y = randomNumbers(-0.06,0.06)
@@ -519,7 +579,13 @@ function animate(){
     atom.nucleon2.rotation.z += 0.01
 
   })
+  mainAtomRing1.rotation.x +=0.08
+  mainAtomRing2.rotation.x +=0.08
+  mainAtomRing3.rotation.x +=0.08
 
+  mainAtomNucleon.rotation.x += 0.1
+  mainAtomNucleon1.rotation.y += 0.1
+  mainAtomNucleon2.rotation.z += 0.1
   
   controls.update() // to show our mouse manipulations of the scene is captured
 }
