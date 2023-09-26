@@ -26,7 +26,7 @@ main{
   }
 
   .page1{
-
+    display: flex;
 
     header{
       width: 100vw;
@@ -82,8 +82,8 @@ main{
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative;
-      height: 100vh;
+
+
       background-image: linear-gradient(45deg, red, blue);
       background-repeat: repeat;
       -webkit-background-clip: text;
@@ -333,17 +333,17 @@ main{
         color: black;
     
       }
-    #loopedPics{
+    #rickandMortyPics{
       img{
           border-radius: 15px;
           
-          width: 600px;
-          height: 400px;
+          width: 100px;
+          height: 100px;
         }
         img:hover{
           transition: 0.5s;
-          width: 620px;
-          height: 420px;
+          width: 120px;
+          height: 120px;
           
         }
       }
@@ -421,4 +421,452 @@ main{
 .show{
   opacity: 1;
 
+}
+
+@media (max-width:900px) {
+  canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: pink;
+  
+  }
+  
+  
+main{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  width: 100%;
+  margin: 0px auto;
+  color: white;
+  top: 0;
+  left: 0;
+  .page1, .quotePage .page2, .page3, .page4, .page5, .page6{
+    
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .page1{
+    display: flex;
+
+    header{
+      width: 100vw;
+      color: white;
+
+      display: flex;
+      position: fixed;
+      justify-content: center;
+      align-items: center;
+      img{
+      
+        margin:2vmin;
+          
+      }
+      .linkedIn{
+        width: 60px;
+        height: 60px;
+        filter: invert(1);
+      }
+      .gitHub{
+        width: 60px;
+        height: 60px;
+        filter: invert(1);
+      }
+      .instagram{
+        filter: invert(1);
+        width: 70px;
+        height: 70px;
+
+      }
+
+     
+      .linkedIn:hover{
+        width: 85px;
+        height: 85px;
+        cursor: pointer;
+      }
+      .instagram:hover{
+        cursor: pointer;
+        width: 85px;
+        height: 85px;
+      }
+      .gitHub:hover{
+        cursor: pointer;
+        width: 85px;
+        height: 85px;
+  
+      }
+    }
+    #name{
+      font-size: 5vmin;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+
+      background-image: linear-gradient(45deg, red, blue);
+      background-repeat: repeat;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; 
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+    }
+    .name:hover{
+      background-image: linear-gradient(45deg, blue, red);
+      transition: 10s;
+    }
+
+  }
+  .quotePage{
+
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    #quotePageSection{
+      background-color: white;
+      width: 90vw;
+      height: 45vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      h2{
+        margin-left: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 50px;
+        border-radius: 8px;
+        width:100vw;
+
+        background-color: black;
+        font-size: 5vmin;
+      }
+      .imgDiv{
+        display: flex;
+        flex-direction: column;
+        .img1{
+          border-radius: 8px;
+          margin: 2px;
+          background-color: black;
+          width: 250px;
+          height: 250px;
+          align-self: center;
+          padding: 1vmin;
+        }
+        .smallerImgDiv{
+          display: flex;
+          flex-direction: row;
+          .img2{
+            border-radius: 8px;
+            padding: 1vmin;
+
+            background-color: black;
+            width: 100px;
+            height: 100px;
+            
+          }
+          .img3{
+            border-radius: 8px;
+            padding: 1vmin;
+
+            background-color: black;
+            width: 100px;
+            height: 100px;
+            
+          }
+        }
+      }
+    }
+  }
+  .page2{
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    h1{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      margin-top:60px ;
+      margin-left: 0;
+
+    }
+    article{
+      margin-left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      border-radius: 8px;
+      width: 90vw;
+      height: 40vh;
+      font-size: 2vmin;
+
+    }
+    footer{
+
+      border-radius: 15px;
+      background-color: rgb(149, 149, 149);
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      width: 90vw;
+
+     img{
+      width: 10px;
+      height: 10px;
+     }
+    }
+  }
+  .page3{
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 15px;
+    justify-content: space-evenly;
+
+    h1{
+      width: 100vw;
+      z-index: 99;
+      font-size: 40px;
+      margin:0;
+      color: white;
+      display: flex;
+      justify-content: center;
+    }
+    .imageSection{
+      background-color: white;
+      border-radius: 15px;
+      width: 100vw;
+      height: 80vh;
+      display:flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      article{
+
+        color: black;
+        border-radius: 7px;
+        display: flex;
+        margin-left: -16px;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 90vw;
+        height: 40vh;
+        overflow-y:scroll ;
+
+    }
+    #scamPics{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 100vw;
+      height: 30vh;
+      img{
+          border-radius: 15px;
+          width: 50vw;
+          height: 25vh;
+        }
+        img:hover{
+          transition: 0.5s;
+          width: 120px;
+          height: 120px1
+          
+        }
+      }
+    }
+    
+  }
+  .page4{
+     
+    
+  }
+  .page5{
+
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+
+    h1{
+
+      width: 100vw;
+      font-size: 40px;
+      margin-left: 0;
+      display: flex;
+      justify-content: center;
+
+    }
+    .imageSection{
+
+      background-color: pink;
+      border-radius: 15px;
+      background-color: white;
+      width: 100vw;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      article{
+
+      color: black;
+      border-radius: 15px;
+      display: flex;
+      width: 90vw;
+      height: 60vh;
+      justify-content: center;
+      align-items: center;
+
+      overflow-y: scroll;
+    }
+    #loopedPics{
+      img{
+        margin-top: 10px;
+          border-radius: 15px;
+          width: 300px;
+          height: 200px;
+        }
+        img:hover{
+          transition: 0.5s;
+          width: 620px;
+          height: 420px;
+          
+        }
+      }
+    }
+ 
+  }
+  .page6{
+
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+
+    h1{
+
+      width: 100vw;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+    
+    .imageSection{
+      border-radius: 15px;
+      background-color: white;
+      width: 100vw;
+      height: 80vh;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      article{
+        border-radius: 15px;
+        display: flex;
+        width: 80vw;
+        height: 550px;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        overflow-y: scroll;
+    
+      }
+    #rickandMortyPics{
+      img{
+          border-radius: 15px;
+          margin-top: 10px;
+          width: 90vw;
+          height: 20vh;
+        }
+        img:hover{
+          transition: 0.5s;
+          width: 620px;
+          height: 420px;
+          
+        }
+      }
+    }
+  }
+  #connectForm{
+  
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 60px;
+    .connectHeader{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 0;
+      margin-top: 40px;
+  
+      width: 100vw;
+      height: 100px;
+    }
+    form{
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 90vw;
+      height: 60vh;
+      background-color: rgb(253, 253, 69);
+      border-style: solid;
+      border-width: 5px;
+      border-color: green;
+      .email{
+        border-style: solid;
+        border-width: 3px;
+        border-color: purple;
+        margin: 10px;
+        width: 250px;
+        height: 20px;
+        border-radius: 7px;
+      }
+      .message{
+        border-style: solid;
+        border-width: 3px;
+        border-color: blue;
+        margin: 10px;
+        width: 85vw;
+        height: 250px;
+        border-radius: 7px;
+        
+      }
+      button{
+        margin: 10px;
+        width: 250px;
+        height: 20px;
+        border-radius: 7px;
+        background-color: azure;
+      }
+      button:hover{
+        color: white;
+        background-color: aqua;
+      }
+    }
+  }
+}
 }

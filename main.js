@@ -445,22 +445,22 @@ const gunish = new THREE.Mesh(
 
 //Lets add multiple objects
 
-function addStar(){
+function addAstroids(){
   //create star object:
-  const starGeometry = new THREE.SphereGeometry(0.1, 24,24)
-  const starMaterial= new THREE.MeshStandardMaterial({color:'red', wireframe:true})
+  const astroGeometry = new THREE.SphereGeometry(0.1, 24,24)
+  const astroMaterial= new THREE.MeshStandardMaterial({color:'white', wireframe:true})
   //combine
-  const star = new THREE.Mesh(starGeometry,starMaterial)
+  const astro = new THREE.Mesh(astroGeometry,astroMaterial)
   
   //get random x,y,z positions
   //const [x,y,z] = Array(2).fill().map(()=> THREE.MathUtils.randFloatSpread(100)) // creates an array which fills each element with random floats between -100 and 100
-  const starRange = 100
-  let x = randomNumbers(-starRange,starRange)
-  let y = randomNumbers(-starRange,starRange)
-  let z = randomNumbers(-starRange,starRange)
-  star.position.set(x,y,z)
+  const astroRange = 60
+  let x = randomNumbers(-astroRange,astroRange)
+  let y = randomNumbers(-astroRange,astroRange)
+  let z = randomNumbers(-astroRange,astroRange)
+  astro.position.set(x,y,z)
   //add to scene
-  scene.add(star)
+  scene.add(astro)
 }
 
 function moveCamera(){
@@ -478,13 +478,18 @@ document.body.onscroll = moveCamera
 const atomsArr = []
 for(let i=0; i<2500; i++){
   let newAtom = createAtoms()
-  console.log(newAtom)
+  //console.log(newAtom)
   atomsArr.push(newAtom)
 
 
 }
 
-
+const astroidArr = []
+for(let i=0; i<100; i++){
+  let newAstro = addAstroids()
+  console.log(newAstro)
+  astroidArr.push(astroidArr)
+}
 
 function animate(){
 
