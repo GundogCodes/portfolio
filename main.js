@@ -437,7 +437,7 @@ const controls = new OrbitControls(camera, renderer.domElement)// instanate that
 
 const gunish = new THREE.Mesh(
   new THREE.BoxGeometry(3,3,3),
-  new THREE.MeshBasicMaterial({map:texture})
+  new THREE.MeshBasicMaterial({map:gunish})
 )
 
 //scene.add(gunish)
