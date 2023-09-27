@@ -194,7 +194,7 @@ const boxGeo = new THREE.BoxGeometry(10,10,10,5,5,5)
 const boxMat = new THREE.MeshBasicMaterial({color:'green', wireframe:true})
 const box = new THREE.Mesh(boxGeo,boxMat)
 
-const selfie = new THREE.TextureLoader().load('./images/selfie.jpg')
+const selfie = new THREE.TextureLoader().load('./images/selfieSquare.jpg')
 const selfieBoxGeo = new THREE.BoxGeometry(3,3,3)
 const selfieBoxMat = new THREE.MeshBasicMaterial({map:selfie})
 const selfieBox = new THREE.Mesh(selfieBoxGeo,selfieBoxMat)
@@ -432,7 +432,7 @@ scene.add(ambientLight)
 //scene.add(lightHelper, gridHelper)
 
 const controls = new OrbitControls(camera, renderer.domElement)// instanate that class
-const texture = new THREE.TextureLoader().load('./images/JWT.png')
+
 //scene.background = texture
 
 const gunish = new THREE.Mesh(
