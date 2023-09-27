@@ -437,7 +437,7 @@ const controls = new OrbitControls(camera, renderer.domElement)// instanate that
 
 const gunish = new THREE.Mesh(
   new THREE.BoxGeometry(3,3,3),
-  new THREE.MeshBasicMaterial({map:gunish})
+  new THREE.MeshBasicMaterial({map:selfie})
 )
 
 //scene.add(gunish)
@@ -487,7 +487,7 @@ for(let i=0; i<2500; i++){
 const astroidArr = []
 for(let i=0; i<100; i++){
   let newAstro = addAstroids()
-  console.log(newAstro)
+  //console.log(newAstro)
   astroidArr.push(astroidArr)
 }
 
