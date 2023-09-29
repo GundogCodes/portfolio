@@ -104,10 +104,11 @@ main{
     width: 100vw;
     height: 40vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    #quotePageSection{
 
+
+      h2{
 
       width: 100vw;
       height: 40vh;
@@ -116,7 +117,6 @@ main{
       align-items: center;
       justify-content: flex-end;
       margin-right: 60px;
-      h2{
         margin-left: 60px;
         display: flex;
         flex-direction: column;
@@ -165,7 +165,7 @@ main{
           }
         }
       }
-    }
+    
   }
   .page2{
 
@@ -386,11 +386,13 @@ main{
     }
   }
   #connectForm{  
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-bottom: 60px;
+    height: 95vh;
     h1{
       margin-top: 60px;
 
@@ -407,6 +409,7 @@ main{
       height: 100px;
     }
     form{
+
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -516,15 +519,15 @@ main{
       .linkedIn{
         width: 60px;
         height: 60px;
-        filter: invert(1);
+
       }
       .gitHub{
         width: 60px;
         height: 60px;
-        filter: invert(1);
       }
       .instagram{
         width: 70px;
+        filter: invert(1);
         height: 70px;
 
       }
@@ -569,67 +572,28 @@ main{
 
   }
   .quotePage{
-
-    height: 30vh;
+    width: 100vw;
+    height: 40vh;
     display: flex;
-
     justify-content: center;
     align-items: center;
-    #quotePageSection{
 
-      width: 80vw;
-      height: 45vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-end;
-      padding-bottom: 30px;
+
+
+
       h2{
         margin-left: 0px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: center;
         height: 30vh;
 
-        width:100vw;
-
-        background-color: black;
+        width:90vw;
         font-size: 5vmin;
       }
-      .imgDiv{
-        display: flex;
-        flex-direction: column;
-        .img1{
-          margin: 2px;
-          background-color: black;
-          width: 100px;
-          height: 100px;
-          align-self: center;
-          padding: 1vmin;
-        }
-        .smallerImgDiv{
-          display: flex;
-          flex-direction: row;
-          .img2{
-            padding: 1vmin;
 
-            background-color: black;
-            width: 100px;
-            height: 100px;
-            
-          }
-          .img3{
-            padding: 1vmin;
-
-            background-color: black;
-            width: 100px;
-            height: 100px;
-            
-          }
-        }
-      }
-    }
+    
   }
   .page2{
     width: 40vh;
@@ -649,33 +613,65 @@ main{
 
     }
     article{
-      margin-left: 0;
+
       display: flex;
       flex-direction: column;
       justify-content: center;
-      border-radius: 8px;
+
       width: 90vw;
       height: 40vh;
-      font-size: 2vmin;
+      font-size: 3vmin;
+
 
     }
+
     footer{
-
-      border-radius: 15px;
-      background-color: rgb(149, 149, 149);
       display: flex;
-      justify-content: space-evenly;
-      align-items: center;
+      flex-direction: column;
+      .jumpText{
 
-      width: 90vw;
-      
-     img{
-      width: 10px;
-      height: 10px;
-     }
-    }
+
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-name: bounce-3;
+        animation-timing-function: ease;
+        transform-origin: bottom;
+        
+        display: flex;
+        
+        justify-content: center;
+
+        color: black;
+        height: 5vh;
+        width: 100vw;
+
+      }
+      .techs{
+        padding: 20px;
+        
+        background-color: #FF6410;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-self: flex-end;
+        place-items: center;
+        column-gap: 10px; 
+        row-gap: 5px;
+        height: 50vh;
+        width: 100vw;
+        
+        img{
+          padding: 10px;
+          border-color: white;
+          border-style: solid;
+          border-radius: 90px;
+          width: 50px;
+          height: 50px;
+        }
+      }
+  }
   }
   .page3{
+
     display: flex;
     flex-direction: column;
 
@@ -690,6 +686,8 @@ main{
       color: white;
       display: flex;
       justify-content: center;
+      color:#FF6410
+ 
     }
     .imageSection{
       background-color: white;
@@ -758,7 +756,7 @@ main{
     }
     .imageSection{
 
-      background-color: pink;
+
       border-radius: 15px;
       background-color: white;
       width: 100vw;
@@ -867,17 +865,17 @@ main{
       height: 100px;
     }
     form{
-      border-radius: 15px;
+
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       width: 90vw;
       height: 60vh;
-      background-color: rgb(253, 253, 69);
+      background-color:#FF6410;
+
       border-style: solid;
-      border-width: 5px;
-      border-color: green;
+
       .email{
         border-style: solid;
         border-width: 3px;
@@ -890,7 +888,7 @@ main{
       .message{
         border-style: solid;
         border-width: 3px;
-        border-color: blue;
+
         margin: 10px;
         width: 85vw;
         height: 250px;
@@ -911,4 +909,15 @@ main{
     }
   }
 }
+}
+
+
+@keyframes bounce-3 {
+  0%   { transform:   translateY(0); }
+  10%  { transform:  translateY(0); }
+  30%  { transform:  translateY(-40px); }
+  50%  { transform: translateY(0); }
+  57%  { transform:   translateY(-7px); }
+  64%  { transform:    translateY(0); }
+  100% { transform:    translateY(0); }
 }
