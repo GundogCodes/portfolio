@@ -192,8 +192,14 @@ main{
       display: flex;
 
 
-      h1{
+      .jumpText{
 
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+          animation-name: bounce-4;
+          animation-timing-function: ease;
+          transform-origin: bottom;
+        
         display: flex;
         justify-content: center;
         align-items: center;
@@ -453,6 +459,13 @@ main{
   opacity: 1;
 
 }
+@keyframes bounce-4 {
+  0%   { transform  : translateY(0); }
+  10%  { transform: translateY(0); }
+  30%  { transform:  translateY(-30px) translateX(30px);}
+  50%  { transform:   translateY(0); }
+  100% { transform :  translateY(0); }
+}
 ///--------------------------------------------------- MOBILE ---------------------------------------------------//
 ///--------------------------------------------------- MOBILE ---------------------------------------------------//
 @media (max-width:900px) {
@@ -632,6 +645,7 @@ main{
       width: 100vw;
       margin-top:60px ;
       margin-left: 0;
+     
 
     }
     article{
@@ -654,7 +668,7 @@ main{
       align-items: center;
 
       width: 90vw;
-
+      
      img{
       width: 10px;
       height: 10px;
