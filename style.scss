@@ -2,6 +2,7 @@ canvas{
   position: fixed;
   top: 0;
   left: 0;
+
 }
 
 main{
@@ -17,13 +18,15 @@ main{
   color: white;
   top: 0;
   left: 0;
-  .page1, .quotePage .page2, .page3, .page4, .page5, .page6{
+
+  .page1,  .page3, .page4, .page5, .page6{
     
     width: 100vw;
     height: 100vh;
   }
-
+  
   .page1{
+    height: 100vh;
     display: flex;
 
     header{
@@ -42,17 +45,15 @@ main{
       .linkedIn{
         width: 60px;
         height: 60px;
-        filter: invert(1);
       }
       .gitHub{
         width: 60px;
         height: 60px;
-        filter: invert(1);
       }
       .instagram{
         width: 70px;
         height: 70px;
-
+        filter: invert(1);
 
       }
 
@@ -61,16 +62,19 @@ main{
         width: 85px;
         height: 85px;
         cursor: pointer;
+        transition: 0.5s;
       }
       .instagram:hover{
         cursor: pointer;
         width: 85px;
         height: 85px;
+        transition: 0.5s;
       }
       .gitHub:hover{
         cursor: pointer;
         width: 85px;
         height: 85px;
+        transition: 0.5s;
   
       }
     }
@@ -82,7 +86,7 @@ main{
       justify-content: center;
 
 
-      background-image: linear-gradient(45deg, red, blue);
+      background-image: linear-gradient(90deg, rgb(201, 21, 21), rgb(156, 0, 0));
       background-repeat: repeat;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent; 
@@ -98,28 +102,30 @@ main{
   .quotePage{
 
     width: 100vw;
-    height: 100vw;
+    height: 40vh;
     display: flex;
     justify-content: center;
     align-items: center;
     #quotePageSection{
-      background-color: white;
-      padding: 50px;
+
+
       width: 100vw;
-      height: 80vh;
+      height: 40vh;
+
       display: flex;
       align-items: center;
-      justify-content: space-around;
+      justify-content: flex-end;
+      margin-right: 60px;
       h2{
         margin-left: 60px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 700px;
-        border-radius: 8px;
+        height: 30vh;
+        padding: 10px;
         width: 33vw;
-        padding-left: 10px;
+
         background-color: black;
         font-size: 5vmin;
 
@@ -128,11 +134,11 @@ main{
         display: flex;
 
         .img1{
-          border-radius: 8px;
+
           margin: 20px;
           background-color: black;
-          width: 600px;
-          height: 600px;
+          width: 100px;
+          height: 100px;
           align-self: center;
           padding: 1vmin;
         }
@@ -140,21 +146,21 @@ main{
           display: flex;
           flex-direction: column;
           .img2{
-            border-radius: 8px;
+
             padding: 1vmin;
             margin: 20px;
             background-color: black;
-            width: 300px;
-            height: 300px;
+            width: 100px;
+            height: 100px;
             
           }
           .img3{
-            border-radius: 8px;
+
             padding: 1vmin;
             margin: 20px;
             background-color: black;
-            width: 300px;
-            height: 300px;
+            width: 100px;
+            height: 100px;
             
           }
         }
@@ -169,36 +175,54 @@ main{
     flex-direction: column;
     justify-content: space-between;
 
-    h1{
-      width: 100vw;
-      margin-left: 60px;
-    }
     article{
       margin-left: 60px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       background-color: black;
-      border-radius: 8px;
-      width: 700px;
-      height: 600px;
+
+      height: 35vh;
+      padding-left: 1vmin;
+      padding-right: 1vmin;
+      width: 38vw;
       font-size: 2vmin;
     }
     footer{
-      padding: 10px;
-      border-radius: 15px;
-      background-color: rgb(149, 149, 149);
       display: flex;
-      justify-content: space-evenly;
-      align-items: center;
 
-      width: 100vw;
 
-     img{
+      h1{
 
-      width: 50px;
-      height: 50px;
-     }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        height: 50vh;
+        width: 50vw;
+      }
+      .techs{
+        padding: 20px;
+
+        background-color: #FF6410;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-self: flex-end;
+        place-items: center;
+        column-gap: 10px; 
+        row-gap: 5px;
+        height: 50vh;
+        width: 50vw;
+        
+        img{
+          padding: 10px;
+          border-color: white;
+          border-style: solid;
+          border-radius: 90px;
+          width: 50px;
+          height: 50px;
+        }
+      }
     }
   }
   .page3{
@@ -210,9 +234,10 @@ main{
 
     h1{
       width: 100vw;
-
+      color: #FF6410;
       font-size: 40px;
-      margin-left:60px;
+      margin-left:120px;
+
     }
     .imageSection{
       border-radius: 15px;
@@ -233,7 +258,7 @@ main{
     }
     #scamPics{
       img{
-          border-radius: 15px;
+
           
           width: 400px;
           height: 500px;
@@ -263,8 +288,11 @@ main{
     h1{
       width: 100vw;
       font-size: 40px;
-      margin-left:60px;
+      margin-right:120px;
+      display: flex;
+      justify-content: flex-end;
       margin-top: 10px;
+      color: #FF6410;
     }
     .imageSection{
       border-radius: 15px;
@@ -285,7 +313,7 @@ main{
     }
     #loopedPics{
       img{
-          border-radius: 15px;
+          border-radius: 6px;
           
           width: 600px;
           height: 400px;
@@ -308,10 +336,11 @@ main{
      align-items: center;
 
     h1{
+      color: #FF6410;
       width: 100vw;
       height: 200px;
       font-size: 40px;
-      margin-left:60px;
+      margin-left:120px;
 ;
     }
     
@@ -366,39 +395,38 @@ main{
       align-items: center;
       margin-left: 0;
       margin-top: 40px;
-  
+
+      color: #FF6410;
       width: 100vw;
       height: 100px;
     }
     form{
-      border-radius: 15px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       width: 500px;
       height: 500px;
-      background-color: rgb(253, 253, 69);
+      background-color: #FF6410;
       border-style: solid;
-      border-width: 5px;
-      border-color: green;
+
       .email{
         border-style: solid;
         border-width: 3px;
-        border-color: purple;
+        border-color: black;
         margin: 10px;
         width: 250px;
         height: 20px;
-        border-radius: 7px;
+        border-radius: 6px;
       }
       .message{
         border-style: solid;
         border-width: 3px;
-        border-color: blue;
+        border-color: black;
         margin: 10px;
         width: 400px;
         height: 250px;
-        border-radius: 7px;
+        border-radius: 6px;
         
       }
       button{
@@ -450,7 +478,7 @@ main{
   color: white;
   top: 0;
   left: 0;
-  .page1, .quotePage .page2, .page3, .page4, .page5, .page6{
+  .page1, .page2, .page3, .page4, .page5, .page6{
     
     width: 100vw;
     height: 100vh;
@@ -514,7 +542,7 @@ main{
       justify-content: center;
 
 
-      background-image: linear-gradient(45deg, red, blue);
+      background-image: linear-gradient(90deg, rgb(201, 21, 21), rgb(156, 0, 0));
       background-repeat: repeat;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent; 
@@ -529,19 +557,19 @@ main{
   }
   .quotePage{
 
-
+    height: 30vh;
     display: flex;
 
     justify-content: center;
     align-items: center;
     #quotePageSection{
-      background-color: white;
+
       width: 80vw;
       height: 45vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: space-around;
+      justify-content: flex-end;
       padding-bottom: 30px;
       h2{
         margin-left: 0px;
@@ -549,8 +577,8 @@ main{
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        height: 50px;
-        border-radius: 8px;
+        height: 30vh;
+
         width:100vw;
 
         background-color: black;
@@ -560,11 +588,10 @@ main{
         display: flex;
         flex-direction: column;
         .img1{
-          border-radius: 8px;
           margin: 2px;
           background-color: black;
-          width: 250px;
-          height: 250px;
+          width: 100px;
+          height: 100px;
           align-self: center;
           padding: 1vmin;
         }
@@ -572,7 +599,6 @@ main{
           display: flex;
           flex-direction: row;
           .img2{
-            border-radius: 8px;
             padding: 1vmin;
 
             background-color: black;
@@ -581,7 +607,6 @@ main{
             
           }
           .img3{
-            border-radius: 8px;
             padding: 1vmin;
 
             background-color: black;
@@ -594,7 +619,7 @@ main{
     }
   }
   .page2{
-
+    width: 40vh;
     display: flex;
     flex-direction: column;
 

@@ -211,6 +211,11 @@ const icoGeo = new THREE.IcosahedronGeometry(1,1)
 const icoMat = new THREE.MeshBasicMaterial({color:'white', wireframe:true})
 const ico = new THREE.Mesh(icoGeo,icoMat)
 
+if (window.matchMedia) {
+  const query = window.matchMedia('prefers-color-scheme: dark');
+  const sceneBackground = new THREE.TextureLoader().load('./images/background.pg')
+  scene.background =  new THREE.Color("#fceee1")
+}
 
 
 function createAtoms(){
@@ -433,7 +438,6 @@ scene.add(ambientLight)
 
 const controls = new OrbitControls(camera, renderer.domElement)// instanate that class
 
-//scene.background = texture
 
 const gunish = new THREE.Mesh(
   new THREE.BoxGeometry(3,3,3),
