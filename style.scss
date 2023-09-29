@@ -99,7 +99,7 @@ main{
     }
 
   }
-  .quotePage{
+  #quotePage{
 
     width: 100vw;
     height: 40vh;
@@ -130,41 +130,7 @@ main{
         font-size: 5vmin;
 
       }
-      .imgDiv{
-        display: flex;
 
-        .img1{
-
-          margin: 20px;
-          background-color: black;
-          width: 100px;
-          height: 100px;
-          align-self: center;
-          padding: 1vmin;
-        }
-        .smallerImgDiv{
-          display: flex;
-          flex-direction: column;
-          .img2{
-
-            padding: 1vmin;
-            margin: 20px;
-            background-color: black;
-            width: 100px;
-            height: 100px;
-            
-          }
-          .img3{
-
-            padding: 1vmin;
-            margin: 20px;
-            background-color: black;
-            width: 100px;
-            height: 100px;
-            
-          }
-        }
-      }
     
   }
   .page2{
@@ -571,7 +537,7 @@ main{
     }
 
   }
-  .quotePage{
+  #quotePage{
     width: 100vw;
     height: 40vh;
     display: flex;
@@ -921,4 +887,77 @@ main{
   57%  { transform:   translateY(-7px); }
   64%  { transform:    translateY(0); }
   100% { transform:    translateY(0); }
+}
+
+///--------------------------------------------------- DARK-MODE ---------------------------------------------------//
+///--------------------------------------------------- DARK-MODE ---------------------------------------------------//
+
+@media(prefers-colors-scheme:dark){
+  canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+  
+  }
+  
+  
+main{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  width: 100%;
+  margin: 0px auto;
+  color: white;
+  top: 0;
+  left: 0;
+
+
+  .page1{
+
+    header{
+
+      .linkedIn{
+        filter: invert(1);
+      }
+      .gitHub{
+        filter: invert(1);
+      }
+      .instagram{
+
+
+      }
+
+  
+    }
+    #name{
+
+
+      background-image: linear-gradient(90deg, rgb(201, 21, 21), rgb(156, 0, 0));
+      background-repeat: repeat;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; 
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+    }
+    .name:hover{
+      background-image: linear-gradient(45deg, blue, red);
+      transition: 10s;
+    }
+
+  }
+  #quotePage{
+      h2{
+        background-color: white;
+
+      }
+
+    
+  }
+  
+}
 }

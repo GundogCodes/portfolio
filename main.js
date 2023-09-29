@@ -210,13 +210,19 @@ const plane2 = new THREE.Mesh( plane2Geometry, plane2Material );
 const icoGeo = new THREE.IcosahedronGeometry(1,1)
 const icoMat = new THREE.MeshBasicMaterial({color:'white', wireframe:true})
 const ico = new THREE.Mesh(icoGeo,icoMat)
+scene.background =  new THREE.Color("#fceee1")
 
-if (window.matchMedia) {
-  const query = window.matchMedia('prefers-color-scheme: dark');
-  const sceneBackground = new THREE.TextureLoader().load('./images/background.png')
-  scene.background =  new THREE.Color("#fceee1")
-}
-
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+  const newColorScheme = event.matches ? "dark" : "light";
+  //console.log(newColorScheme)
+  if(newColorScheme==='light'){
+    scene.background =  new THREE.Color("#fceee1")
+  
+} else if(newColorScheme==='dark'){
+  scene.background =  new THREE.Color("black")
+  
+  }
+});
 
 function createAtoms(){
 const ring1Geo = new THREE.RingGeometry(0.5,0.49,150)
