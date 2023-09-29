@@ -182,8 +182,8 @@ const sphere2Geometry = new THREE.SphereGeometry(10,10,15)
 const sphere2Texture = new THREE.MeshBasicMaterial({color:'orange', wireframe:true})
 const sphere2 = new THREE.Mesh(sphere2Geometry, sphere2Texture)
 
-const sphere3Geometry = new THREE.SphereGeometry(20,30,15)
-const sphere3Texture = new THREE.MeshBasicMaterial({color:'orange', wireframe:true})
+const sphere3Geometry = new THREE.SphereGeometry(27,35,35)
+const sphere3Texture = new THREE.MeshBasicMaterial({color:'red', wireframe:true})
 const sphere3 = new THREE.Mesh(sphere3Geometry, sphere3Texture)
 
 const capsuleGeo = new THREE.CapsuleGeometry(2, 5,2)
@@ -367,13 +367,13 @@ capsule.position.x = -100
 capsule.position.y = -20
 capsule.position.z= -300
 
-sphere.position.x = 25
-sphere.position.y = -35
+sphere.position.x = 30
+sphere.position.y = -45
 sphere.position.z = -10
 
-sphere3.position.x = 25
-sphere3.position.y = 200
-sphere3.position.z = 0
+sphere3.position.x = -20
+sphere3.position.y = 50
+sphere3.position.z = 50
 
 torus.position.x = -9
 torus.position.y = 20
@@ -503,6 +503,10 @@ function animate(){
    sphere.rotation.x += 0.001
    sphere.rotation.y += 0.005
    sphere.rotation.z += 0.001
+   
+   sphere3.rotation.x -= 0.001
+   sphere3.rotation.y -= 0.005
+   sphere3.rotation.z -= 0.001
   // sphere.position.z += 0.09
   
   capsule.rotation.x += 0.01
