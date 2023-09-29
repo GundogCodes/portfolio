@@ -213,7 +213,7 @@ const ico = new THREE.Mesh(icoGeo,icoMat)
 
 if (window.matchMedia) {
   const query = window.matchMedia('prefers-color-scheme: dark');
-  const sceneBackground = new THREE.TextureLoader().load('./images/background.pg')
+  const sceneBackground = new THREE.TextureLoader().load('./images/background.png')
   scene.background =  new THREE.Color("#fceee1")
 }
 

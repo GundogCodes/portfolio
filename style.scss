@@ -644,7 +644,7 @@ main{
         color: black;
         height: 5vh;
         width: 100vw;
-
+        font-size: 5vmin;
       }
       .techs{
         padding: 20px;
@@ -704,12 +704,12 @@ main{
         color: black;
         border-radius: 7px;
         display: flex;
-        margin-left: -16px;
         flex-direction: column;
         justify-content: flex-start;
         width: 90vw;
         height: 40vh;
         overflow-y:scroll ;
+
 
     }
     #scamPics{
@@ -720,9 +720,9 @@ main{
       width: 100vw;
       height: 30vh;
       img{
-          border-radius: 15px;
-          width: 50vw;
-          height: 25vh;
+
+          width: 60vw;
+          height: 30vh;
         }
         img:hover{
           transition: 0.5s;
@@ -748,45 +748,45 @@ main{
     h1{
 
       width: 100vw;
+
       font-size: 40px;
-      margin-left: 0;
+      margin: 0;
       display: flex;
       justify-content: center;
 
     }
     .imageSection{
-
-
       border-radius: 15px;
       background-color: white;
       width: 100vw;
       height: 80vh;
       display: flex;
       flex-direction: column;
-      justify-content: space-evenly;
+      justify-content: flex-start;
+
       article{
-
-      color: black;
-      border-radius: 15px;
-      display: flex;
-      width: 90vw;
-      height: 60vh;
-      justify-content: center;
-      align-items: center;
-
-      overflow-y: scroll;
+        color: black;
+        border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 90vw;
+        height: 40vh;
+        overflow-y:scroll ;
+        margin-bottom: 10px;
     }
     #loopedPics{
+      margin-bottom: 10px;
       img{
         margin-top: 10px;
-          border-radius: 15px;
-          width: 300px;
-          height: 200px;
+          border-radius: 6px;
+          width: 90vw;
+          height: 30vh;
         }
         img:hover{
           transition: 0.5s;
-          width: 620px;
-          height: 420px;
+          width: 91vw;
+          height: 31vh;
           
         }
       }
@@ -807,7 +807,7 @@ main{
       display: flex;
       justify-content: center;
       align-items: center;
-      
+      margin-left: 60px;
     }
     
     .imageSection{
@@ -820,27 +820,28 @@ main{
       justify-content: center;
       align-items: center;
       article{
-        border-radius: 15px;
-        display: flex;
-        width: 80vw;
-        height: 550px;
-        justify-content: center;
-        align-items: center;
         color: black;
-        overflow-y: scroll;
+        border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 90vw;
+        height: 40vh;
+        overflow-y:scroll ;
+        margin-bottom: 10px;
     
       }
     #rickandMortyPics{
       img{
-          border-radius: 15px;
+          border-radius: 7px;
           margin-top: 10px;
           width: 90vw;
           height: 20vh;
         }
         img:hover{
           transition: 0.5s;
-          width: 620px;
-          height: 420px;
+          width: 90vw;
+          height: 21vh;
           
         }
       }
