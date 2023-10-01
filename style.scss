@@ -100,9 +100,9 @@ main{
       -moz-background-clip: text;
       -moz-text-fill-color: transparent;
     }
-    .name:hover{
+    #name:hover{
       background-image: linear-gradient(45deg, blue, red);
-      transition: 10s;
+      transition: 15s;
     }
 
   }
@@ -250,6 +250,7 @@ main{
           height: 500px;
         }
         img:hover{
+          cursor: pointer;
           transition: 0.5s;
           width: 420px;
           height: 520px;
@@ -308,6 +309,7 @@ main{
           height: 400px;
         }
         img:hover{
+          cursor: pointer;
           transition: 0.5s;
           width: 620px;
           height: 420px;
@@ -364,6 +366,7 @@ main{
           height: 500px;
         }
         img:hover{
+          cursor: pointer;
           transition: 0.5s;
           width: 720px;
           height: 520px;
@@ -426,6 +429,7 @@ main{
         
       }
       button{
+          cursor: pointer;
         margin: 10px;
         width: 250px;
         height: 20px;
@@ -433,6 +437,7 @@ main{
         background-color: azure;
       }
       button:hover{
+        cursor: pointer;
         color: white;
         background-color: aqua;
       }
@@ -457,14 +462,12 @@ main{
   100% { transform :  translateY(0); }
 }
 ///--------------------------------------------------- MOBILE ---------------------------------------------------//
-///--------------------------------------------------- MOBILE ---------------------------------------------------//
+
 @media (max-width:900px) {
   canvas{
     position: fixed;
     top: 0;
     left: 0;
-
-  
   }
   
   
@@ -482,7 +485,7 @@ main{
   top: 0;
   left: 0;
   
-  .page1, .page2, .page3, .page4, .page5, .page6{
+  .page1, .page2, .page3, .page4, .page6{
     
     width: 100vw;
     height: 100vh;
@@ -656,6 +659,7 @@ main{
           height: 50px;
         }
         img:hover{
+          transition: 2s;
           width: 60px;
           height: 60px;
 
@@ -664,7 +668,7 @@ main{
   }
   }
   .page3{
-
+    height: 90vh;
     display: flex;
     flex-direction: column;
 
@@ -673,10 +677,8 @@ main{
 
     h1{
       width: 100vw;
-      z-index: 99;
       font-size: 40px;
       margin:0;
-      color: white;
       display: flex;
       justify-content: center;
       color:#FF6410
@@ -732,7 +734,8 @@ main{
     
   }
   .page5{
-
+    height: 90vh;
+    background-color: green;
      display: flex;
      flex-direction: column;
      justify-content: center;
@@ -787,7 +790,8 @@ main{
  
   }
   .page6{
-
+    height: 90vh;
+    background-color: red;
      display: flex;
      flex-direction: column;
      justify-content: center;
@@ -829,7 +833,7 @@ main{
           border-radius: 7px;
           margin-top: 10px;
           width: 90vw;
-          height: 20vh;
+          height: 25vh;
         }
         img:hover{
           transition: 0.5s;

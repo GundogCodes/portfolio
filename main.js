@@ -202,6 +202,7 @@ const boxMat = new THREE.MeshBasicMaterial({color:'green', wireframe:true})
 const box = new THREE.Mesh(boxGeo,boxMat)
 
 const selfie = new THREE.TextureLoader().load('images/selfie.jpg')
+console.log(selfie)
 const selfieBoxGeo = new THREE.BoxGeometry(3,3,3)
 const selfieBoxMat = new THREE.MeshBasicMaterial({map:selfie})
 const selfieBox = new THREE.Mesh(selfieBoxGeo,selfieBoxMat)
