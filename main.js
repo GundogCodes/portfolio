@@ -183,6 +183,10 @@ const sphere3Geometry = new THREE.SphereGeometry(35,25,25)
 const sphere3Texture = new THREE.MeshStandardMaterial({color:'pink', wireframe:true})
 const sphere3 = new THREE.Mesh(sphere3Geometry, sphere3Texture)
 
+const sphere4Geometry = new THREE.SphereGeometry(35,35,35)
+const sphere4Texture = new THREE.MeshStandardMaterial({color:'pink', wireframe:true})
+const sphere4 = new THREE.Mesh(sphere4Geometry, sphere4Texture)
+
 const tetraGeo = new THREE.TetrahedronGeometry(2,1)
 const tetraMat = new THREE.MeshBasicMaterial({color:'white', wireframe:true})
 const tetra  = new THREE.Mesh(tetraGeo,tetraMat)
@@ -197,7 +201,7 @@ const boxGeo = new THREE.BoxGeometry(10,10,10,5,5,5)
 const boxMat = new THREE.MeshBasicMaterial({color:'green', wireframe:true})
 const box = new THREE.Mesh(boxGeo,boxMat)
 
-const selfie = new THREE.TextureLoader().load('./images/selfieSquare.jpg')
+const selfie = new THREE.TextureLoader().load('selfieSquare.jpg')
 const selfieBoxGeo = new THREE.BoxGeometry(3,3,3)
 const selfieBoxMat = new THREE.MeshBasicMaterial({map:selfie})
 const selfieBox = new THREE.Mesh(selfieBoxGeo,selfieBoxMat)
@@ -376,6 +380,10 @@ sphere3.position.x = 90
 sphere3.position.y = 50
 sphere3.position.z = -420
 
+sphere4.position.x = -40
+sphere4.position.y = 10
+sphere4.position.z = 50
+
 torus.position.x = -9
 torus.position.y = 20
 torus.position.z = 10
@@ -410,6 +418,7 @@ plane2.rotation.x = 2.7
 scene.add(sphere)
 scene.add(sphere2)
 scene.add(sphere3)
+scene.add(sphere4)
 //scene.add(torus)
 //scene.add(torus2)
 //scene.add( torusKnot );
@@ -531,7 +540,10 @@ function animate(){
    sphere3.rotation.x -= 0.001
    sphere3.rotation.y -= 0.005
    sphere3.rotation.z -= 0.001
-  // sphere.position.z += 0.09
+
+    sphere4.rotation.z += 0.001
+    sphere4.rotation.z += 0.005
+    sphere4.rotation.z -= 0.001
   
   capsule.rotation.x += 0.01
   capsule.rotation.y += 0.05
@@ -569,10 +581,6 @@ function animate(){
   selfieBox.rotation.x +=0.01
   selfieBox.rotation.y +=0.01
   selfieBox.rotation.z -=0.01
-
-  // sphere3.rotation.z += 0.001
-  // sphere3.rotation.z += 0.005
-  // sphere3.rotation.z -= 0.001
 
   atomsArr.forEach((atom)=>{
     let randoNum1x = randomNumbers(0.06,-0.06)
