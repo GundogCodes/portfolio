@@ -170,21 +170,24 @@ const knotGeometry = new THREE.TorusKnotGeometry( 1, 1, 10, 10 );
 const knotMaterial = new THREE.MeshBasicMaterial( { color: 'aqua', wireframe:true } ); 
 const torusKnot = new THREE.Mesh( knotGeometry, knotMaterial ); 
 
-const SphereGeometry = new THREE.SphereGeometry(35,25,25)
-const sphereTexture = new THREE.MeshBasicMaterial({color:'red', wireframe:true})
+//SPHERES
+const SphereGeometry = new THREE.SphereGeometry(35,50,50)
+const sphereTexture = new THREE.MeshStandardMaterial({color:'red', wireframe:true})
 const sphere = new THREE.Mesh(SphereGeometry, sphereTexture)
+
+const sphere2Geometry = new THREE.SphereGeometry(35,40,40)
+const sphere2Texture = new THREE.MeshStandardMaterial({color:'orange', wireframe:true})
+const sphere2 = new THREE.Mesh(sphere2Geometry, sphere2Texture)
+
+const sphere3Geometry = new THREE.SphereGeometry(35,25,25)
+const sphere3Texture = new THREE.MeshStandardMaterial({color:'pink', wireframe:true})
+const sphere3 = new THREE.Mesh(sphere3Geometry, sphere3Texture)
 
 const tetraGeo = new THREE.TetrahedronGeometry(2,1)
 const tetraMat = new THREE.MeshBasicMaterial({color:'white', wireframe:true})
 const tetra  = new THREE.Mesh(tetraGeo,tetraMat)
 
-const sphere2Geometry = new THREE.SphereGeometry(10,10,15)
-const sphere2Texture = new THREE.MeshBasicMaterial({color:'orange', wireframe:true})
-const sphere2 = new THREE.Mesh(sphere2Geometry, sphere2Texture)
 
-const sphere3Geometry = new THREE.SphereGeometry(27,35,35)
-const sphere3Texture = new THREE.MeshBasicMaterial({color:'red', wireframe:true})
-const sphere3 = new THREE.Mesh(sphere3Geometry, sphere3Texture)
 
 const capsuleGeo = new THREE.CapsuleGeometry(2, 5,2)
 const capsuleMat = new THREE.MeshBasicMaterial({color:'yellow', wireframe:true})
@@ -210,28 +213,18 @@ const plane2 = new THREE.Mesh( plane2Geometry, plane2Material );
 const icoGeo = new THREE.IcosahedronGeometry(1,1)
 const icoMat = new THREE.MeshBasicMaterial({color:'white', wireframe:true})
 const ico = new THREE.Mesh(icoGeo,icoMat)
-scene.background =  new THREE.Color("#fceee1")
+//scene.background =  new THREE.Color("#fceee1")
+scene.background =  new THREE.Color("white")
 
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-  const newColorScheme = event.matches ? "dark" : "light";
-  //console.log(newColorScheme)
-  if(newColorScheme==='light'){
-    scene.background =  new THREE.Color("#fceee1")
-  
-} else if(newColorScheme==='dark'){
-  scene.background =  new THREE.Color("black")
-  
-  }
-});
 
 function createAtoms(){
-const ring1Geo = new THREE.RingGeometry(0.5,0.49,150)
+const ring1Geo = new THREE.RingGeometry(0.55,0.49,150)
 const ring1Mat = new THREE.MeshBasicMaterial({color:'blue', wireframe:true})
 const ring1 = new THREE.Mesh(ring1Geo,ring1Mat)
-const ring2Geo = new THREE.RingGeometry(0.5,0.49,150)
+const ring2Geo = new THREE.RingGeometry(0.55,0.49,150)
 const ring2Mat = new THREE.MeshBasicMaterial({color:'blue', wireframe:true})
 const ring2 = new THREE.Mesh(ring2Geo,ring2Mat)
-const ring3Geo = new THREE.RingGeometry(0.5,0.49,150)
+const ring3Geo = new THREE.RingGeometry(0.55,0.49,150)
 const ring3Mat = new THREE.MeshBasicMaterial({color:'blue', wireframe:true})
 const ring3 = new THREE.Mesh(ring3Geo,ring3Mat)
 scene.add(ring1)
@@ -291,36 +284,36 @@ return {nucleon, nucleon1, nucleon2, ring1, ring2, ring3}
 }
 
 ///
-const mainAtomRing1Geo = new THREE.RingGeometry(2.5,2.4,150)
+const mainAtomRing1Geo = new THREE.RingGeometry(2.9,2.4,150)
 const mainAtomRing1Mat = new THREE.MeshBasicMaterial({color:'purple', wireframe:true})
 const mainAtomRing1 = new THREE.Mesh(mainAtomRing1Geo,mainAtomRing1Mat)
 
-const mainAtomRing2Geo = new THREE.RingGeometry(2.5,2.4,150)
+const mainAtomRing2Geo = new THREE.RingGeometry(2.9,2.4,150)
 const mainAtomRing2Mat = new THREE.MeshBasicMaterial({color:'purple', wireframe:true})
 const mainAtomRing2 = new THREE.Mesh(mainAtomRing2Geo,mainAtomRing2Mat)
 
-const mainAtomRing3Geo = new THREE.RingGeometry(2.5,2.4,150)
+const mainAtomRing3Geo = new THREE.RingGeometry(2.9,2.4,150)
 const mainAtomRing3Mat = new THREE.MeshBasicMaterial({color:'purple', wireframe:true})
 const mainAtomRing3 = new THREE.Mesh(mainAtomRing3Geo,mainAtomRing3Mat)
 
-scene.add(mainAtomRing1)
-scene.add(mainAtomRing2)
-scene.add(mainAtomRing3)
+//scene.add(mainAtomRing1)
+//scene.add(mainAtomRing2)
+//scene.add(mainAtomRing3)
 
 const mainAtomNucleon1Geo = new THREE.SphereGeometry(0.2,10,10)
 const mainAtomNucleon1Mat = new THREE.MeshBasicMaterial({color:'yellow', wireframe:true})
 const mainAtomNucleon1 = new THREE.Mesh(mainAtomNucleon1Geo,mainAtomNucleon1Mat)
-scene.add(mainAtomNucleon1)
+//scene.add(mainAtomNucleon1)
 
 const mainAtomNucleonGeo = new THREE.SphereGeometry(0.2,10,10)
 const mainAtomNucleonMat = new THREE.MeshBasicMaterial({color:'yellow', wireframe:true})
 const mainAtomNucleon = new THREE.Mesh(mainAtomNucleonGeo,mainAtomNucleonMat)
-scene.add(mainAtomNucleon)
+//scene.add(mainAtomNucleon)
 
 const mainAtomNucleon2Geo = new THREE.SphereGeometry(0.2,10,10)
 const mainAtomNucleon2Mat = new THREE.MeshBasicMaterial({color:'yellow', wireframe:true})
 const mainAtomNucleon2 = new THREE.Mesh(mainAtomNucleon2Geo,mainAtomNucleon2Mat)
-scene.add(mainAtomNucleon2)
+//scene.add(mainAtomNucleon2)
 
 
 
@@ -361,9 +354,7 @@ selfieBox.position.x = 5
 selfieBox.position.y = 55
 selfieBox.position.z = 20
 
-sphere2.position.x = 80
-sphere2.position.y = 30
-sphere2.position.z = -100
+
 
 box.position.x =150
 box.position.y = 100
@@ -373,13 +364,17 @@ capsule.position.x = -100
 capsule.position.y = -20
 capsule.position.z= -300
 
-sphere.position.x = 30
-sphere.position.y = -45
+sphere.position.x = 35
+sphere.position.y = -30
 sphere.position.z = -10
 
-sphere3.position.x = -20
+sphere2.position.x = -80
+sphere2.position.y = 0
+sphere2.position.z = -120
+
+sphere3.position.x = 90
 sphere3.position.y = 50
-sphere3.position.z = 50
+sphere3.position.z = -420
 
 torus.position.x = -9
 torus.position.y = 20
@@ -413,7 +408,7 @@ plane2.rotation.x = 2.7
 
 //add object to screen
 scene.add(sphere)
-//scene.add(sphere2)
+scene.add(sphere2)
 scene.add(sphere3)
 //scene.add(torus)
 //scene.add(torus2)
@@ -436,10 +431,10 @@ const ambientLight = new THREE.AmbientLight(0xffffff)
 const lightHelper = new THREE.PointLightHelper(pointLight) // show us the position of a pointLight
 const gridHelper = new THREE.GridHelper(1000,1000)
 //set its position
-pointLight.position.set(20,20,20)
+pointLight.position.set(0,0,0)
 //add it to the scene
 scene.add(pointLight)
-scene.add(ambientLight)
+//scene.add(ambientLight)
 //scene.add(lightHelper, gridHelper)
 
 const controls = new OrbitControls(camera, renderer.domElement)// instanate that class
@@ -487,19 +482,37 @@ document.body.onscroll = moveCamera
 //  Array(5000).fill().forEach(createAtoms)
 const atomsArr = []
 for(let i=0; i<2500; i++){
-  let newAtom = createAtoms()
+  //let newAtom = createAtoms()
   //console.log(newAtom)
-  atomsArr.push(newAtom)
+  //atomsArr.push(newAtom)
+
+
+}
+
+function changeColor(){
 
 
 }
 
 const astroidArr = []
-for(let i=0; i<100; i++){
+for(let i=0; i<1000; i++){
   let newAstro = addAstroids()
   //console.log(newAstro)
   astroidArr.push(astroidArr)
 }
+
+// window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+//   const newColorScheme = event.matches ? "dark" : "light";
+//   //console.log(newColorScheme)
+//   if(newColorScheme==='light'){
+//     scene.background =  new THREE.Color("white")
+  
+// } else if(newColorScheme==='dark'){
+//   scene.background =  new THREE.Color("black")
+
+//   }
+// });
+
 
 function animate(){
 
@@ -509,6 +522,11 @@ function animate(){
    sphere.rotation.x += 0.001
    sphere.rotation.y += 0.005
    sphere.rotation.z += 0.001
+
+   sphere2.rotation.x += 0.005
+   sphere2.rotation.y -= 0.002
+   sphere2.rotation.z -= 0.002
+ 
    
    sphere3.rotation.x -= 0.001
    sphere3.rotation.y -= 0.005
@@ -544,10 +562,7 @@ function animate(){
   torusKnot.rotation.x -= 0.02
   torusKnot.rotation.z += 0.01
 
-  sphere2.rotation.x += 0.05
-  sphere2.rotation.y -= 0.02
-  sphere2.rotation.z -= 0.02
-
+ 
   tetra.position.x += 0.1
   tetra.position.z -= 0.5
 
