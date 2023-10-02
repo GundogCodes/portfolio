@@ -499,11 +499,6 @@ for(let i=0; i<2500; i++){
 
 }
 
-function changeColor(){
-
-
-}
-
 const astroidArr = []
 for(let i=0; i<1000; i++){
   let newAstro = addAstroids()
