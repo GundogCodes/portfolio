@@ -1,18 +1,18 @@
-canvas{
+canvas {
   position: fixed;
   top: 0;
   left: 0;
-
 }
 
-main{
-  .underline{
-    width:95vw;
+main {
+  .underline {
+    width: 95vw;
     height: 1vmin;
-    background-color: #FF6410;
+    background-color: #ff6410;
     margin-top: 0;
   }
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -25,18 +25,20 @@ main{
   top: 0;
   left: 0;
 
-
-  .page1,  .page3, .page4, .page5, .page6{
-    
+  .page1,
+  .page3,
+  .page4,
+  .page5,
+  .page6 {
     width: 100vw;
     height: 100vh;
   }
-  
-  .page1{
+
+  .page1 {
     height: 100vh;
     display: flex;
 
-    header{
+    header {
       width: 100vw;
       color: white;
 
@@ -44,79 +46,73 @@ main{
       position: fixed;
       justify-content: center;
       align-items: center;
-      img{
-      
-        margin:2vmin;
-          
+      img {
+        margin: 2vmin;
       }
-      .linkedIn{
+      .linkedIn {
         width: 60px;
         height: 60px;
       }
-      .gitHub{
+      .gitHub {
         width: 60px;
         height: 60px;
       }
-      .instagram{
+      .instagram {
         width: 70px;
         height: 70px;
         filter: invert(1);
-
       }
 
-     
-      .linkedIn:hover{
+      .linkedIn:hover {
         width: 85px;
         height: 85px;
         cursor: pointer;
         transition: 0.5s;
       }
-      .instagram:hover{
+      .instagram:hover {
         cursor: pointer;
         width: 85px;
         height: 85px;
         transition: 0.5s;
       }
-      .gitHub:hover{
+      .gitHub:hover {
         cursor: pointer;
         width: 85px;
         height: 85px;
         transition: 0.5s;
-  
       }
     }
-    #name{
+    #name {
       font-size: 5vmin;
       width: 100vw;
       display: flex;
       align-items: center;
       justify-content: center;
 
-
-      background-image: linear-gradient(90deg, rgb(201, 21, 21), rgb(156, 0, 0));
+      background-image: linear-gradient(
+        90deg,
+        rgb(201, 21, 21),
+        rgb(156, 0, 0)
+      );
       background-repeat: repeat;
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent; 
+      -webkit-text-fill-color: transparent;
       -moz-background-clip: text;
       -moz-text-fill-color: transparent;
     }
-    #name:hover{
+    #name:hover {
       background-image: linear-gradient(45deg, blue, red);
       transition: 15s;
     }
-
   }
-  #quotePage{
-
+  #quotePage {
     width: 100vw;
     height: 40vh;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 
-
-      h2{
-
+    h2 {
       width: 100vw;
       height: 40vh;
 
@@ -124,31 +120,27 @@ main{
       align-items: center;
       justify-content: flex-end;
       margin-right: 60px;
-        margin-left: 60px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 30vh;
-        padding: 10px;
-        width: 33vw;
+      margin-left: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 30vh;
+      padding: 10px;
+      width: 33vw;
 
-        background-color: black;
-        font-size: 5vmin;
-
-      }
-
-    
+      background-color: black;
+      font-size: 5vmin;
+    }
   }
-  .page2{
-
+  .page2 {
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    article{
+    article {
       margin-left: 60px;
       display: flex;
       flex-direction: column;
@@ -161,18 +153,16 @@ main{
       width: 38vw;
       font-size: 2vmin;
     }
-    footer{
+    footer {
       display: flex;
 
+      .jumpText {
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-name: bounce-4;
+        animation-timing-function: ease;
+        transform-origin: bottom;
 
-      .jumpText{
-
-          animation-duration: 2s;
-          animation-iteration-count: infinite;
-          animation-name: bounce-4;
-          animation-timing-function: ease;
-          transform-origin: bottom;
-        
         display: flex;
         justify-content: center;
         align-items: center;
@@ -180,20 +170,20 @@ main{
         height: 50vh;
         width: 50vw;
       }
-      .techs{
+      .techs {
         padding: 20px;
 
-        background-color: #FF6410;
+        background-color: #ff6410;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         align-self: flex-end;
         place-items: center;
-        column-gap: 10px; 
+        column-gap: 10px;
         row-gap: 5px;
         height: 50vh;
         width: 50vw;
-        
-        img{
+
+        img {
           padding: 10px;
           border-color: white;
           border-style: solid;
@@ -201,30 +191,27 @@ main{
           width: 50px;
           height: 50px;
         }
-        img:hover{
+        img:hover {
           width: 60px;
           height: 60px;
-
         }
       }
     }
   }
-  .page3{
+  .page3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-
-    h1{
+    h1 {
       width: 100vw;
-      color: #FF6410;
+      color: #ff6410;
       font-size: 40px;
-      margin-left:5vw;
+      margin-left: 5vw;
       margin-bottom: 0;
-
     }
-    .imageSection{
+    .imageSection {
       border-radius: 15px;
       //background-color: white;
       width: 100vw;
@@ -232,114 +219,97 @@ main{
       display: flex;
       justify-content: space-around;
       align-items: center;
-      article{
+      article {
         color: black;
-      border-radius: 15px;
-      display: flex;
-      width: 450px;
-      height: 550px;
-      justify-content: center;
-      align-items: center;
-      background-color: white;
-    }
-    #scamPics{
-      img{
-
-          
+        border-radius: 15px;
+        display: flex;
+        width: 450px;
+        height: 550px;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+      }
+      #scamPics {
+        img {
           width: 400px;
           height: 500px;
         }
-        img:hover{
+        img:hover {
           cursor: pointer;
           transition: 0.5s;
           width: 420px;
           height: 520px;
-          
         }
       }
     }
-    
   }
-  .page4{
-     
-    
+  .page4 {
   }
-  .page5{
+  .page5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-
-    h1{
+    h1 {
       width: 100vw;
       font-size: 40px;
-      margin-right:5vw;
+      margin-right: 5vw;
       display: flex;
       justify-content: flex-end;
       margin-bottom: 0;
-      color: #FF6410;
-
-
+      color: #ff6410;
     }
-    .imageSection{
-
+    .imageSection {
       //background-color: white;
       width: 100vw;
       height: 700px;
       display: flex;
       justify-content: space-around;
       align-items: center;
-      article{
+      article {
         color: black;
 
-      display: flex;
-      width: 450px;
-      padding: 10px;
-      justify-content: center;
-      align-items: center;
-      background-color: white;
-    }
-    #loopedPics{
-      img{
+        display: flex;
+        width: 450px;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+      }
+      #loopedPics {
+        img {
           border-radius: 6px;
-          
+
           width: 600px;
           height: 400px;
         }
-        img:hover{
+        img:hover {
           cursor: pointer;
           transition: 0.5s;
           width: 620px;
           height: 420px;
-          
         }
       }
     }
- 
   }
-  .page6{
+  .page6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-
-    h1{
-
-      color: #FF6410;
-      width: 100vw;
+    h1 {
+      color: #ff6410;
+      width: 90vw;
 
       font-size: 40px;
-      margin-left:5vw;
-      margin-bottom: 0
-;
+      margin-left: 5vw;
+      margin-bottom: 0;
+      border-bottom: solid 1vh #ff6410;
     }
-    
-    .imageSection{
 
-
+    .imageSection {
       padding-top: 30px;
       width: 100vw;
       height: 700px;
@@ -347,69 +317,65 @@ main{
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
-      article{
+      article {
         color: black;
 
-      display: flex;
+        display: flex;
 
-      width: 80vw;
-      padding: 10px;
-      justify-content: center;
-      align-items: center;
-      background-color: white;
-    }
-    #rickandMortyPics{
-      img{
+        width: 80vw;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+      }
+      #flightClubPics {
+        img {
           border-radius: 15px;
-          
-          width: 700px;
+
+          width: 800px;
           height: 500px;
         }
-        img:hover{
+        img:hover {
           cursor: pointer;
           transition: 0.5s;
           width: 720px;
           height: 520px;
-          
         }
       }
     }
   }
-  #connectForm{  
-
+  #connectForm {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-bottom: 60px;
     height: 95vh;
-    h1{
+    h1 {
       margin-top: 60px;
-
     }
-    .connectHeader{
+    .connectHeader {
       display: flex;
       justify-content: center;
       align-items: center;
       margin-left: 0;
       margin-top: 40px;
 
-      color: #FF6410;
+      color: #ff6410;
       width: 100vw;
       height: 100px;
     }
-    form{
-
+    form {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       width: 500px;
       height: 500px;
-      background-color: #FF6410;
+      background-color: #ff6410;
       border-style: solid;
 
-      .email{
+      .email {
         border-style: solid;
         border-width: 3px;
         border-color: black;
@@ -418,7 +384,7 @@ main{
         height: 20px;
         border-radius: 6px;
       }
-      .message{
+      .message {
         border-style: solid;
         border-width: 3px;
         border-color: black;
@@ -426,17 +392,16 @@ main{
         width: 400px;
         height: 250px;
         border-radius: 6px;
-        
       }
-      button{
-          cursor: pointer;
+      button {
+        cursor: pointer;
         margin: 10px;
         width: 250px;
         height: 20px;
         border-radius: 7px;
         background-color: azure;
       }
-      button:hover{
+      button:hover {
         cursor: pointer;
         color: white;
         background-color: aqua;
@@ -445,134 +410,139 @@ main{
   }
 }
 
-.hidden{
+.hidden {
   opacity: 0;
   transition: all 2s;
 }
 
-.show{
+.show {
   opacity: 1;
-
 }
 @keyframes bounce-4 {
-  0%   { transform  : translateY(0); }
-  10%  { transform: translateY(0); }
-  30%  { transform:  translateY(-30px) translateX(30px);}
-  50%  { transform:   translateY(0); }
-  100% { transform :  translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-30px) translateX(30px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 ///--------------------------------------------------- MOBILE ---------------------------------------------------//
 
-@media (max-width:900px) {
-  canvas{
+@media (max-width: 900px) {
+  canvas {
     position: fixed;
     top: 0;
     left: 0;
   }
-  
-  
-main{
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 99;
-  width: 100vw;
-  margin: 0px auto;
-  color: white;
-  top: 0;
-  left: 0;
-  
-  .page1, .page2, .page3, .page4, .page6{
-    
-    width: 100vw;
-    height: 100vh;
-  }
 
-  .page1{
+  main {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    position: absolute;
     display: flex;
-
-    header{
-      width: 100vw;
-      color: white;
-
-      display: flex;
-      position: fixed;
-      justify-content: center;
-      align-items: center;
-      img{
-      
-        margin:2vmin;
-          
-      }
-      .linkedIn{
-        width: 60px;
-        height: 60px;
-
-      }
-      .gitHub{
-        width: 60px;
-        height: 60px;
-      }
-      .instagram{
-        width: 70px;
-        filter: invert(1);
-        height: 70px;
-
-      }
-
-     
-      .linkedIn:hover{
-        width: 85px;
-        height: 85px;
-        cursor: pointer;
-      }
-      .instagram:hover{
-        cursor: pointer;
-        width: 85px;
-        height: 85px;
-      }
-      .gitHub:hover{
-        cursor: pointer;
-        width: 85px;
-        height: 85px;
-  
-      }
-    }
-    #name{
-      font-size: 10vmin;
-      width: 100vw;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-
-      background-image: linear-gradient(90deg, rgb(201, 21, 21), rgb(156, 0, 0));
-      background-repeat: repeat;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent; 
-      -moz-background-clip: text;
-      -moz-text-fill-color: transparent;
-    }
-    .name:hover{
-      background-image: linear-gradient(45deg, blue, red);
-      transition: 10s;
-    }
-
-  }
-  #quotePage{
-    width: 100vw;
-    height: 40vh;
-    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 99;
+    width: 100vw;
+    margin: 0px auto;
+    color: white;
+    top: 0;
+    left: 0;
 
+    .page1,
+    .page2,
+    .page3,
+    .page4,
+    .page6 {
+      width: 100vw;
+      height: 100vh;
+    }
 
+    .page1 {
+      display: flex;
 
+      header {
+        width: 100vw;
+        color: white;
 
-      h2{
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        img {
+          margin: 2vmin;
+        }
+        .linkedIn {
+          width: 60px;
+          height: 60px;
+        }
+        .gitHub {
+          width: 60px;
+          height: 60px;
+        }
+        .instagram {
+          width: 70px;
+          filter: invert(1);
+          height: 70px;
+        }
+
+        .linkedIn:hover {
+          width: 85px;
+          height: 85px;
+          cursor: pointer;
+        }
+        .instagram:hover {
+          cursor: pointer;
+          width: 85px;
+          height: 85px;
+        }
+        .gitHub:hover {
+          cursor: pointer;
+          width: 85px;
+          height: 85px;
+        }
+      }
+      #name {
+        font-size: 10vmin;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-image: linear-gradient(
+          90deg,
+          rgb(201, 21, 21),
+          rgb(156, 0, 0)
+        );
+        background-repeat: repeat;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+      }
+      .name:hover {
+        background-image: linear-gradient(45deg, blue, red);
+        transition: 10s;
+      }
+    }
+    #quotePage {
+      width: 100vw;
+      height: 40vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      h2 {
         margin-left: 0px;
         display: flex;
         flex-direction: column;
@@ -580,421 +550,395 @@ main{
         justify-content: center;
         height: 30vh;
 
-        width:90vw;
+        width: 90vw;
         font-size: 5vmin;
       }
-
-    
-  }
-  .page2{
-    width: 40vh;
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-
-    h1{
+    }
+    .page2 {
+      width: 40vh;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+
       align-items: center;
-      width: 100vw;
-      margin-top:60px ;
-      margin-left: 0;
-     
 
-    }
-    article{
-
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      width: 90vw;
-      height: 40vh;
-      font-size: 3vmin;
-
-
-    }
-
-    footer{
-      display: flex;
-      flex-direction: column;
-      .jumpText{
-
-
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
-        animation-name: bounce-3;
-        animation-timing-function: ease;
-        transform-origin: bottom;
-        
+      h1 {
         display: flex;
-        
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        margin-top: 60px;
+        margin-left: 0;
+      }
+      article {
+        display: flex;
+        flex-direction: column;
         justify-content: center;
 
-        color: black;
-        height: 5vh;
-        width: 100vw;
-        font-size: 5vmin;
-      }
-      .techs{
-        padding: 20px;
-        
-        background-color: #FF6410;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        align-self: flex-end;
-        place-items: center;
-        column-gap: 10px; 
-        row-gap: 5px;
-        height: 50vh;
-        width: 100vw;
-        
-        img{
-          padding: 10px;
-          border-color: white;
-          border-style: solid;
-          border-radius: 90px;
-          width: 50px;
-          height: 50px;
-        }
-        img:hover{
-          transition: 2s;
-          width: 60px;
-          height: 60px;
-
-        }
-      }
-  }
-  }
-  .page3{
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-
-    border-radius: 15px;
-    justify-content: space-evenly;
-
-    h1{
-      width: 100vw;
-      font-size: 40px;
-      margin:0;
-      display: flex;
-      justify-content: center;
-      color:#FF6410
- 
-    }
-    .imageSection{
-      //background-color: white;
-      border-radius: 15px;
-      width: 100vw;
-      height: 80vh;
-      display:flex;
-      flex-direction: column-reverse;
-      justify-content: center;
-      align-items: center;
-      margin: 0;
-      article{
-
-        color: black;
-        border-radius: 7px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
         width: 90vw;
         height: 40vh;
-        overflow-y:scroll ;
+        font-size: 3vmin;
+      }
 
+      footer {
+        display: flex;
+        flex-direction: column;
+        .jumpText {
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+          animation-name: bounce-3;
+          animation-timing-function: ease;
+          transform-origin: bottom;
 
-    }
-    #scamPics{
-      display: flex;
-      justify-content: center;
-      align-items: center;
+          display: flex;
 
-      width: 100vw;
-      height: 30vh;
-      img{
+          justify-content: center;
 
-          width: 60vw;
-          height: 30vh;
+          color: black;
+          height: 5vh;
+          width: 100vw;
+          font-size: 5vmin;
         }
-        img:hover{
-          transition: 0.5s;
-          width: 61vw;
-          height: 31vh;
-          
+        .techs {
+          padding: 20px;
+
+          background-color: #ff6410;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          align-self: flex-end;
+          place-items: center;
+          column-gap: 10px;
+          row-gap: 5px;
+          height: 50vh;
+          width: 100vw;
+
+          img {
+            padding: 10px;
+            border-color: white;
+            border-style: solid;
+            border-radius: 90px;
+            width: 50px;
+            height: 50px;
+          }
+          img:hover {
+            transition: 2s;
+            width: 60px;
+            height: 60px;
+          }
         }
       }
     }
-    
-  }
-  .page4{
-     
-    
-  }
-  .page5{
-    height: 90vh;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-
-    h1{
-
-      width: 100vw;
-
-      font-size: 40px;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-
-    }
-    .imageSection{
-      border-radius: 15px;
-      //background-color: white;
-      width: 100vw;
-      height: 80vh;
+    .page3 {
+      height: 90vh;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
 
-      article{
-        color: black;
-        border-radius: 7px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        width: 90vw;
-        height: 40vh;
-        overflow-y:scroll ;
-        margin-bottom: 10px;
-    }
-    #loopedPics{
-      margin-bottom: 10px;
-      img{
-        margin-top: 10px;
-          border-radius: 6px;
-          width: 90vw;
-          height: 30vh;
-        }
-        img:hover{
-          transition: 0.5s;
-          width: 91vw;
-          height: 31vh;
-          
-        }
-      }
-    }
- 
-  }
-  .page6{
-    height: 90vh;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-
-    h1{
-
-      width: 100vw;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-left: 60px;
-    }
-    
-    .imageSection{
       border-radius: 15px;
-      //background-color: white;
-      width: 100vw;
-      height: 80vh;
+      justify-content: space-evenly;
+
+      h1 {
+        width: 100vw;
+        font-size: 40px;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        color: #ff6410;
+      }
+      .imageSection {
+        //background-color: white;
+        border-radius: 15px;
+        width: 100vw;
+        height: 80vh;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        article {
+          color: black;
+          border-radius: 7px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          width: 90vw;
+          height: 40vh;
+          overflow-y: scroll;
+        }
+        #scamPics {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          width: 100vw;
+          height: 30vh;
+          img {
+            width: 60vw;
+            height: 30vh;
+          }
+          img:hover {
+            transition: 0.5s;
+            width: 61vw;
+            height: 31vh;
+          }
+        }
+      }
+    }
+    .page4 {
+    }
+    .page5 {
+      height: 90vh;
       display: flex;
-      flex-direction: column-reverse;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      article{
-        color: black;
-        border-radius: 7px;
+
+      h1 {
+        width: 100vw;
+
+        font-size: 40px;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+      }
+      .imageSection {
+        border-radius: 15px;
+        //background-color: white;
+        width: 100vw;
+        height: 80vh;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        width: 90vw;
-        height: 40vh;
-        overflow-y:scroll ;
-        margin-bottom: 10px;
-    
-      }
-    #rickandMortyPics{
-      img{
+
+        article {
+          color: black;
           border-radius: 7px;
-          margin-top: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
           width: 90vw;
-          height: 25vh;
+          height: 40vh;
+          overflow-y: scroll;
+          margin-bottom: 10px;
         }
-        img:hover{
-          transition: 0.5s;
+        #loopedPics {
+          margin-bottom: 10px;
+          img {
+            margin-top: 10px;
+            border-radius: 6px;
+            width: 90vw;
+            height: 30vh;
+          }
+          img:hover {
+            transition: 0.5s;
+            width: 91vw;
+            height: 31vh;
+          }
+        }
+      }
+    }
+    .page6 {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h1 {
+        width: 100vw;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 60px;
+      }
+
+      .imageSection {
+        border-radius: 15px;
+        //background-color: white;
+        width: 100vw;
+        height: 80vh;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        article {
+          color: black;
+          border-radius: 7px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
           width: 90vw;
-          height: 21vh;
-          
+          height: 40vh;
+          overflow-y: scroll;
+          margin-bottom: 10px;
+        }
+        #rickandMortyPics {
+          img {
+            border-radius: 7px;
+            margin-top: 10px;
+            width: 90vw;
+            height: 25vh;
+          }
+          img:hover {
+            transition: 0.5s;
+            width: 90vw;
+            height: 21vh;
+          }
+        }
+      }
+    }
+    #connectForm {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 60px;
+      .connectHeader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+        margin-top: 40px;
+
+        width: 100vw;
+        height: 100px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90vw;
+        height: 60vh;
+        background-color: #ff6410;
+
+        border-style: solid;
+
+        .email {
+          border-style: solid;
+          border-width: 3px;
+          border-color: purple;
+          margin: 10px;
+          width: 250px;
+          height: 20px;
+          border-radius: 7px;
+        }
+        .message {
+          border-style: solid;
+          border-width: 3px;
+
+          margin: 10px;
+          width: 85vw;
+          height: 250px;
+          border-radius: 7px;
+        }
+        button {
+          margin: 10px;
+          width: 250px;
+          height: 20px;
+          border-radius: 7px;
+          background-color: azure;
+        }
+        button:hover {
+          color: white;
+          background-color: aqua;
         }
       }
     }
   }
-  #connectForm{
-  
-  
+}
+
+@keyframes bounce-3 {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-40px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  57% {
+    transform: translateY(-7px);
+  }
+  64% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+///--------------------------------------------------- DARK-MODE ---------------------------------------------------//
+///--------------------------------------------------- DARK-MODE ---------------------------------------------------//
+
+@media (prefers-colors-scheme: dark) {
+  canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  main {
+    .underline {
+      width: 95vw;
+      height: 1vmin;
+      background-color: rgb(24, 71, 255);
+      margin-top: 0;
+    }
+    h1 {
+      color: rgb(24, 71, 255);
+    }
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 60px;
-    .connectHeader{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-left: 0;
-      margin-top: 40px;
-  
-      width: 100vw;
-      height: 100px;
-    }
-    form{
-
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 90vw;
-      height: 60vh;
-      background-color:#FF6410;
-
-      border-style: solid;
-
-      .email{
-        border-style: solid;
-        border-width: 3px;
-        border-color: purple;
-        margin: 10px;
-        width: 250px;
-        height: 20px;
-        border-radius: 7px;
-      }
-      .message{
-        border-style: solid;
-        border-width: 3px;
-
-        margin: 10px;
-        width: 85vw;
-        height: 250px;
-        border-radius: 7px;
-        
-      }
-      button{
-        margin: 10px;
-        width: 250px;
-        height: 20px;
-        border-radius: 7px;
-        background-color: azure;
-      }
-      button:hover{
-        color: white;
-        background-color: aqua;
-      }
-    }
-  }
-}
-}
-
-
-@keyframes bounce-3 {
-  0%   { transform:   translateY(0); }
-  10%  { transform:  translateY(0); }
-  30%  { transform:  translateY(-40px); }
-  50%  { transform: translateY(0); }
-  57%  { transform:   translateY(-7px); }
-  64%  { transform:    translateY(0); }
-  100% { transform:    translateY(0); }
-}
-
-///--------------------------------------------------- DARK-MODE ---------------------------------------------------//
-///--------------------------------------------------- DARK-MODE ---------------------------------------------------//
-
-@media(prefers-colors-scheme:dark){
-  canvas{
-    position: fixed;
+    z-index: 99;
+    width: 100%;
+    margin: 0px auto;
+    color: white;
     top: 0;
     left: 0;
 
-  
-  }
-  
-  
-main{
-  .underline{
-    width:95vw;
-    height: 1vmin;
-    background-color: rgb(24, 71, 255);
-    margin-top: 0;
-  }
-  h1{
-    color: rgb(24, 71, 255);
-  }
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 99;
-  width: 100%;
-  margin: 0px auto;
-  color: white;
-  top: 0;
-  left: 0;
-
-
-  .page1{
-
-    header{
-
-      .linkedIn{
-        filter: invert(1);
+    .page1 {
+      header {
+        .linkedIn {
+          filter: invert(1);
+        }
+        .gitHub {
+          filter: invert(1);
+        }
+        .instagram {
+        }
       }
-      .gitHub{
-        filter: invert(1);
+      #name {
+        width: 100vw;
+
+        background-image: linear-gradient(
+          90deg,
+          rgb(201, 21, 21),
+          rgb(156, 0, 0)
+        );
+        background-repeat: repeat;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
       }
-      .instagram{
-
+      .name:hover {
+        background-image: linear-gradient(45deg, blue, red);
+        transition: 10s;
       }
-
-  
     }
-    #name{
-      width: 100vw;
-
-      background-image: linear-gradient(90deg, rgb(201, 21, 21), rgb(156, 0, 0));
-      background-repeat: repeat;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent; 
-      -moz-background-clip: text;
-      -moz-text-fill-color: transparent;
+    #quotePage {
     }
-    .name:hover{
-      background-image: linear-gradient(45deg, blue, red);
-      transition: 10s;
+    .page3 {
+      background-color: red;
     }
-
   }
-  #quotePage{
-      
-  
-    
-  }
-  .page3{
-    background-color: red;
-  }
-  
-}
 }
