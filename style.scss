@@ -180,7 +180,7 @@ main {
         place-items: center;
         column-gap: 10px;
         row-gap: 5px;
-        height: 50vh;
+        height: 55vh;
         width: 50vw;
 
         img {
@@ -244,6 +244,54 @@ main {
     }
   }
   .page4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      color: #ff6410;
+      font-size: 40px;
+      width: 95vw;
+      border-bottom: solid 1vh#ff6410;
+    }
+    .mainSection {
+      width: 95vw;
+      height: 75%;
+      display: flex;
+      justify-content: space-evenly;
+      .imgDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+
+        img {
+          height: 390px;
+          width: 390px;
+        }
+        #img1 {
+          align-self: flex-end;
+        }
+        #img2 {
+          align-self: flex-start;
+        }
+        #img3 {
+          align-self: flex-start;
+        }
+      }
+      h2 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      article {
+        width: 400px;
+        height: 400px;
+        align-self: center;
+        background-color: white;
+        color: black;
+        padding: 5px;
+      }
+    }
   }
   .page5 {
     display: flex;
