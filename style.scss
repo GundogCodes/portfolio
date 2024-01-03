@@ -293,6 +293,36 @@ main {
       }
     }
   }
+  .page4point5 {
+    height: 75vh;
+    width: 100%;
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      color: #ff6410;
+      width: 95vw;
+      border-bottom: solid 1vh#ff6410;
+    }
+
+    .imageSection {
+      background-color: green;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      img {
+        width: 30vw;
+      }
+      #wojPics {
+      }
+      article {
+        width: 40vw;
+      }
+    }
+  }
   .page5 {
     display: flex;
     flex-direction: column;
