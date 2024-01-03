@@ -5,12 +5,6 @@ canvas {
 }
 
 main {
-  .underline {
-    width: 95vw;
-    height: 1vmin;
-    background-color: #ff6410;
-    margin-top: 0;
-  }
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   position: absolute;
@@ -205,11 +199,11 @@ main {
     align-items: center;
 
     h1 {
-      width: 100vw;
+      width: 95vw;
       color: #ff6410;
       font-size: 40px;
-      margin-left: 5vw;
       margin-bottom: 0;
+      border-bottom: solid 1vh #ff6410;
     }
     .imageSection {
       border-radius: 15px;
@@ -252,6 +246,8 @@ main {
       font-size: 40px;
       width: 95vw;
       border-bottom: solid 1vh#ff6410;
+      display: flex;
+      justify-content: flex-end;
     }
     .mainSection {
       width: 95vw;
@@ -265,8 +261,8 @@ main {
         width: 50%;
 
         img {
-          height: 390px;
-          width: 390px;
+          height: 33%;
+          width: 50%;
         }
         #img1 {
           align-self: flex-end;
@@ -296,7 +292,7 @@ main {
   .page4point5 {
     height: 75vh;
     width: 100%;
-    background-color: pink;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -307,19 +303,21 @@ main {
     }
 
     .imageSection {
-      background-color: green;
       height: 100%;
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: space-evenly;
       img {
-        width: 30vw;
+        width: 40vw;
       }
       #wojPics {
       }
       article {
         width: 40vw;
+        background-color: white;
+        color: black;
+        padding: 5px;
       }
     }
   }
@@ -330,13 +328,13 @@ main {
     align-items: center;
 
     h1 {
-      width: 100vw;
+      width: 95vw;
       font-size: 40px;
-      margin-right: 5vw;
       display: flex;
       justify-content: flex-end;
       margin-bottom: 0;
       color: #ff6410;
+      border-bottom: solid 1vh#ff6410;
     }
     .imageSection {
       //background-color: white;
@@ -379,10 +377,8 @@ main {
 
     h1 {
       color: #ff6410;
-      width: 90vw;
-
+      width: 95vw;
       font-size: 40px;
-      margin-left: 5vw;
       margin-bottom: 0;
       border-bottom: solid 1vh #ff6410;
     }
@@ -408,10 +404,8 @@ main {
       }
       #flightClubPics {
         img {
-          border-radius: 15px;
-
           width: 800px;
-          height: 500px;
+          height: 400px;
         }
         img:hover {
           cursor: pointer;
@@ -531,24 +525,20 @@ main {
     justify-content: center;
     align-items: center;
     z-index: 99;
-    width: 100vw;
-    margin: 0px auto;
     color: white;
-    top: 0;
-    left: 0;
 
     .page1,
     .page2,
     .page3,
     .page4,
     .page6 {
-      width: 100vw;
+      width: 105vw;
       height: 100vh;
     }
 
     .page1 {
       display: flex;
-
+      width: 100vw;
       header {
         width: 100vw;
         color: white;
@@ -633,10 +623,9 @@ main {
       }
     }
     .page2 {
-      width: 40vh;
+      width: 100%;
       display: flex;
       flex-direction: column;
-
       align-items: center;
 
       h1 {
@@ -706,13 +695,10 @@ main {
       }
     }
     .page3 {
-      height: 90vh;
+      height: 100vh;
       display: flex;
       flex-direction: column;
-
-      border-radius: 15px;
       justify-content: space-evenly;
-
       h1 {
         width: 100vw;
         font-size: 40px;
@@ -722,15 +708,12 @@ main {
         color: #ff6410;
       }
       .imageSection {
-        //background-color: white;
-        border-radius: 15px;
         width: 100vw;
         height: 80vh;
         display: flex;
         flex-direction: column-reverse;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
-        margin: 0;
         article {
           color: black;
           border-radius: 7px;
@@ -761,6 +744,52 @@ main {
       }
     }
     .page4 {
+      display: flex;
+      flex-direction: column;
+
+      h1 {
+      }
+      .mainSection {
+        display: flex;
+        flex-direction: column;
+        .imgDiv {
+          width: 105%;
+          img {
+          }
+          #img1 {
+          }
+          #img2 {
+          }
+          #img3 {
+          }
+        }
+        h2 {
+        }
+        article {
+          overflow-y: scroll;
+        }
+      }
+    }
+    .page4point5 {
+      h1 {
+      }
+      .imageSection {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        img {
+          width: 100%;
+        }
+        #wojPics {
+        }
+        article {
+          height: 30vh;
+          overflow-y: scroll;
+          width: 90%;
+        }
+      }
     }
     .page5 {
       height: 90vh;
@@ -819,7 +848,7 @@ main {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-
+      width: 100%;
       h1 {
         width: 100vw;
 
@@ -849,7 +878,7 @@ main {
           overflow-y: scroll;
           margin-bottom: 10px;
         }
-        #rickandMortyPics {
+        #flightClubPics {
           img {
             border-radius: 7px;
             margin-top: 10px;
@@ -951,72 +980,3 @@ main {
 
 ///--------------------------------------------------- DARK-MODE ---------------------------------------------------//
 ///--------------------------------------------------- DARK-MODE ---------------------------------------------------//
-
-@media (prefers-colors-scheme: dark) {
-  canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
-
-  main {
-    .underline {
-      width: 95vw;
-      height: 1vmin;
-      background-color: rgb(24, 71, 255);
-      margin-top: 0;
-    }
-    h1 {
-      color: rgb(24, 71, 255);
-    }
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 99;
-    width: 100%;
-    margin: 0px auto;
-    color: white;
-    top: 0;
-    left: 0;
-
-    .page1 {
-      header {
-        .linkedIn {
-          filter: invert(1);
-        }
-        .gitHub {
-          filter: invert(1);
-        }
-        .instagram {
-        }
-      }
-      #name {
-        width: 100vw;
-
-        background-image: linear-gradient(
-          90deg,
-          rgb(201, 21, 21),
-          rgb(156, 0, 0)
-        );
-        background-repeat: repeat;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -moz-background-clip: text;
-        -moz-text-fill-color: transparent;
-      }
-      .name:hover {
-        background-image: linear-gradient(45deg, blue, red);
-        transition: 10s;
-      }
-    }
-    #quotePage {
-    }
-    .page3 {
-      background-color: red;
-    }
-  }
-}
