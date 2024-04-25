@@ -89,7 +89,7 @@ main {
     }
   }
   #quotePage {
-    width: 100vw;
+    width: 90vw;
     height: 30vh;
     display: flex;
     justify-content: flex-end;
@@ -112,12 +112,11 @@ main {
       align-self: flex-end;
       margin-right: 60px;
       background-color: black;
+      background-color: rgb(162, 170, 173);
     }
     #checkout {
       width: 20vw;
-      background-color: black;
       align-self: flex-start;
-      margin-left: 60px;
     }
   }
   .page2 {
