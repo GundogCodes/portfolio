@@ -29,7 +29,7 @@ main {
   }
 
   .page1 {
-    height: 100vh;
+    height: 85vh;
     display: flex;
 
     header {
@@ -82,113 +82,84 @@ main {
       display: flex;
       align-items: center;
       justify-content: center;
-
-      background-image: linear-gradient(
-        90deg,
-        rgb(201, 21, 21),
-        rgb(156, 0, 0)
-      );
-      background-repeat: repeat;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -moz-background-clip: text;
-      -moz-text-fill-color: transparent;
+      color: #ff6410;
     }
     #name:hover {
-      background-image: linear-gradient(45deg, blue, red);
       transition: 15s;
     }
   }
   #quotePage {
     width: 100vw;
-    height: 40vh;
+    height: 30vh;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-
+    flex-direction: column;
     h2 {
       width: 100vw;
-      height: 40vh;
-
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      margin-right: 60px;
-      margin-left: 60px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 30vh;
+      height: 10vh;
       padding: 10px;
-      width: 33vw;
+      width: 30vw;
 
+      font-size: 20px;
       background-color: black;
-      font-size: 5vmin;
+    }
+    #heyThere {
+      align-self: flex-end;
+      margin-right: 60px;
+      background-color: black;
+    }
+    #checkout {
+      width: 20vw;
+      background-color: black;
+      align-self: flex-start;
+      margin-left: 60px;
     }
   }
   .page2 {
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-
-    article {
-      margin-left: 60px;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff6410;
+    color: white;
+    .jumpText {
       display: flex;
-      flex-direction: column;
       justify-content: center;
-      background-color: black;
-
-      height: 35vh;
-      padding-left: 1vmin;
-      padding-right: 1vmin;
-      width: 38vw;
-      font-size: 2vmin;
+      align-items: center;
+      width: 100vw;
+      height: 5vh;
     }
-    footer {
-      display: flex;
+    .techs {
+      border-top: solid 1px white;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-self: flex-end;
+      place-items: center;
+      column-gap: 20px;
+      row-gap: 20px;
+      height: 100%;
+      width: 100vw;
+      background-color: #f89880;
 
-      .jumpText {
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
-        animation-name: bounce-4;
-        animation-timing-function: ease;
-        transform-origin: bottom;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: black;
-        height: 50vh;
-        width: 50vw;
+      img {
+        padding: 10px;
+        border-color: white;
+        border-style: solid;
+        border-radius: 90px;
+        border-width: 1.5px;
+        width: 50px;
+        height: 50px;
       }
-      .techs {
-        padding: 20px;
-
-        background-color: #ff6410;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        align-self: flex-end;
-        place-items: center;
-        column-gap: 10px;
-        row-gap: 5px;
-        height: 55vh;
-        width: 50vw;
-
-        img {
-          padding: 10px;
-          border-color: white;
-          border-style: solid;
-          border-radius: 90px;
-          width: 50px;
-          height: 50px;
-        }
-        img:hover {
-          width: 60px;
-          height: 60px;
-        }
+      img:hover {
+        width: 60px;
+        height: 60px;
       }
     }
   }
@@ -241,51 +212,53 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    h1 {
-      color: #ff6410;
-      font-size: 40px;
-      width: 95vw;
-      border-bottom: solid 1vh#ff6410;
+    .h1Div {
+      width: 100vw;
       display: flex;
-      justify-content: flex-end;
-    }
-    .mainSection {
-      width: 95vw;
-      height: 75%;
-      display: flex;
+      align-items: center;
       justify-content: space-evenly;
-      .imgDiv {
+      h1 {
+        color: #ff6410;
+        font-size: 40px;
+        width: 45vw;
+        border-bottom: solid 1vh#ff6410;
+        display: flex;
+        justify-content: flex-start;
+      }
+    }
+    #mainSection {
+      width: 95vw;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      #focusSide,
+      #albertaSide {
+        width: 40vw;
+        height: 70vh;
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 50%;
-
+      }
+      a {
         img {
-          height: 33%;
-          width: 50%;
-        }
-        #img1 {
-          align-self: flex-end;
-        }
-        #img2 {
-          align-self: flex-start;
-        }
-        #img3 {
-          align-self: flex-start;
+          transform: scale(1.3);
+          justify-self: flex-start;
+          width: 100%;
+          height: 60%;
         }
       }
-      h2 {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-      }
-      article {
-        width: 400px;
-        height: 400px;
-        align-self: center;
+      p {
         background-color: white;
+        width: 100%;
+        height: 100%;
+        padding: 15px;
         color: black;
-        padding: 5px;
+        font-weight: lighter;
+        max-height: 250px;
+        span {
+          font-weight: bold;
+        }
       }
     }
   }
@@ -362,9 +335,6 @@ main {
         }
         img:hover {
           cursor: pointer;
-          transition: 0.5s;
-          width: 620px;
-          height: 420px;
         }
       }
     }
@@ -409,9 +379,6 @@ main {
         }
         img:hover {
           cursor: pointer;
-          transition: 0.5s;
-          width: 720px;
-          height: 520px;
         }
       }
     }
@@ -485,6 +452,15 @@ main {
 .hidden {
   opacity: 0;
   transition: all 2s;
+}
+.hidden2 {
+  opacity: 1;
+  transition: all 3s;
+}
+.hidden3 {
+  transition: all 8s;
+  background-color: black;
+  color: white;
 }
 
 .show {
