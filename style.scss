@@ -709,6 +709,7 @@ main {
         width: 100vw;
         margin-left: 0px;
         flex-direction: column;
+        margin: 10px;
         #focusSide,
         #albertaSide {
           height: 40vh;
@@ -717,7 +718,8 @@ main {
         }
         a {
           img {
-            transform: scale(2.5);
+            width: 200px;
+            height: 100px;
           }
         }
         p {
