@@ -580,21 +580,20 @@ main {
     }
     #quotePage {
       width: 100vw;
-      height: 40vh;
+      height: 30vh;
       display: flex;
       justify-content: center;
       align-items: center;
-
       h2 {
         margin-left: 0px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 30vh;
+        height: 10vh;
 
         width: 90vw;
-        font-size: 5vmin;
+        font-size: 15px;
       }
     }
     .page2 {
@@ -602,70 +601,48 @@ main {
       display: flex;
       flex-direction: column;
       align-items: center;
-
-      h1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100vw;
-        margin-top: 60px;
-        margin-left: 0;
-      }
+      justify-content: flex-start;
       article {
         display: flex;
         flex-direction: column;
         justify-content: center;
-
         width: 90vw;
         height: 40vh;
         font-size: 3vmin;
       }
 
-      footer {
+      .jumpText {
         display: flex;
-        flex-direction: column;
-        .jumpText {
-          animation-duration: 2s;
-          animation-iteration-count: infinite;
-          animation-name: bounce-3;
-          animation-timing-function: ease;
-          transform-origin: bottom;
+        justify-content: center;
+        color: black;
+        height: 1vh;
+        width: 100vw;
+        font-size: 20px;
+        color: white;
+      }
+      .techs {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-self: flex-end;
+        place-items: center;
+        column-gap: 10px;
+        row-gap: 5px;
+        height: 100%;
+        width: 100vw;
 
-          display: flex;
-
-          justify-content: center;
-
-          color: black;
-          height: 5vh;
-          width: 100vw;
-          font-size: 5vmin;
+        img {
+          padding: 10px;
+          border-color: white;
+          border-style: solid;
+          border-radius: 90px;
+          width: 50px;
+          height: 50px;
         }
-        .techs {
-          padding: 20px;
-
-          background-color: #ff6410;
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
-          align-self: flex-end;
-          place-items: center;
-          column-gap: 10px;
-          row-gap: 5px;
-          height: 50vh;
-          width: 100vw;
-
-          img {
-            padding: 10px;
-            border-color: white;
-            border-style: solid;
-            border-radius: 90px;
-            width: 50px;
-            height: 50px;
-          }
-          img:hover {
-            transition: 2s;
-            width: 60px;
-            height: 60px;
-          }
+        img:hover {
+          transition: 2s;
+          width: 60px;
+          height: 60px;
         }
       }
     }
@@ -719,29 +696,42 @@ main {
       }
     }
     .page4 {
-      display: flex;
       flex-direction: column;
-
-      h1 {
+      width: 100vw;
+      margin-left: 0px;
+      height: 130vh;
+      .h1Div {
+        h1 {
+          font-size: 20px;
+        }
       }
-      .mainSection {
-        display: flex;
+      #mainSection {
+        width: 100vw;
+        margin-left: 0px;
         flex-direction: column;
-        .imgDiv {
-          width: 105%;
+        #focusSide,
+        #albertaSide {
+          height: 40vh;
+        }
+        #focusSide {
+        }
+        a {
           img {
-          }
-          #img1 {
-          }
-          #img2 {
-          }
-          #img3 {
+            transform: scale(2.5);
           }
         }
-        h2 {
-        }
-        article {
+        p {
+          width: 34vw;
+          border-radius: 4px;
           overflow-y: scroll;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          width: 80vw;
+          height: 30vh;
+          span {
+          }
         }
       }
     }
