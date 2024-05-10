@@ -26,6 +26,7 @@ main {
   .page6 {
     width: 100vw;
     height: 100vh;
+    max-width: 1940px;
   }
 
   .page1 {
@@ -128,6 +129,7 @@ main {
     justify-content: center;
     background-color: #ff6410;
     color: white;
+
     .jumpText {
       display: flex;
       justify-content: center;
@@ -179,24 +181,29 @@ main {
       border-radius: 15px;
       //background-color: white;
       width: 100vw;
-      height: 700px;
+      height: 80%;
+
       display: flex;
       justify-content: space-around;
       align-items: center;
       article {
         color: black;
-        border-radius: 15px;
         display: flex;
-        width: 450px;
-        height: 550px;
+        max-width: 700px;
+        max-height: 900px;
+        width: 30vw;
+        height: 70vh;
         justify-content: center;
         align-items: center;
         background-color: white;
+        padding: 5px;
       }
       #scamPics {
         img {
-          width: 400px;
-          height: 500px;
+          max-width: 700px;
+          max-height: 900px;
+          width: 30vw;
+          height: 70vh;
         }
         img:hover {
           cursor: pointer;
@@ -298,7 +305,6 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     h1 {
       width: 95vw;
       font-size: 40px;
@@ -311,7 +317,7 @@ main {
     .imageSection {
       //background-color: white;
       width: 100vw;
-      height: 700px;
+      height: 80%;
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -319,18 +325,21 @@ main {
         color: black;
 
         display: flex;
-        width: 450px;
         padding: 10px;
         justify-content: center;
         align-items: center;
         background-color: white;
+        max-width: 700px;
+        max-height: 900px;
+        width: 30vw;
+        height: 70vh;
       }
       #loopedPics {
         img {
-          border-radius: 6px;
-
-          width: 600px;
-          height: 400px;
+          max-height: 700px;
+          max-width: 1000px;
+          height: 45vh;
+          width: 40vw;
         }
         img:hover {
           cursor: pointer;
@@ -343,7 +352,6 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     h1 {
       color: #ff6410;
       width: 95vw;
@@ -355,7 +363,7 @@ main {
     .imageSection {
       padding-top: 30px;
       width: 100vw;
-      height: 700px;
+      height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
@@ -373,8 +381,10 @@ main {
       }
       #flightClubPics {
         img {
-          width: 800px;
-          height: 400px;
+          max-width: 1000px;
+          max-height: 600px;
+          width: 50vw;
+          height: 60vh;
         }
         img:hover {
           cursor: pointer;
