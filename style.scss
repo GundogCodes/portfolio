@@ -18,1027 +18,574 @@ main {
   color: white;
   top: 0;
   left: 0;
-
-  .page1,
-  .page3,
-  .page4,
-  .page5,
-  .page6 {
-    width: 100vw;
-    height: 100vh;
-    max-width: 1940px;
-  }
-
-  .page1 {
-    height: 85vh;
-    display: flex;
-    header {
-      width: 100vw;
-      color: white;
-
-      display: flex;
-      position: fixed;
-      justify-content: center;
-      align-items: center;
-      img {
-        margin: 2vmin;
-      }
-      .linkedIn {
-        width: 60px;
-        height: 60px;
-      }
-      .gitHub {
-        width: 60px;
-        height: 60px;
-      }
-      .instagram {
-        width: 70px;
-        height: 70px;
-        filter: invert(1);
-      }
-
-      .linkedIn:hover {
-        width: 85px;
-        height: 85px;
-        cursor: pointer;
-        transition: 0.5s;
-      }
-      .instagram:hover {
-        cursor: pointer;
-        width: 85px;
-        height: 85px;
-        transition: 0.5s;
-      }
-      .gitHub:hover {
-        cursor: pointer;
-        width: 85px;
-        height: 85px;
-        transition: 0.5s;
-      }
-    }
-    #name {
-      font-size: 5vmin;
-      width: 100vw;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #ff6410;
-    }
-    #name:hover {
-      transition: 15s;
-    }
-  }
-  #quotePage {
-    width: 90vw;
-    height: 30vh;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: column;
-    h2 {
-      background-color: green;
-      width: 100vw;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 10vh;
-      padding: 10px;
-      width: 30vw;
-
-      font-size: 20px;
-      background-color: black;
-    }
-    #heyThere {
-      align-self: flex-end;
-      margin-right: 60px;
-      background-color: black;
-      background-color: rgb(162, 170, 173);
-    }
-    #checkout {
-      width: 20vw;
-      align-self: flex-start;
-    }
-  }
-  .gfPage {
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100vh;
-    h1 {
-      width: 95vw;
-      color: #ff6410;
-      font-size: 40px;
-      margin-bottom: 0;
-      display: flex;
-      justify-content: flex-end;
-      border-bottom: solid 1vh #ff6410;
-      #gfLogo {
-        width: 55px;
-        height: 55px;
-      }
-    }
-    .gfMainBody {
-      height: 100%;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-
-      .gfMainBodyLeftSide {
-        width: 70vw;
-        height: 80vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        .gfDes {
-          padding: 10px;
-          width: 50vw;
-          background-color: white;
-          color: black;
-          span {
-            font-weight: bold;
-          }
-        }
-      }
-      .gfKeyFeatures {
-        background-color: white;
-        color: black;
-        height: 600px;
-        overflow-y: scroll;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        padding: 10px;
-        width: 20vw;
-        font-size: 15px;
-        h2 {
-          font-size: 20px;
-        }
-      }
-      #gfImageDiv {
-        width: 100%;
-        height: 100%;
-        max-width: 800px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow-x: visible;
-        .gfImages {
-          border-radius: 5px;
-
-          min-width: 230px;
-          min-height: 130px;
-          max-width: 20vw;
-        }
-        #gfHomePage {
-          min-width: 270px;
-          min-height: 170px;
-          margin: 5px;
-          max-width: 25vw;
-        }
-        #gfHomePage:hover {
-          animation: scaleSlowly 1s forwards;
-        }
-      }
-    }
-  }
-  .page2 {
-    width: 100vw;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #ff6410;
-    color: white;
-
-    .jumpText {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100vw;
-      height: 5vh;
-    }
-    .techs {
-      border-top: solid 1px white;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      align-self: flex-end;
-      place-items: center;
-      column-gap: 20px;
-      row-gap: 20px;
-      height: 100%;
-      width: 100vw;
-      background-color: #f89880;
-
-      img {
-        padding: 10px;
-        border-color: white;
-        border-style: solid;
-        border-radius: 90px;
-        border-width: 1.5px;
-        width: 50px;
-        height: 50px;
-      }
-      img:hover {
-        width: 60px;
-        height: 60px;
-      }
-    }
-  }
-  .page3 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    h1 {
-      width: 95vw;
-      color: #ff6410;
-      font-size: 40px;
-      margin-bottom: 0;
-      border-bottom: solid 1vh #ff6410;
-    }
-    .imageSection {
-      border-radius: 15px;
-      //background-color: white;
-      width: 100vw;
-      height: 80%;
-
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      article {
-        color: black;
-        display: flex;
-        max-width: 700px;
-        max-height: 900px;
-        width: 30vw;
-        height: 70vh;
-        justify-content: center;
-        align-items: center;
-        background-color: white;
-        padding: 5px;
-      }
-      #scamPics {
-        img {
-          max-width: 700px;
-          max-height: 900px;
-          width: 30vw;
-          height: 70vh;
-        }
-        img:hover {
-          cursor: pointer;
-          transition: 0.5s;
-          width: 420px;
-          height: 520px;
-        }
-      }
-    }
-  }
-  .page4 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .h1Div {
-      width: 100vw;
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      h1 {
-        color: #ff6410;
-        font-size: 40px;
-        width: 45vw;
-        border-bottom: solid 1vh#ff6410;
-        display: flex;
-        justify-content: flex-start;
-      }
-    }
-    #mainSection {
-      width: 95vw;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      #focusSide,
-      #albertaSide {
-        width: 40vw;
-        height: 70vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      a {
-        img {
-          transform: scale(1.3);
-          justify-self: flex-start;
-          width: 100%;
-          height: 60%;
-        }
-      }
-      p {
-        background-color: white;
-        width: 100%;
-        height: 100%;
-        padding: 15px;
-        color: black;
-        font-weight: lighter;
-        max-height: 250px;
-        span {
-          font-weight: bold;
-        }
-      }
-    }
-  }
-  .page4point5 {
-    height: 75vh;
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    h1 {
-      color: #ff6410;
-      width: 95vw;
-      border-bottom: solid 1vh#ff6410;
-    }
-
-    .imageSection {
-      height: 100%;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      img {
-        width: 40vw;
-      }
-      #wojPics {
-      }
-      article {
-        width: 40vw;
-        background-color: white;
-        color: black;
-        padding: 5px;
-      }
-    }
-  }
-  .page5 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    h1 {
-      width: 95vw;
-      font-size: 40px;
-      display: flex;
-      justify-content: flex-end;
-      margin-bottom: 0;
-      color: #ff6410;
-      border-bottom: solid 1vh#ff6410;
-    }
-    .imageSection {
-      //background-color: white;
-      width: 100vw;
-      height: 80%;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      article {
-        color: black;
-
-        display: flex;
-        padding: 10px;
-        justify-content: center;
-        align-items: center;
-        background-color: white;
-        max-width: 700px;
-        max-height: 900px;
-        width: 30vw;
-        height: 70vh;
-      }
-      #loopedPics {
-        img {
-          max-height: 700px;
-          max-width: 1000px;
-          height: 45vh;
-          width: 40vw;
-        }
-        img:hover {
-          cursor: pointer;
-        }
-      }
-    }
-  }
-  .page6 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    h1 {
-      color: #ff6410;
-      width: 95vw;
-      font-size: 40px;
-      margin-bottom: 0;
-      border-bottom: solid 1vh #ff6410;
-    }
-
-    .imageSection {
-      padding-top: 30px;
-      width: 100vw;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      article {
-        color: black;
-
-        display: flex;
-
-        width: 80vw;
-        padding: 10px;
-        justify-content: center;
-        align-items: center;
-        background-color: white;
-      }
-      #flightClubPics {
-        img {
-          max-width: 1000px;
-          max-height: 600px;
-          width: 50vw;
-          height: 60vh;
-        }
-        img:hover {
-          cursor: pointer;
-        }
-      }
-    }
-  }
-  #connectForm {
-    height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100vw;
-
-    h1 {
-      color: #ff6410;
-      text-decoration: underline;
-    }
-    .connectHeader {
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-
-      .email {
-        width: 400px;
-        margin-left: 10px;
-        border-color: #ff6410;
-        border-width: 3px;
-        border-radius: 5px;
-        border-style: solid;
-      }
-      .message {
-        border-style: solid;
-        border-width: 3px;
-        border-color: #ff6410;
-        margin: 10px;
-        width: 400px;
-        height: 250px;
-        border-radius: 6px;
-      }
-      button {
-        cursor: pointer;
-        border-color: #ff6410;
-        margin: 10px;
-        width: 250px;
-        height: 20px;
-        border-radius: 7px;
-        border-style: solid;
-        background-color: azure;
-      }
-      button:hover {
-        cursor: pointer;
-        color: white;
-        background-color: aqua;
-      }
-    }
-  }
 }
 
-.hidden {
-  opacity: 0;
-  transition: all 2s;
+.page1,
+.page3,
+.page4,
+.page5,
+.page6 {
+  width: 100vw;
+  height: 100vh;
+  max-width: 1940px;
 }
-.hidden2 {
-  opacity: 1;
-  transition: all 3s;
+
+.page1 {
+  height: 85vh;
+  display: flex;
 }
-.hidden3 {
-  transition: all 8s;
+
+.page1 header {
+  width: 100vw;
+  color: white;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+}
+
+.page1 header img {
+  margin: 2vmin;
+}
+
+.linkedIn {
+  width: 60px;
+  height: 60px;
+}
+
+.gitHub {
+  width: 60px;
+  height: 60px;
+}
+
+.instagram {
+  width: 70px;
+  height: 70px;
+  filter: invert(1);
+}
+
+.linkedIn:hover {
+  width: 85px;
+  height: 85px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.instagram:hover {
+  cursor: pointer;
+  width: 85px;
+  height: 85px;
+  transition: 0.5s;
+}
+
+.gitHub:hover {
+  cursor: pointer;
+  width: 85px;
+  height: 85px;
+  transition: 0.5s;
+}
+
+#name {
+  font-size: 5vmin;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff6410;
+}
+
+#quotePage {
+  width: 90vw;
+  height: 30vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+
+#quotePage h2 {
+  background-color: green;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  padding: 10px;
+  width: 30vw;
+  font-size: 20px;
   background-color: black;
+}
+
+#heyThere {
+  align-self: flex-end;
+  margin-right: 60px;
+  background-color: rgb(162, 170, 173);
+}
+
+/* Odoro Section Styles */
+.odoroPage {
+  margin: 4rem auto;
+  padding: 2rem;
+  max-width: 1200px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.odoroPage h1 {
+  width: 95vw;
+  color: #ff6410;
+  font-size: 40px;
+  margin-bottom: 1.5rem;
+  border-bottom: solid 1vh #ff6410;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.odoroMainBody {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.odoroMainBodyLeftSide {
+  width: 70vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+justify-content: space-evenly;
+  align-items: center;
+
+}
+
+#odoroImageDiv {
+  width: 100%;
+  height: 60%;
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.odoroImages {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  min-width: 200px;
+  min-height: 350px;
+  max-width: 220px;
+  max-height: 400px;
+  object-fit: cover;
+  margin: 10px;
+}
+
+.odoroImages:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.odoroDes {
+  padding: 10px;
+  width: 30vw;
+  background-color: white;
+  color: black;
+  margin-top: 1rem;
+}
+
+.odoroDes span {
+  font-weight: bold;
+}
+
+.odoroKeyFeatures {
+  background-color: white;
+  color: black;
+  height: 500px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+  width: 40vw;
+  font-size: 15px;
+}
+
+.odoroKeyFeatures h2 {
+  font-size: 20px;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+/* Existing styles continue... */
+.gfPage {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+}
+
+.gfPage h1 {
+  width: 95vw;
+  color: #ff6410;
+  font-size: 40px;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: solid 1vh #ff6410;
+}
+
+#gfLogo {
+  width: 55px;
+  height: 55px;
+}
+
+.gfMainBody {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.gfMainBodyLeftSide {
+  width: 70vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gfDes {
+  padding: 10px;
+  width: 50vw;
+  background-color: white;
+  color: black;
+}
+
+.gfDes span {
+  font-weight: bold;
+}
+
+.gfKeyFeatures {
+  background-color: white;
+  color: black;
+  height: 600px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+  width: 20vw;
+  font-size: 15px;
+}
+
+.gfKeyFeatures h2 {
+  font-size: 20px;
+}
+
+#gfImageDiv {
+  width: 100%;
+  height: 100%;
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: visible;
+}
+
+.gfImages {
+  border-radius: 5px;
+  min-width: 230px;
+  min-height: 130px;
+  max-width: 20vw;
+}
+
+#gfHomePage {
+  min-width: 270px;
+  min-height: 170px;
+  margin: 5px;
+  max-width: 25vw;
+}
+
+#gfHomePage:hover {
+  animation: scaleSlowly 1s forwards;
+}
+
+.page2 {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff6410;
   color: white;
 }
 
-.show {
-  opacity: 1;
-}
-@keyframes bounce-4 {
-  0% {
-    transform: translateY(0);
-  }
-  10% {
-    transform: translateY(0);
-  }
-  30% {
-    transform: translateY(-30px) translateX(30px);
-  }
-  50% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-///================================================= MOBILE =================================================//
-///================================================= MOBILE =================================================//
-///================================================= MOBILE =================================================//
-
-@media (max-width: 900px) {
-  canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
-
-  main {
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 99;
-    color: white;
-
-    .page1,
-    .page2,
-    .page3,
-    .page4,
-    .page6 {
-      width: 105vw;
-      height: 100vh;
-    }
-
-    .page1 {
-      display: flex;
-      width: 100vw;
-      header {
-        width: 100vw;
-        color: white;
-
-        display: flex;
-        position: fixed;
-        justify-content: center;
-        align-items: center;
-        img {
-          margin: 2vmin;
-        }
-        .linkedIn {
-          width: 60px;
-          height: 60px;
-        }
-        .gitHub {
-          width: 60px;
-          height: 60px;
-        }
-        .instagram {
-          width: 70px;
-          filter: invert(1);
-          height: 70px;
-        }
-
-        .linkedIn:hover {
-          width: 85px;
-          height: 85px;
-          cursor: pointer;
-        }
-        .instagram:hover {
-          cursor: pointer;
-          width: 85px;
-          height: 85px;
-        }
-        .gitHub:hover {
-          cursor: pointer;
-          width: 85px;
-          height: 85px;
-        }
-      }
-      #name {
-        font-size: 10vmin;
-        width: 100vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        background-image: linear-gradient(
-          90deg,
-          rgb(201, 21, 21),
-          rgb(156, 0, 0)
-        );
-        background-repeat: repeat;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -moz-background-clip: text;
-        -moz-text-fill-color: transparent;
-      }
-      .name:hover {
-        background-image: linear-gradient(45deg, blue, red);
-        transition: 10s;
-      }
-    }
-    #quotePage {
-      height: 30vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      #heyThere {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        justify-content: center;
-        height: 15vh;
-        width: 100%;
-        font-size: 12px;
-      }
-    }
-    .page2 {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      article {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 90vw;
-        height: 40vh;
-        font-size: 3vmin;
-      }
-
-      .jumpText {
-        display: flex;
-        justify-content: center;
-        color: black;
-        height: 1vh;
-        width: 100vw;
-        font-size: 20px;
-        color: white;
-      }
-      .techs {
-        padding: 20px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        align-self: flex-end;
-        place-items: center;
-        column-gap: 10px;
-        row-gap: 5px;
-        height: 100%;
-        width: 100vw;
-
-        img {
-          padding: 10px;
-          border-color: white;
-          border-style: solid;
-          border-radius: 90px;
-          width: 50px;
-          height: 50px;
-        }
-        img:hover {
-          transition: 2s;
-          width: 60px;
-          height: 60px;
-        }
-      }
-    }
-    .page3 {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      h1 {
-        width: 100vw;
-        font-size: 40px;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        color: #ff6410;
-      }
-      .imageSection {
-        width: 100vw;
-        height: 80vh;
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: space-evenly;
-        align-items: center;
-        article {
-          color: black;
-          border-radius: 7px;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          width: 90vw;
-          height: 40vh;
-          overflow-y: scroll;
-        }
-        #scamPics {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          width: 100vw;
-          height: 30vh;
-          img {
-            width: 60vw;
-            height: 30vh;
-          }
-          img:hover {
-            transition: 0.5s;
-            width: 61vw;
-            height: 31vh;
-          }
-        }
-      }
-    }
-    .page4 {
-      flex-direction: column;
-      width: 100vw;
-      margin-left: 0px;
-      height: 130vh;
-      .h1Div {
-        h1 {
-          font-size: 20px;
-        }
-      }
-      #mainSection {
-        width: 100vw;
-        margin-left: 0px;
-        flex-direction: column;
-        margin: 10px;
-        #focusSide,
-        #albertaSide {
-          height: 40vh;
-        }
-        #focusSide {
-        }
-        a {
-          img {
-            width: 200px;
-            height: 100px;
-          }
-        }
-        p {
-          width: 34vw;
-          border-radius: 4px;
-          overflow-y: scroll;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: flex-start;
-          width: 80vw;
-          height: 30vh;
-          span {
-          }
-        }
-      }
-    }
-    .page4point5 {
-      height: 100vh;
-      h1 {
-      }
-      .imageSection {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        img {
-          width: 100%;
-        }
-        #wojPics {
-        }
-        article {
-          height: 30vh;
-          overflow-y: scroll;
-          width: 90%;
-        }
-      }
-    }
-    .page5 {
-      height: 90vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      h1 {
-        width: 100vw;
-
-        font-size: 40px;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-      }
-      .imageSection {
-        border-radius: 15px;
-        //background-color: white;
-        width: 100vw;
-        height: 80vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-
-        article {
-          color: black;
-          border-radius: 7px;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          width: 90vw;
-          height: 40vh;
-          overflow-y: scroll;
-          margin-bottom: 10px;
-        }
-        #loopedPics {
-          margin-bottom: 10px;
-          img {
-            margin-top: 10px;
-            border-radius: 6px;
-            width: 90vw;
-            height: 30vh;
-          }
-          img:hover {
-            transition: 0.5s;
-            width: 91vw;
-            height: 31vh;
-          }
-        }
-      }
-    }
-    .page6 {
-      height: 90vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      h1 {
-        width: 100vw;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 60px;
-      }
-
-      .imageSection {
-        border-radius: 15px;
-        //background-color: white;
-        width: 100vw;
-        height: 80vh;
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-        article {
-          color: black;
-          border-radius: 7px;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          width: 90vw;
-          height: 40vh;
-          overflow-y: scroll;
-          margin-bottom: 10px;
-        }
-        #flightClubPics {
-          img {
-            border-radius: 7px;
-            margin-top: 10px;
-            width: 90vw;
-            height: 25vh;
-          }
-          img:hover {
-            transition: 0.5s;
-            width: 90vw;
-            height: 21vh;
-          }
-        }
-      }
-    }
-    #connectForm {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding-bottom: 60px;
-      .connectHeader {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 0;
-        margin-top: 40px;
-
-        width: 100vw;
-        height: 100px;
-      }
-      form {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 90vw;
-        height: 60vh;
-        background-color: #ff6410;
-
-        border-style: solid;
-
-        .email {
-          border-style: solid;
-          border-width: 3px;
-          border-color: purple;
-          margin: 10px;
-          width: 250px;
-          height: 20px;
-          border-radius: 7px;
-        }
-        .message {
-          border-style: solid;
-          border-width: 3px;
-
-          margin: 10px;
-          width: 85vw;
-          height: 250px;
-          border-radius: 7px;
-        }
-        button {
-          margin: 10px;
-          width: 250px;
-          height: 20px;
-          border-radius: 7px;
-          background-color: azure;
-        }
-        button:hover {
-          color: white;
-          background-color: aqua;
-        }
-      }
-    }
-  }
+.jumpText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 5vh;
 }
 
-@keyframes bounce-3 {
-  0% {
-    transform: translateY(0);
-  }
-  10% {
-    transform: translateY(0);
-  }
-  30% {
-    transform: translateY(-40px);
-  }
-  50% {
-    transform: translateY(0);
-  }
-  57% {
-    transform: translateY(-7px);
-  }
-  64% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-@keyframes scaleSlowly {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.1);
-  }
+.techs {
+  border-top: solid 1px white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-self: flex-end;
+  place-items: center;
+  column-gap: 20px;
+  row-gap: 20px;
+  height: 100%;
+  width: 100vw;
+  background-color: #f89880;
 }
 
-///--------------------------------------------------- DARK-MODE ---------------------------------------------------//
-///--------------------------------------------------- DARK-MODE ---------------------------------------------------//
+.techs img {
+  padding: 10px;
+  border-color: white;
+  border-style: solid;
+  border-radius: 90px;
+  border-width: 1.5px;
+  width: 50px;
+  height: 50px;
+}
+
+.techs img:hover {
+  width: 60px;
+  height: 60px;
+}
+
+.page3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page3 h1 {
+  width: 95vw;
+  color: #ff6410;
+  font-size: 40px;
+  margin-bottom: 0;
+  border-bottom: solid 1vh #ff6410;
+}
+
+.imageSection {
+  border-radius: 15px;
+  width: 100vw;
+  height: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.page3 .imageSection article {
+  color: black;
+  display: flex;
+  max-width: 700px;
+  max-height: 900px;
+  width: 30vw;
+  height: 70vh;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 5px;
+}
+
+#scamPics img {
+  max-width: 700px;
+  max-height: 900px;
+  width: 30vw;
+  height: 70vh;
+}
+
+#scamPics img:hover {
+  cursor: pointer;
+  transition: 0.5s;
+  width: 420px;
+  height: 520px;
+}
+
+.page4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.h1Div {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.h1Div h1 {
+  color: #ff6410;
+  font-size: 40px;
+  width: 45vw;
+  border-bottom: solid 1vh #ff6410;
+  display: flex;
+  justify-content: flex-start;
+}
+
+#mainSection {
+  width: 95vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#focusSide,
+#albertaSide {
+  width: 40vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#mainSection a img {
+  transform: scale(1.3);
+  justify-self: flex-start;
+  width: 100%;
+  height: 60%;
+}
+
+#mainSection p {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  color: black;
+  font-weight: lighter;
+  max-height: 250px;
+}
+
+#mainSection p span {
+  font-weight: bold;
+}
+
+.page4point5 {
+  height: 75vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page4point5 h1 {
+  color: #ff6410;
+  width: 95vw;
+  border-bottom: solid 1vh #ff6410;
+}
+
+.page4point5 .imageSection {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.page4point5 .imageSection img {
+  width: 40vw;
+}
+
+.page4point5 .imageSection article {
+  width: 40vw;
+  background-color: white;
+  color: black;
+  padding: 5px;
+}
+
+.page5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page5 h1 {
+  width: 95vw;
+  font-size: 40px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0;
+  color: #ff6410;
+  border-bottom: solid 1vh #ff6410;
+}
+
+.page5 .imageSection {
+  width: 100vw;
+  height: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.page5 .imageSection article {
+  color: black;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  max-width: 700px;
+  max-height: 900px;
+  width: 30vw;
+  height: 70vh;
+}
+
+#loopedPics img {
+  max-height: 700px;
+  max-width: 1000px;
+  height: 45vh;
+  width: 40vw;
+}
+
+#loopedPics img:hover {
+  cursor: pointer;
+}
+
+.page6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page6 h1 {
+  color: #ff6410;
+  width: 95vw;
+  font-size: 40px;
+  margin-bottom: 0;
+  border-bottom: solid 1vh #ff6410;
+}
+
+.page6 .imageSection {
+  padding-top: 30px;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.page6 .imageSection article {
+  color: black }
