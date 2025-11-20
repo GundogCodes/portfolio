@@ -267,8 +267,7 @@ article h1 {
 #odoroImageDiv,
 #gfImageDiv {
   @extend .project-images;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 #gfLogo {
