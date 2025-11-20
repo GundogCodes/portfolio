@@ -522,14 +522,40 @@ button:hover {
     display: flex;
     flex-wrap: nowrap;
     /* Force horizontal layout */
+    flex-direction: row;
+    /* Force row direction */
+  }
+
+  /* Flatten the anchor tag structure */
+  #novakeyImageDiv a,
+  #odoroImageDiv a {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  /* Handle the nested bottom div */
+  #bottomNovaImage {
+    display: contents;
+    /* Flatten the div, treat children as siblings */
   }
 
   /* Ensure images maintain size and don't shrink */
   .novakeyImages,
-  .odoroImages,
   .gfImages {
     height: 180px;
     min-width: 280px;
+    flex-shrink: 0;
+    /* Prevent shrinking */
+  }
+
+  /* Odoro images are phone screenshots - need taller height */
+  .odoroImages {
+    height: 300px;
+    /* Taller for phone screenshots */
+    width: auto;
+    /* Let width adjust based on aspect ratio */
     flex-shrink: 0;
     /* Prevent shrinking */
   }
