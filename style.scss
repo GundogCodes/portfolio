@@ -268,6 +268,116 @@ article h1 {
 #gfImageDiv {
   @extend .project-images;
   justify-content: flex-start;
+  flex-wrap: wrap;
+  /* Wrap on desktop for better layout */
+}
+
+/* Desktop fixes for image layout and text overflow */
+@media (min-width: 769px) {
+
+  /* NovaKey images - horizontal scroll enabled */
+  #novakeyImageDiv {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    /* Enable horizontal scrolling */
+    justify-content: flex-start;
+    gap: 2rem;
+    padding-bottom: 1rem;
+    /* Space for scrollbar */
+    -webkit-overflow-scrolling: touch;
+
+    /* Smooth scrolling on Safari */
+  }
+
+  /* Odoro main body - two column layout */
+  .odoroMainBody {
+    display: flex;
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+
+  /* Odoro left side - images and description stacked vertically */
+  .odoroMainBodyLeftSide {
+    flex: 1 1 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /* Odoro images - horizontal with spacing */
+  #odoroImageDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    /* Spacing between images */
+    flex-wrap: nowrap;
+  }
+
+  /* Odoro description */
+  .odoroDes {
+    font-size: 1.1rem;
+  }
+
+  /* Odoro key features - right column */
+  .odoroKeyFeatures {
+    flex: 1 1 300px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    border-radius: 16px;
+  }
+
+  /* GoodForum images - horizontal scroll enabled */
+  #gfImageDiv {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    /* Enable horizontal scrolling */
+    justify-content: flex-start;
+    gap: 2rem;
+    padding-bottom: 1rem;
+    /* Space for scrollbar */
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scrolling on Safari */
+  }
+
+  /* Constrain description text to prevent overflow */
+  .novakeyDes,
+  .odoroDes,
+  .gfDes {
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    /* Ensure text wraps within container */
+  }
+
+  /* Better image sizing on desktop */
+  .novakeyImages {
+    height: 300px;
+    width: auto;
+    flex: 0 1 auto;
+    /* Allow natural sizing */
+  }
+
+  .odoroImages {
+    height: 400px;
+    /* Taller for phone screenshots */
+    width: auto;
+    flex: 0 1 auto;
+  }
+
+  .gfImages {
+    height: 350px;
+    width: auto;
+    flex: 0 1 auto;
+  }
+
+  /* Ensure left side doesn't overflow */
+  .novakeyMainBodyLeftSide,
+  .odoroMainBodyLeftSide,
+  .gfMainBodyLeftSide {
+    max-width: 100%;
+    overflow: hidden;
+  }
 }
 
 #gfLogo {
