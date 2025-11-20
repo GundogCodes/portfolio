@@ -519,6 +519,37 @@ button:hover {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     /* Smooth scrolling on iOS */
+    display: flex;
+    flex-wrap: nowrap;
+    /* Force horizontal layout */
+  }
+
+  /* Ensure images maintain size and don't shrink */
+  .novakeyImages,
+  .odoroImages,
+  .gfImages {
+    height: 180px;
+    min-width: 280px;
+    flex-shrink: 0;
+    /* Prevent shrinking */
+  }
+
+  /* Fix width overflow on project pages */
+  .novakeyMainBodyLeftSide,
+  .odoroMainBodyLeftSide,
+  .gfMainBodyLeftSide {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    /* Prevent text overflow */
+  }
+
+  .novakeyDes,
+  .odoroDes,
+  .gfDes {
+    width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   #quotePage h2 {
