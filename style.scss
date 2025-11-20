@@ -511,6 +511,16 @@ button:hover {
     /* Ensure they don't shrink too much */
   }
 
+  /* Ensure image divs can scroll on mobile */
+  #novakeyImageDiv,
+  #odoroImageDiv,
+  #gfImageDiv {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scrolling on iOS */
+  }
+
   #quotePage h2 {
     font-size: 1.2rem;
   }
