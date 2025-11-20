@@ -17,6 +17,7 @@
 
 body {
   overflow-x: hidden;
+  overflow-y: auto;
   background-color: transparent;
 }
 
@@ -33,7 +34,6 @@ main {
   color: var(--text-color);
   position: relative;
   z-index: 1;
-  overflow-x: hidden;
 }
 
 a {
