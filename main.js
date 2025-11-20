@@ -652,30 +652,22 @@ animate()
 function updateTheme() {
   const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-  if (isDarkMode) {
-    scene.background = new THREE.Color("#111");
-    // Update wireframe objects to white
-    if (typeof tetraMat !== 'undefined') tetraMat.color.set('white');
-    if (typeof icoMat !== 'undefined') icoMat.color.set('white');
+  const targetColor = isDarkMode ? new THREE.Color('white') : new THREE.Color('#333');
+  const bgColor = isDarkMode ? new THREE.Color('#000000') : new THREE.Color('white');
 
-    // Update asteroids (traversing scene to find them)
-    scene.traverse((object) => {
-      if (object.isMesh && object.geometry.type === 'SphereGeometry' && object.geometry.parameters.radius === 0.1) {
-        object.material.color.set('white');
-      }
-    });
-  } else {
-    scene.background = new THREE.Color("white");
-    // Update wireframe objects to dark
-    if (typeof tetraMat !== 'undefined') tetraMat.color.set('#333');
-    if (typeof icoMat !== 'undefined') icoMat.color.set('#333');
+  scene.background = bgColor;
 
-    scene.traverse((object) => {
-      if (object.isMesh && object.geometry.type === 'SphereGeometry' && object.geometry.parameters.radius === 0.1) {
-        object.material.color.set('#333');
+  scene.traverse((object) => {
+    if (object.isMesh) {
+      // Skip objects with textures (like the moon or selfie box) unless we want to tint them
+      if (object.material.map) return;
+
+      // Update color
+      if (object.material.color) {
+        object.material.color.set(targetColor);
       }
-    });
-  }
+    }
+  });
 }
 
 // Initial check
