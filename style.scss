@@ -9,6 +9,39 @@
   --transition-speed: 0.3s;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #111;
+    --text-color: #f0f0f0;
+    --card-bg: rgba(0, 0, 0, 0.3);
+    --card-border: 1px solid rgba(255, 255, 255, 0.1);
+    --glass-blur: blur(4px);
+  }
+
+  .page1 header img {
+    filter: invert(1);
+  }
+
+  #quotePage h2 {
+    background: linear-gradient(90deg, #fff, #aaa);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  input,
+  textarea {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-color);
+  }
+
+  input:focus,
+  textarea:focus {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -269,6 +302,18 @@ article h1 {
   @extend .project-images;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+#gfLogo {
+  height: 60px;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 15px;
+  transition: var(--transition-speed);
+}
+
+#gfLogo:hover {
+  transform: rotate(20deg);
 }
 
 /* --- Fixes for Scamazon, World of Joy, Looped --- */

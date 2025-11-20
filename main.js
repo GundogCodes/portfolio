@@ -647,3 +647,39 @@ hiddenElements.forEach((el) => observer.observe(el))
 
 // This is like a Game loop 
 animate()
+
+// --- Theme Handling ---
+function updateTheme() {
+  const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (isDarkMode) {
+    scene.background = new THREE.Color("#111");
+    // Update wireframe objects to white
+    if (typeof tetraMat !== 'undefined') tetraMat.color.set('white');
+    if (typeof icoMat !== 'undefined') icoMat.color.set('white');
+
+    // Update asteroids (traversing scene to find them)
+    scene.traverse((object) => {
+      if (object.isMesh && object.geometry.type === 'SphereGeometry' && object.geometry.parameters.radius === 0.1) {
+        object.material.color.set('white');
+      }
+    });
+  } else {
+    scene.background = new THREE.Color("white");
+    // Update wireframe objects to dark
+    if (typeof tetraMat !== 'undefined') tetraMat.color.set('#333');
+    if (typeof icoMat !== 'undefined') icoMat.color.set('#333');
+
+    scene.traverse((object) => {
+      if (object.isMesh && object.geometry.type === 'SphereGeometry' && object.geometry.parameters.radius === 0.1) {
+        object.material.color.set('#333');
+      }
+    });
+  }
+}
+
+// Initial check
+updateTheme();
+
+// Listen for changes
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTheme);
