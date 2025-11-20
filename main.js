@@ -647,31 +647,3 @@ hiddenElements.forEach((el) => observer.observe(el))
 
 // This is like a Game loop 
 animate()
-
-// --- Theme Handling ---
-function updateTheme() {
-  const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-  const targetColor = isDarkMode ? new THREE.Color('white') : new THREE.Color('#333');
-  const bgColor = isDarkMode ? new THREE.Color('#000000') : new THREE.Color('white');
-
-  scene.background = bgColor;
-
-  scene.traverse((object) => {
-    if (object.isMesh) {
-      // Skip objects with textures (like the moon or selfie box) unless we want to tint them
-      if (object.material.map) return;
-
-      // Update color
-      if (object.material.color) {
-        object.material.color.set(targetColor);
-      }
-    }
-  });
-}
-
-// Initial check
-updateTheme();
-
-// Listen for changes
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTheme);
