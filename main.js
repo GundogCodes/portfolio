@@ -202,7 +202,6 @@ const boxMat = new THREE.MeshBasicMaterial({ color: 'green', wireframe: true })
 const box = new THREE.Mesh(boxGeo, boxMat)
 
 const selfie = new THREE.TextureLoader().load('images/selfie.jpg')
-console.log(selfie)
 const selfieBoxGeo = new THREE.BoxGeometry(3, 3, 3)
 const selfieBoxMat = new THREE.MeshBasicMaterial({ map: selfie })
 const selfieBox = new THREE.Mesh(selfieBoxGeo, selfieBoxMat)
@@ -221,34 +220,31 @@ const ico = new THREE.Mesh(icoGeo, icoMat)
 //scene.background =  new THREE.Color("#fceee1")
 scene.background = new THREE.Color("white")
 
+const atomRingMaterial = new THREE.MeshBasicMaterial({ color: 'blue', wireframe: true })
+const atomNucleonMaterial = new THREE.MeshBasicMaterial({ color: 'orange', wireframe: true })
+
 
 function createAtoms() {
   const ring1Geo = new THREE.RingGeometry(0.55, 0.49, 150)
-  const ring1Mat = new THREE.MeshBasicMaterial({ color: 'blue', wireframe: true })
-  const ring1 = new THREE.Mesh(ring1Geo, ring1Mat)
+  const ring1 = new THREE.Mesh(ring1Geo, atomRingMaterial)
   const ring2Geo = new THREE.RingGeometry(0.55, 0.49, 150)
-  const ring2Mat = new THREE.MeshBasicMaterial({ color: 'blue', wireframe: true })
-  const ring2 = new THREE.Mesh(ring2Geo, ring2Mat)
+  const ring2 = new THREE.Mesh(ring2Geo, atomRingMaterial)
   const ring3Geo = new THREE.RingGeometry(0.55, 0.49, 150)
-  const ring3Mat = new THREE.MeshBasicMaterial({ color: 'blue', wireframe: true })
-  const ring3 = new THREE.Mesh(ring3Geo, ring3Mat)
+  const ring3 = new THREE.Mesh(ring3Geo, atomRingMaterial)
   scene.add(ring1)
   scene.add(ring2)
   scene.add(ring3)
 
   const nucleon1Geo = new THREE.SphereGeometry(0.05, 10, 10)
-  const nucleon1Mat = new THREE.MeshBasicMaterial({ color: 'orange', wireframe: true })
-  const nucleon1 = new THREE.Mesh(nucleon1Geo, nucleon1Mat)
+  const nucleon1 = new THREE.Mesh(nucleon1Geo, atomNucleonMaterial)
   scene.add(nucleon1)
 
   const nucleonGeo = new THREE.SphereGeometry(0.05, 10, 10)
-  const nucleonMat = new THREE.MeshBasicMaterial({ color: 'orange', wireframe: true })
-  const nucleon = new THREE.Mesh(nucleonGeo, nucleonMat)
+  const nucleon = new THREE.Mesh(nucleonGeo, atomNucleonMaterial)
   scene.add(nucleon)
 
   const nucleon2Geo = new THREE.SphereGeometry(0.05, 10, 10)
-  const nucleon2Mat = new THREE.MeshBasicMaterial({ color: 'orange', wireframe: true })
-  const nucleon2 = new THREE.Mesh(nucleon2Geo, nucleon2Mat)
+  const nucleon2 = new THREE.Mesh(nucleon2Geo, atomNucleonMaterial)
   scene.add(nucleon2)
 
   const atomRange = 100
@@ -459,23 +455,288 @@ const gunish = new THREE.Mesh(
 
 
 //Lets add multiple objects
+const asteroidGeometry = new THREE.SphereGeometry(0.1, 24, 24)
+const asteroidMaterial = new THREE.MeshStandardMaterial({ color: '#333', wireframe: true })
 
 function addAstroids() {
-  //create star object:
-  const astroGeometry = new THREE.SphereGeometry(0.1, 24, 24)
-  const astroMaterial = new THREE.MeshStandardMaterial({ color: '#333', wireframe: true })
-  //combine
-  const astro = new THREE.Mesh(astroGeometry, astroMaterial)
+  const astro = new THREE.Mesh(asteroidGeometry, asteroidMaterial)
 
-  //get random x,y,z positions
-  //const [x,y,z] = Array(2).fill().map(()=> THREE.MathUtils.randFloatSpread(100)) // creates an array which fills each element with random floats between -100 and 100
   const astroRange = 60
   let x = randomNumbers(-astroRange, astroRange)
   let y = randomNumbers(-astroRange, astroRange)
   let z = randomNumbers(-astroRange, astroRange)
   astro.position.set(x, y, z)
-  //add to scene
   scene.add(astro)
+  return astro
+}
+
+const themedSceneMaterials = {
+  primary: [
+    material,
+    sphereTexture,
+    sphere2Texture,
+    sphere3Texture,
+    sphere4Texture,
+    tetraMat,
+    icoMat,
+    plane2Material,
+    asteroidMaterial
+  ],
+  accent: [
+    knotMaterial,
+    planeMaterial,
+    atomRingMaterial,
+    mainAtomRing1Mat,
+    mainAtomRing2Mat,
+    mainAtomRing3Mat
+  ],
+  secondary: [
+    capsuleMat,
+    boxMat,
+    atomNucleonMaterial,
+    mainAtomNucleon1Mat,
+    mainAtomNucleonMat,
+    mainAtomNucleon2Mat
+  ]
+}
+
+const sceneThemeTargets = {
+  background: new THREE.Color('#ffffff'),
+  primary: new THREE.Color('#111111'),
+  accent: new THREE.Color('#ff6410'),
+  secondary: new THREE.Color('#5a5a5a')
+}
+
+const buildSectionTheme = ({
+  mode = 'light',
+  primary,
+  text,
+  sceneBackground,
+  objectPrimary,
+  objectAccent,
+  objectSecondary = objectPrimary,
+  surfaceRgb,
+  buttonHover,
+  quoteEnd
+}) => {
+  const isDark = mode === 'dark'
+  const baseSurface = surfaceRgb ?? (isDark ? '24, 24, 28' : '255, 255, 255')
+
+  return {
+    css: {
+      '--primary-color': primary,
+      '--bg-color': sceneBackground,
+      '--text-color': text,
+      '--card-bg': isDark ? `rgba(${baseSurface}, 0.74)` : 'rgba(255, 255, 255, 0.6)',
+      '--copy-bg': isDark ? `rgba(${baseSurface}, 0.82)` : 'rgba(255, 255, 255, 0.4)',
+      '--panel-bg': isDark ? `rgba(${baseSurface}, 0.88)` : 'rgba(255, 255, 255, 0.45)',
+      '--page4-surface-bg': isDark ? `rgba(${baseSurface}, 0.78)` : 'rgba(0, 0, 0, 0.08)',
+      '--card-border-color': isDark ? 'rgba(255, 255, 255, 0.12)' : 'rgba(0, 0, 0, 0.1)',
+      '--panel-border-color': isDark ? 'rgba(255, 255, 255, 0.14)' : 'rgba(255, 255, 255, 0.35)',
+      '--field-border-color': isDark ? 'rgba(255, 255, 255, 0.18)' : 'rgba(0, 0, 0, 0.2)',
+      '--card-shadow': isDark ? '0 24px 50px rgba(0, 0, 0, 0.45)' : '0 20px 40px rgba(0, 0, 0, 0.3)',
+      '--surface-shadow': isDark ? '0 18px 45px rgba(0, 0, 0, 0.34)' : '0 18px 45px rgba(0, 0, 0, 0.14)',
+      '--image-shadow': isDark ? '0 24px 60px rgba(0, 0, 0, 0.48)' : '0 24px 60px rgba(0, 0, 0, 0.26)',
+      '--image-hover-shadow': isDark ? '0 30px 70px rgba(0, 0, 0, 0.56)' : '0 30px 70px rgba(0, 0, 0, 0.32)',
+      '--input-bg': isDark ? 'rgba(255, 255, 255, 0.06)' : 'rgba(0, 0, 0, 0.05)',
+      '--input-focus-bg': isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
+      '--button-hover': buttonHover,
+      '--button-text': '#ffffff',
+      '--hero-icon-color': isDark ? '#ffffff' : '#111111',
+      '--social-image-filter': isDark ? 'brightness(0) invert(1)' : 'brightness(1)',
+      '--name-shadow': isDark ? '0 10px 30px rgba(0, 0, 0, 0.8)' : '0 10px 30px rgba(0, 0, 0, 0.5)',
+      '--quote-start': text,
+      '--quote-end': quoteEnd ?? (isDark ? 'rgba(255, 255, 255, 0.72)' : '#666666')
+    },
+    scene: {
+      background: sceneBackground,
+      primary: objectPrimary,
+      accent: objectAccent,
+      secondary: objectSecondary
+    }
+  }
+}
+
+const sectionThemes = {
+  intro: buildSectionTheme({
+    primary: '#ff6410',
+    text: '#242424',
+    sceneBackground: '#ffffff',
+    objectPrimary: '#111111',
+    objectAccent: '#ff6410',
+    objectSecondary: '#5a5a5a',
+    buttonHover: '#ff8540',
+    quoteEnd: '#666666'
+  }),
+  novakey: buildSectionTheme({
+    mode: 'dark',
+    primary: '#ff6a00',
+    text: '#f5f5f5',
+    sceneBackground: '#050505',
+    objectPrimary: '#ffffff',
+    objectAccent: '#ff6a00',
+    objectSecondary: '#d0d0d0',
+    surfaceRgb: '16, 16, 18',
+    buttonHover: '#ff8740',
+    quoteEnd: '#a3a3a3'
+  }),
+  odoro: buildSectionTheme({
+    mode: 'dark',
+    primary: '#ff8a5b',
+    text: '#fbf5ff',
+    sceneBackground: '#251548',
+    objectPrimary: '#fff8ff',
+    objectAccent: '#87d8ff',
+    objectSecondary: '#ffcb72',
+    surfaceRgb: '39, 24, 68',
+    buttonHover: '#ffa27d',
+    quoteEnd: '#d6bbff'
+  }),
+  msp: buildSectionTheme({
+    mode: 'dark',
+    primary: '#57c98f',
+    text: '#f4fff8',
+    sceneBackground: '#10231c',
+    objectPrimary: '#f4fff8',
+    objectAccent: '#57c98f',
+    objectSecondary: '#a6efc9',
+    surfaceRgb: '18, 40, 32',
+    buttonHover: '#76d7a3',
+    quoteEnd: '#c0eed2'
+  }),
+  goodforum: buildSectionTheme({
+    mode: 'dark',
+    primary: '#ff7a1a',
+    text: '#fff8ef',
+    sceneBackground: '#261810',
+    objectPrimary: '#fff5e6',
+    objectAccent: '#ffb067',
+    objectSecondary: '#ffd8b3',
+    surfaceRgb: '43, 28, 20',
+    buttonHover: '#ff9548',
+    quoteEnd: '#f0caa5'
+  }),
+  scamazon: buildSectionTheme({
+    primary: '#2f94b8',
+    text: '#17313b',
+    sceneBackground: '#b9e4f0',
+    objectPrimary: '#102a33',
+    objectAccent: '#8b4ecb',
+    objectSecondary: '#2f94b8',
+    buttonHover: '#54abcd',
+    quoteEnd: '#417185'
+  }),
+  logistics: buildSectionTheme({
+    mode: 'dark',
+    primary: '#71b9ff',
+    text: '#edf6ff',
+    sceneBackground: '#10233a',
+    objectPrimary: '#f5fbff',
+    objectAccent: '#71b9ff',
+    objectSecondary: '#bedcff',
+    surfaceRgb: '18, 40, 65',
+    buttonHover: '#91c8ff',
+    quoteEnd: '#c8defd'
+  }),
+  worldofjoy: buildSectionTheme({
+    mode: 'dark',
+    primary: '#ff924a',
+    text: '#fff7fc',
+    sceneBackground: '#53225a',
+    objectPrimary: '#fff8fd',
+    objectAccent: '#f3a1df',
+    objectSecondary: '#ffd166',
+    surfaceRgb: '66, 34, 72',
+    buttonHover: '#ffab72',
+    quoteEnd: '#f0c1eb'
+  }),
+  looped: buildSectionTheme({
+    mode: 'dark',
+    primary: '#58c2ff',
+    text: '#f3fbff',
+    sceneBackground: '#182331',
+    objectPrimary: '#f5fbff',
+    objectAccent: '#58c2ff',
+    objectSecondary: '#9ae5ff',
+    surfaceRgb: '27, 40, 57',
+    buttonHover: '#7bd0ff',
+    quoteEnd: '#c3eaff'
+  })
+}
+
+const sectionThemeElements = Array.from(document.querySelectorAll('[data-theme-section]'))
+const rootStyle = document.documentElement.style
+let activeThemeName = ''
+let themeUpdateScheduled = false
+
+const applySceneThemeTarget = (themeName) => {
+  const theme = sectionThemes[themeName] ?? sectionThemes.intro
+
+  sceneThemeTargets.background.set(theme.scene.background)
+  sceneThemeTargets.primary.set(theme.scene.primary)
+  sceneThemeTargets.accent.set(theme.scene.accent)
+  sceneThemeTargets.secondary.set(theme.scene.secondary)
+}
+
+const applyDomTheme = (themeName) => {
+  const theme = sectionThemes[themeName] ?? sectionThemes.intro
+
+  Object.entries(theme.css).forEach(([property, value]) => {
+    rootStyle.setProperty(property, value)
+  })
+}
+
+const setActiveTheme = (themeName) => {
+  if (themeName === activeThemeName) {
+    return
+  }
+
+  activeThemeName = themeName
+  document.documentElement.dataset.themeSection = themeName
+  applyDomTheme(themeName)
+  applySceneThemeTarget(themeName)
+}
+
+const resolveActiveTheme = () => {
+  if (!sectionThemeElements.length) {
+    return 'intro'
+  }
+
+  const viewportMidpoint = window.innerHeight * 0.5
+  let closestTheme = 'intro'
+  let closestDistance = Number.POSITIVE_INFINITY
+
+  for (const section of sectionThemeElements) {
+    const rect = section.getBoundingClientRect()
+
+    if (rect.top <= viewportMidpoint && rect.bottom >= viewportMidpoint) {
+      return section.dataset.themeSection ?? 'intro'
+    }
+
+    const sectionCenter = rect.top + rect.height / 2
+    const distance = Math.abs(sectionCenter - viewportMidpoint)
+
+    if (distance < closestDistance) {
+      closestDistance = distance
+      closestTheme = section.dataset.themeSection ?? 'intro'
+    }
+  }
+
+  return closestTheme
+}
+
+const syncThemeToViewport = () => {
+  themeUpdateScheduled = false
+  setActiveTheme(resolveActiveTheme())
+}
+
+const requestThemeSync = () => {
+  if (themeUpdateScheduled) {
+    return
+  }
+
+  themeUpdateScheduled = true
+  window.requestAnimationFrame(syncThemeToViewport)
 }
 
 function moveCamera() {
@@ -486,8 +747,6 @@ function moveCamera() {
   //camera.position.x = webPage * -0.0002
   camera.position.y = webPage * -0.02
 }
-
-document.body.onscroll = moveCamera
 
 //  Array(5000).fill().forEach(createAtoms)
 const atomsArr = []
@@ -502,26 +761,44 @@ for (let i = 0; i < 2500; i++) {
 const astroidArr = []
 for (let i = 0; i < 1000; i++) {
   let newAstro = addAstroids()
-  //console.log(newAstro)
-  astroidArr.push(astroidArr)
+  astroidArr.push(newAstro)
 }
 
-// window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-//   const newColorScheme = event.matches ? "dark" : "light";
-//   //console.log(newColorScheme)
-//   if(newColorScheme==='light'){
-//     scene.background =  new THREE.Color("white")
+const lerpMaterialGroup = (materials, targetColor, amount) => {
+  materials.forEach((sceneMaterial) => {
+    sceneMaterial.color.lerp(targetColor, amount)
+  })
+}
 
-// } else if(newColorScheme==='dark'){
-//   scene.background =  new THREE.Color("black")
+const setMaterialGroupColor = (materials, colorValue) => {
+  materials.forEach((sceneMaterial) => {
+    sceneMaterial.color.set(colorValue)
+  })
+}
 
-//   }
-// });
+const applyCurrentSceneTheme = (themeName) => {
+  const theme = sectionThemes[themeName] ?? sectionThemes.intro
 
+  scene.background.set(theme.scene.background)
+  setMaterialGroupColor(themedSceneMaterials.primary, theme.scene.primary)
+  setMaterialGroupColor(themedSceneMaterials.accent, theme.scene.accent)
+  setMaterialGroupColor(themedSceneMaterials.secondary, theme.scene.secondary)
+}
+
+const initialTheme = resolveActiveTheme()
+setActiveTheme(initialTheme)
+applyCurrentSceneTheme(initialTheme)
+moveCamera()
 
 function animate() {
 
   requestAnimationFrame(animate)// calls request animation frame from the browser which basically tells the browser we're gonna do some animations
+
+  scene.background.lerp(sceneThemeTargets.background, 0.045)
+  lerpMaterialGroup(themedSceneMaterials.primary, sceneThemeTargets.primary, 0.06)
+  lerpMaterialGroup(themedSceneMaterials.accent, sceneThemeTargets.accent, 0.06)
+  lerpMaterialGroup(themedSceneMaterials.secondary, sceneThemeTargets.secondary, 0.06)
+
   renderer.render(scene, camera)
 
   sphere.rotation.x += 0.001
@@ -627,10 +904,6 @@ function animate() {
 
   controls.update() // to show our mouse manipulations of the scene is captured
 }
-
-
-
-opacity: 0;
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     //console.log(entry)
@@ -656,6 +929,21 @@ if (messageField instanceof HTMLTextAreaElement) {
   resizeMessageField()
   messageField.addEventListener('input', resizeMessageField)
 }
+
+window.addEventListener('scroll', () => {
+  moveCamera()
+  requestThemeSync()
+}, { passive: true })
+
+window.addEventListener('resize', () => {
+  camera.aspect = window.innerWidth / window.innerHeight
+  camera.updateProjectionMatrix()
+  renderer.setPixelRatio(window.devicePixelRatio)
+  renderer.setSize(window.innerWidth, window.innerHeight)
+  requestThemeSync()
+})
+
+requestThemeSync()
 
 // This is like a Game loop 
 animate()
