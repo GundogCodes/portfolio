@@ -93,6 +93,12 @@ span {
   z-index: 10;
 }
 
+.page1 header a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .page1 header img {
   width: 40px;
   height: 40px;
@@ -101,7 +107,19 @@ span {
   /* Icons are dark by default or need to be dark */
 }
 
+.page1 header i {
+  font-size: 40px;
+  line-height: 1;
+  color: #111111;
+  transition: var(--transition-speed);
+}
+
 .page1 header img:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 8px var(--primary-color));
+}
+
+.page1 header i:hover {
   transform: scale(1.2);
   filter: drop-shadow(0 0 8px var(--primary-color));
 }
@@ -135,10 +153,9 @@ span {
 
 /* --- Project Cards (Shared Styles) --- */
 article {
-  width: 90%;
-  max-width: 1200px;
+  width: min(94%, 1400px);
   margin: 4rem auto;
-  padding: 3rem;
+  padding: clamp(1.75rem, 3vw, 3rem);
   background: var(--card-bg);
   backdrop-filter: var(--glass-blur);
   border: var(--card-border);
@@ -150,36 +167,33 @@ article h1 {
   border-bottom: 2px solid var(--primary-color);
   padding-bottom: 0.5rem;
   display: inline-block;
+  margin-bottom: 1.5rem;
 }
 
 .project-body {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.85fr);
+  gap: 1.5rem 2rem;
   margin-top: 2rem;
+  align-items: start;
 }
 
 .project-left {
-  flex: 1 1 500px;
-  /* Grow, shrink, basis */
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  display: contents;
 }
 
 .project-right {
-  flex: 1 1 300px;
-  background: rgba(0, 0, 0, 0.2);
-  padding: 2rem;
-  border-radius: 16px;
+  display: grid;
+  gap: 1rem;
 }
 
 .project-images {
+  grid-column: 1 / -1;
   display: flex;
-  gap: 1rem;
+  gap: 1.25rem;
   overflow-x: auto;
-  padding-bottom: 1rem;
-  /* Hide scrollbar but allow scroll */
+  padding: 0.35rem 0 1.25rem;
+  scroll-snap-type: x proximity;
   scrollbar-width: none;
 }
 
@@ -187,50 +201,125 @@ article h1 {
   display: none;
 }
 
-@mixin project-image-styles {
-  height: 250px;
-  border-radius: 12px;
-  transition: var(--transition-speed);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+.project-images a {
+  display: block;
+  flex: 0 0 min(82vw, 920px);
+  scroll-snap-align: start;
+}
 
-  &:hover {
-    transform: scale(1.05);
-  }
+@mixin project-image-styles {
+  width: 100%;
+  height: auto;
+  max-height: 540px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.26);
 }
 
 .project-images img {
   @include project-image-styles;
 }
 
-.description {
-  font-size: 1.1rem;
+.project-images img:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.32);
 }
 
-.features-list {
-  list-style: none;
+.project-copy {
+  grid-column: 1 / 2;
+  width: 100%;
+  max-width: 980px;
+  padding: 1.75rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.22));
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.14);
 }
 
-.features-list li {
-  margin-bottom: 0.8rem;
-  padding-left: 1.5rem;
-  position: relative;
+.project-copy p {
+  font-size: 1.08rem;
+  line-height: 1.7;
 }
 
-.features-list li::before {
-  content: '▹';
+.project-copy p+p {
+  margin-top: 1rem;
+}
+
+.project-copy span {
   color: var(--primary-color);
-  position: absolute;
-  left: 0;
+  font-weight: 600;
 }
 
-/* --- Specific Page Tweaks (Mapping old classes to new structure) --- */
-/* NovaKey, Odoro, GoodForum use the shared 'article' styles now. 
-   We need to ensure the HTML classes map to these styles or we update the CSS selectors to match HTML.
-   Let's update CSS selectors to match existing HTML classes but apply the new styles.
-*/
+.project-panel {
+  padding: 1.1rem 1.15rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.22));
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.14);
+}
+
+.project-panel h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.project-panel h2 i {
+  color: var(--primary-color);
+}
+
+.project-list {
+  list-style: none;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.project-list li {
+  display: grid;
+  grid-template-columns: 0.95rem 1fr;
+  gap: 0.65rem;
+  align-items: flex-start;
+}
+
+.project-list li>i {
+  color: var(--primary-color);
+  font-size: 0.82rem;
+  margin-top: 0.25rem;
+}
+
+.project-list strong {
+  display: block;
+  margin-bottom: 0.1rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.project-list span {
+  display: block;
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+.project-list--compact {
+  gap: 0.75rem;
+}
+
+.project-list--compact strong {
+  display: inline;
+  margin-bottom: 0;
+}
+
+.project-list--compact span {
+  display: inline;
+}
 
 .novakeyPage,
 .odoroPage,
+.mspPage,
 .gfPage,
 .page3,
 .page4point5,
@@ -240,143 +329,136 @@ article h1 {
 
 .novakeyMainBody,
 .odoroMainBody,
+.mspMainBody,
 .gfMainBody,
 .imageSection {
   @extend .project-body;
 }
 
+.novakeyMainBody,
+.odoroMainBody,
+.mspMainBody,
+.gfMainBody {
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
 .novakeyMainBodyLeftSide,
 .odoroMainBodyLeftSide,
+.mspMainBodyLeftSide,
 .gfMainBodyLeftSide {
   @extend .project-left;
 }
 
 .novakeyKeyFeatures,
 .odoroKeyFeatures,
+.mspKeyFeatures,
 .gfKeyFeatures {
   @extend .project-right;
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  align-items: start;
 }
 
 .novakeyImages,
 .odoroImages,
+.mspImages,
 .gfImages {
   @include project-image-styles;
 }
 
 #novakeyImageDiv,
 #odoroImageDiv,
+#mspImageDiv,
 #gfImageDiv {
   @extend .project-images;
   justify-content: flex-start;
-  flex-wrap: wrap;
-  /* Wrap on desktop for better layout */
+  -webkit-overflow-scrolling: touch;
 }
 
-/* Desktop fixes for image layout and text overflow */
+#novakeyImageDiv a,
+#gfImageDiv a {
+  flex-basis: min(82vw, 920px);
+}
+
+#mspImageDiv .mspImageFrame {
+  flex: 0 0 min(82vw, 920px);
+  scroll-snap-align: start;
+}
+
+#mspImageDiv .mspImages {
+  height: clamp(280px, 30vw, 420px);
+  width: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+#odoroImageDiv {
+  justify-content: center;
+}
+
+#odoroImageDiv a {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 0 0 min(24vw, 320px);
+}
+
+#odoroImageDiv .odoroImages {
+  width: min(100%, 315px);
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
+
+#gfImageDiv .gfImages {
+  height: clamp(280px, 30vw, 420px);
+  width: 100%;
+  object-fit: cover;
+}
+
+.novakeyDes,
+.odoroDes,
+.mspDes,
+.gfDes {
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
 @media (min-width: 769px) {
-
-  /* NovaKey images - horizontal scroll enabled */
-  #novakeyImageDiv {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    /* Enable horizontal scrolling */
-    justify-content: flex-start;
-    gap: 2rem;
-    padding-bottom: 1rem;
-    /* Space for scrollbar */
-    -webkit-overflow-scrolling: touch;
-
-    /* Smooth scrolling on Safari */
+  .novakeyKeyFeatures,
+  .mspKeyFeatures,
+  .gfKeyFeatures {
+    grid-template-columns: minmax(0, 1.45fr) minmax(240px, 0.95fr) minmax(220px, 0.85fr);
+    grid-auto-rows: 1fr;
   }
 
-  /* Odoro main body - two column layout */
-  .odoroMainBody {
-    display: flex;
-    gap: 3rem;
-    margin-top: 2rem;
-  }
-
-  /* Odoro left side - images and description stacked vertically */
-  .odoroMainBodyLeftSide {
-    flex: 1 1 500px;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  /* Odoro images - horizontal with spacing */
-  #odoroImageDiv {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 3rem;
-    /* Spacing between images */
-    flex-wrap: nowrap;
-  }
-
-  /* Odoro description */
-  .odoroDes {
-    font-size: 1.1rem;
-  }
-
-  /* Odoro key features - right column */
   .odoroKeyFeatures {
-    flex: 1 1 300px;
-    background: rgba(0, 0, 0, 0.2);
-    padding: 2rem;
-    border-radius: 16px;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.2fr) minmax(250px, 0.95fr) minmax(220px, 0.8fr);
+    grid-auto-rows: 1fr;
   }
 
-  /* GoodForum images - horizontal scroll enabled */
-  #gfImageDiv {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    /* Enable horizontal scrolling */
-    justify-content: flex-start;
-    gap: 2rem;
-    padding-bottom: 1rem;
-    /* Space for scrollbar */
-    -webkit-overflow-scrolling: touch;
-    /* Smooth scrolling on Safari */
+  .novakeyKeyFeatures .project-panel,
+  .odoroKeyFeatures .project-panel,
+  .mspKeyFeatures .project-panel,
+  .gfKeyFeatures .project-panel {
+    height: 100%;
   }
 
-  /* Constrain description text to prevent overflow */
-  .novakeyDes,
-  .odoroDes,
-  .gfDes {
-    max-width: 100%;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    /* Ensure text wraps within container */
+  .novakeyKeyFeatures .project-panel:first-child .project-list,
+  .mspKeyFeatures .project-panel:first-child .project-list,
+  .gfKeyFeatures .project-panel:first-child .project-list,
+  .odoroKeyFeatures .project-panel:nth-child(-n+2) .project-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 1rem;
   }
 
-  /* Better image sizing on desktop */
-  .novakeyImages {
-    height: 300px;
-    width: auto;
-    flex: 0 1 auto;
-    /* Allow natural sizing */
-  }
-
-  .odoroImages {
-    height: 400px;
-    /* Taller for phone screenshots */
-    width: auto;
-    flex: 0 1 auto;
-  }
-
-  .gfImages {
-    height: 350px;
-    width: auto;
-    flex: 0 1 auto;
-  }
-
-  /* Ensure left side doesn't overflow */
-  .novakeyMainBodyLeftSide,
-  .odoroMainBodyLeftSide,
-  .gfMainBodyLeftSide {
-    max-width: 100%;
-    overflow: hidden;
+  .mspKeyFeatures .project-panel:last-child {
+    grid-column: 1 / -1;
+    width: min(100%, 720px);
+    justify-self: center;
+    align-self: start;
   }
 }
 
@@ -397,48 +479,54 @@ article h1 {
 .page4point5,
 .page5 {
   .imageSection {
-    align-items: center;
-    /* Vertically center */
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    align-items: stretch;
   }
 
-  /* The inner article should just be text, not a card */
   article {
     width: auto;
-    max-width: none;
-    margin: 0;
-    padding: 0;
-    background: none;
-    backdrop-filter: none;
-    border: none;
-    box-shadow: none;
-    flex: 1 1 400px;
-    /* Allow it to grow/shrink */
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 1.75rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.22));
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.14);
+    backdrop-filter: var(--glass-blur);
+    border-radius: 20px;
+    flex: none;
   }
 
-  /* The image containers */
   #scamPics,
   #wojPics,
   #loopedPics {
-    flex: 1 1 400px;
+    order: -1;
+    width: 100%;
     display: flex;
     justify-content: center;
 
     img {
-      width: 100%;
-      max-width: 500px;
-      /* Limit max size */
+      width: min(100%, 1040px);
+      max-width: 1040px;
       height: auto;
-      /* Maintain aspect ratio */
       object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-      transition: var(--transition-speed);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.26);
+      transition: transform var(--transition-speed), box-shadow var(--transition-speed);
     }
 
     img:hover {
-      transform: scale(1.02);
+      transform: translateY(-6px);
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.3);
     }
   }
+}
+
+#scamPics img {
+  width: min(100%, 720px);
+  max-width: 720px;
 }
 
 
@@ -469,28 +557,42 @@ article h1 {
 
 #focusSide,
 #albertaSide {
-  flex: 1 1 400px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   background: rgba(0, 0, 0, 0.1);
   padding: 2rem;
   border-radius: 16px;
+  height: 100%;
 }
 
 #focusSide img,
 #albertaSide img {
   width: 100%;
-  height: auto;
-  max-height: 300px;
+  height: clamp(240px, 18vw, 310px);
   object-fit: cover;
-  border-radius: 12px;
-  transition: var(--transition-speed);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+#focusSide p,
+#albertaSide p {
+  flex: 1 1 auto;
+}
+
+@media (min-width: 769px) {
+  #mainSection {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+  }
 }
 
 #focusSide img:hover,
 #albertaSide img:hover {
-  transform: scale(1.02);
+  transform: translateY(-4px);
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.24);
 }
 
 /* --- Tech Stack Section --- */
@@ -559,6 +661,13 @@ textarea {
   font-size: 1rem;
 }
 
+textarea.message {
+  min-height: 4.75rem;
+  line-height: 1.5;
+  resize: none;
+  overflow: hidden;
+}
+
 input:focus,
 textarea:focus {
   outline: none;
@@ -600,84 +709,72 @@ button:hover {
   }
 
   .project-body {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .project-left,
-  .project-right {
-    flex: 1 1 100%;
-  }
-
-  .project-images {
-    justify-content: flex-start;
-    /* Allow horizontal scroll */
-    flex-wrap: nowrap;
-  }
-
-  .project-images img {
-    height: 180px;
-    min-width: 250px;
-    /* Ensure they don't shrink too much */
-  }
-
-  /* Ensure image divs can scroll on mobile */
-  #novakeyImageDiv,
-  #odoroImageDiv,
-  #gfImageDiv {
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    /* Smooth scrolling on iOS */
-    display: flex;
-    flex-wrap: nowrap;
-    /* Force horizontal layout */
-    flex-direction: row;
-    /* Force row direction */
-  }
-
-  /* Flatten the anchor tag structure */
-  #novakeyImageDiv a,
-  #odoroImageDiv a {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
 
-  /* Handle the nested bottom div */
-  #bottomNovaImage {
-    display: contents;
-    /* Flatten the div, treat children as siblings */
+  .project-copy,
+  .project-right {
+    grid-column: 1 / -1;
   }
 
-  /* Ensure images maintain size and don't shrink */
+  .novakeyKeyFeatures,
+  .odoroKeyFeatures,
+  .mspKeyFeatures,
+  .gfKeyFeatures {
+    grid-template-columns: 1fr;
+  }
+
+  .project-images {
+    gap: 1rem;
+    padding-bottom: 0.85rem;
+  }
+
+  .project-images a {
+    flex-basis: 86vw;
+  }
+
+  #novakeyImageDiv a,
+  #mspImageDiv .mspImageFrame,
+  #gfImageDiv a {
+    flex-basis: 86vw;
+  }
+
+  #odoroImageDiv a {
+    flex-basis: min(72vw, 320px);
+  }
+
   .novakeyImages,
-  .gfImages {
-    height: 180px;
-    min-width: 280px;
-    flex-shrink: 0;
-    /* Prevent shrinking */
-  }
-
-  /* Odoro images are phone screenshots - need taller height */
+  .gfImages,
   .odoroImages {
-    height: 300px;
-    /* Taller for phone screenshots */
-    width: auto;
-    /* Let width adjust based on aspect ratio */
-    flex-shrink: 0;
-    /* Prevent shrinking */
+    max-height: none;
   }
 
-  /* Fix width overflow on project pages */
-  .novakeyMainBodyLeftSide,
-  .odoroMainBodyLeftSide,
-  .gfMainBodyLeftSide {
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-    /* Prevent text overflow */
+  #odoroImageDiv .odoroImages {
+    width: min(100%, 320px);
+    height: auto;
+  }
+
+  .gfImages {
+    height: auto;
+    object-fit: cover;
+  }
+
+  .project-panel,
+  .project-copy {
+    padding: 1.25rem;
+  }
+
+  .page3,
+  .page4point5,
+  .page5 {
+    .imageSection {
+      gap: 1rem;
+    }
+
+    article {
+      padding: 1.25rem;
+    }
   }
 
   .novakeyDes,

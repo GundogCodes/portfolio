@@ -645,5 +645,17 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.hidden')
 hiddenElements.forEach((el) => observer.observe(el))
 
+const messageField = document.querySelector('#connectForm .message')
+
+if (messageField instanceof HTMLTextAreaElement) {
+  const resizeMessageField = () => {
+    messageField.style.height = 'auto'
+    messageField.style.height = `${messageField.scrollHeight}px`
+  }
+
+  resizeMessageField()
+  messageField.addEventListener('input', resizeMessageField)
+}
+
 // This is like a Game loop 
 animate()

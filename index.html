@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
@@ -22,7 +23,9 @@
             src="https://cdn-icons-png.flaticon.com/512/61/61109.png" /></a>
         <a href="https://github.com/GundogCodes"><img class="gitHub"
             src="https://cdn-icons-png.flaticon.com/512/25/25231.png" /></a>
-        <a href="https://x.com/FaultsSegSharma"><img class="x" src="/images/x.png" /></a>
+        <a href="https://www.youtube.com/@gundoggydog" class="socialIconLink" aria-label="YouTube">
+          <i class="fa-brands fa-youtube youtubeIcon" aria-hidden="true"></i>
+        </a>
       </header>
       <h1 class="hidden" id="name">GUNISH SHARMA</h1>
     </div>
@@ -39,92 +42,448 @@
       <div class="novakeyMainBody">
         <div class="novakeyMainBodyLeftSide">
           <div class="hidden" id="novakeyImageDiv">
-            <a href="https://apps.apple.com/ca/app/hyperkey/id6751394828?mt=12">
-              <img class="novakeyImages" src="/images/novakey1.png" alt="NovaKey main interface" />
+            <a href="https://gundogcodes.github.io/NovaKey/">
+              <img class="novakeyImages" src="/images/NovaKey-AppStore-01-HotKeys.png" alt="NovaKey hotkeys screen" />
             </a>
-            <a href="https://apps.apple.com/ca/app/hyperkey/id6751394828?mt=12">
-              <img class="novakeyImages" src="/images/novakey2.png" alt="NovaKey settings" />
+            <a href="https://gundogcodes.github.io/NovaKey/">
+              <img class="novakeyImages" src="/images/NovaKey-AppStore-02-Window-Management.png"
+                alt="NovaKey window management screen" />
             </a>
-            <a href="https://apps.apple.com/ca/app/hyperkey/id6751394828?mt=12">
-              <img class="novakeyImages" src="/images/novakey3.png" alt="NovaKey statistics" />
+            <a href="https://gundogcodes.github.io/NovaKey/">
+              <img class="novakeyImages" src="/images/NovaKey-AppStore-03-Workspaces.png"
+                alt="NovaKey workspaces screen" />
+            </a>
+            <a href="https://gundogcodes.github.io/NovaKey/">
+              <img class="novakeyImages" src="/images/NovaKey-AppStore-04-Import-Export.png"
+                alt="NovaKey import and export screen" />
             </a>
           </div>
+          <div class="novakeyDes project-copy">
+            <p><span>NovaKey</span> is a keyboard-first macOS productivity app that combines instant app launching,
+              window control, and workspace switching in one native desktop experience.</p>
+            <p>Bind apps or URLs to custom shortcuts, bring windows forward, spawn fresh instances, auto-tile every
+              display, and move between saved workspaces without leaving home row. When your setup is dialed in, export
+              the whole thing and carry it to another Mac in seconds.</p>
+          </div>
         </div>
-        <div class="novakeyDes">
-          <span>NovaKey</span> is a sleek macOS application launcher that gives you instant control over your Mac by
-          letting you assign custom keyboard shortcuts to your favorite apps. Whether you want to launch a new app,
-          bring an existing one to the front, or toggle visibility with a keystroke, NovaKey makes it effortless. Built
-          entirely in SwiftUI for macOS with a focus on productivity and workflow optimization.
+        <div class="novakeyKeyFeatures">
+          <section class="project-panel">
+            <h2><i class="fa-solid fa-star" aria-hidden="true"></i> Key Features</h2>
+            <ul class="project-list">
+              <li>
+                <i class="fa-solid fa-keyboard" aria-hidden="true"></i>
+                <div>
+                  <strong>Hotkeys for Apps and URLs</strong>
+                  <span>Bind any app or URL to a single shortcut.</span>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+                <div>
+                  <strong>Flexible Actions</strong>
+                  <span>Launch apps, bring windows forward, or open new instances on demand.</span>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-table-cells-large" aria-hidden="true"></i>
+                <div>
+                  <strong>Auto-Tile Window Management</strong>
+                  <span>Hyprland-inspired tiling keeps each display organized while overflow windows float.</span>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-desktop" aria-hidden="true"></i>
+                <div>
+                  <strong>Per-Display Layouts</strong>
+                  <span>Tile every monitor independently for multi-display setups that stay predictable.</span>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+                <div>
+                  <strong>Ten Workspaces</strong>
+                  <span>Save layouts by context and jump between them with a single keystroke.</span>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-rotate" aria-hidden="true"></i>
+                <div>
+                  <strong>Sync Across Macs</strong>
+                  <span>Export hotkeys, tiling rules, and workspaces into one portable <code>.novakey</code> file.</span>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+                <div>
+                  <strong>Search and Stats</strong>
+                  <span>Filter shortcuts quickly and see which actions power your daily workflow.</span>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-power-off" aria-hidden="true"></i>
+                <div>
+                  <strong>Launch at Login</strong>
+                  <span>Keep NovaKey ready from the moment your Mac boots.</span>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <section class="project-panel">
+            <h2><i class="fa-solid fa-code" aria-hidden="true"></i> Technologies Used</h2>
+            <ul class="project-list project-list--compact">
+              <li>
+                <i class="fa-solid fa-cube" aria-hidden="true"></i>
+                <div><span>SwiftUI for the native macOS interface.</span></div>
+              </li>
+              <li>
+                <i class="fa-solid fa-keyboard" aria-hidden="true"></i>
+                <div><span>Carbon for system-wide hotkey registration.</span></div>
+              </li>
+              <li>
+                <i class="fa-solid fa-window-restore" aria-hidden="true"></i>
+                <div><span>AppKit for desktop and window management integration.</span></div>
+              </li>
+              <li>
+                <i class="fa-solid fa-folder-open" aria-hidden="true"></i>
+                <div><span>NSWorkspace for launching, focusing, and opening apps or URLs.</span></div>
+              </li>
+            </ul>
+          </section>
+
+          <section class="project-panel">
+            <h2><i class="fa-solid fa-link" aria-hidden="true"></i> Explore</h2>
+            <ul class="project-list project-list--compact">
+              <li>
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                <div><span>Image clicks now open the NovaKey product page.</span></div>
+              </li>
+              <li>
+                <i class="fa-solid fa-laptop" aria-hidden="true"></i>
+                <div><span>Built for keyboard-first macOS workflows and fast desktop control.</span></div>
+              </li>
+            </ul>
+          </section>
         </div>
-      </div>
-      <div class="novakeyKeyFeatures">
-        <h2>✨ Key Features:</h2>
-        ⚡ <strong>Custom Shortcuts</strong> — Assign unique keyboard combinations to launch any app<br />
-        ⚡ <strong>Launch Multiple Apps</strong> — Launch mutiple apps at once<br />
-        ⚡ <strong>Import/Export Shortcuts</strong> — Import and Export your favorite shortcuts to other devices<br />
-        📊 <strong>Usage Statistics</strong> — Track and visualize how often you use each shortcut<br />
-        🎯 <strong>Flexible Launch Behavior</strong> — Open new instances, bring to front, or toggle visibility<br />
-        🔍 <strong>Grid View & Search</strong> — Organized interface with instant search functionality<br />
-        🖥️ <strong>Menu Bar Integration</strong> — Seamless macOS system integration<br />
-        🚀 <strong>Launch at Login</strong> — Start automatically with your Mac<br />
-
-        <h2>Technologies Used:</h2>
-        • SwiftUI Framework<br />
-        • Carbon Framework for hotkey registration<br />
-        • AppKit for macOS functionality<br />
-        • NSWorkspace for app management<br />
-
-        <h2>App Store:</h2>
-        • Available for macOS 12.0+ (Monterey)<br />
-        • Native Apple Silicon & Intel support
-      </div>
       </div>
     </article>
 
     <article class="odoroPage">
       <h1>Odoro</h1>
       <div class="odoroMainBody">
-        <!-- Left section: Images + Description -->
         <div class="odoroMainBodyLeftSide">
           <div class="hidden" id="odoroImageDiv">
             <a href="https://apps.apple.com/ca/app/odoro/id6751009132">
-              <img class="odoroImages" src="/images/odoro4.png" alt="Odoro settings" />
+              <img class="odoroImages" src="/images/Odoro1.webp" alt="Odoro timer and habit dashboard" />
             </a>
             <a href="https://apps.apple.com/ca/app/odoro/id6751009132">
-              <img class="odoroImages" src="/images/odoro3.png" alt="Odoro timer interface" />
-            </a>
-            <a href="https://apps.apple.com/ca/app/odoro/id6751009132">
-              <img class="odoroImages" src="/images/odoro2.png" alt="Odoro home screen" />
+              <img class="odoroImages" src="/images/Odoro2.webp" alt="Odoro widgets and habit progress views" />
             </a>
           </div>
-          <div class="odoroDes">
-            <span>Odoro</span> is a productivity timer app inspired by the Pomodoro Technique, designed to help you
-            focus
-            on study sessions and take proper breaks. Built entirely in SwiftUI for iOS, Odoro features a clean UI with
-            smooth animations, customizable timers, and background notifications to keep you productive even when the
-            app
-            isn't active.
+          <div class="odoroDes project-copy">
+            <p><span>Odoro</span> helps you master your focus and build lasting habits with a beautifully designed
+              Pomodoro timer and habit tracker for iPhone and iPad.</p>
+            <p>Based on the Pomodoro Technique, it turns work into focused sessions and intentional breaks so progress
+              feels sustainable. Your habits just got smarter too, with streaks, resets, progress graphs, and widgets
+              that stay perfectly in sync across the experience.</p>
           </div>
         </div>
 
-        <!-- Right section: Key Features -->
         <div class="odoroKeyFeatures">
-          <h2>✨ Key Features:</h2>
-          🎯 <strong>Customizable Timers</strong> — Set your own study and rest durations<br />
-          🎨 <strong>Polished UI</strong> — Rounded pickers, gradients, and drop shadows<br />
-          🔔 <strong>Background Notifications</strong> — Get alerts when timers finish, even if the app is closed<br />
-          🚀 <strong>First-Time Logo Screen</strong> — Welcoming splash screen shown only for new users<br />
-          📱 <strong>iOS-Optimized</strong> — Built entirely in SwiftUI for native performance<br />
+          <section class="project-panel">
+            <h2><i class="fa-solid fa-stopwatch" aria-hidden="true"></i> Timer Features</h2>
+            <ul class="project-list">
+              <li>
+                <i class="fa-solid fa-sliders" aria-hidden="true"></i>
+                <div>
+                  <strong>Flexible Durations</strong>
+                  <span>Customize work and break lengths, support long breaks, and auto-switch between focus and rest.</span>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                <div>
+                  <strong>Quick Adjust</strong>
+                  <span>Add or subtract 5 or 10 minutes while the timer is already running.</span>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>
+                <div>
+                  <strong>Live Activities</strong>
+                  <span>Track active sessions from your Lock Screen, Dynamic Island, and synced widgets.</span>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-battery-half" aria-hidden="true"></i>
+                <div>
+                  <strong>Focus Environment</strong>
+                  <span>Use battery saver mode, ambient sounds, music-friendly playback, and gentle notifications.</span>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-film" aria-hidden="true"></i>
+                <div>
+                  <strong>Session Playback and Stats</strong>
+                  <span>Record smooth timelapses and review daily, weekly, and all-time study progress.</span>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-wave-square" aria-hidden="true"></i>
+                <div>
+                  <strong>Fluid Wave Animation</strong>
+                  <span>A layered wave fills the screen as time passes and reacts to your phone's movement.</span>
+                </div>
+              </li>
+            </ul>
+          </section>
 
-          <h2>Technologies Used:</h2>
-          • SwiftUI Framework<br />
-          • iOS Local Notifications<br />
-          • UserDefaults for settings persistence<br />
-          • Core Animation for smooth transitions<br />
+          <section class="project-panel">
+            <h2><i class="fa-solid fa-seedling" aria-hidden="true"></i> Habit and Goal Tracker</h2>
+            <ul class="project-list">
+              <li>
+                <i class="fa-solid fa-table-cells" aria-hidden="true"></i>
+                <div>
+                  <strong>Multiple Progress Views</strong>
+                  <span>Switch between contribution grids, elegant timeline bars, and detailed text counters.</span>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+                <div>
+                  <strong>Smart Tracking</strong>
+                  <span>Track automatically or manually, count up or down, and watch streaks, resets, and graphs evolve.</span>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-pen-to-square" aria-hidden="true"></i>
+                <div>
+                  <strong>Deep Customization</strong>
+                  <span>Edit names, icons, colors, styles, dates, and layout settings at any point.</span>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-trophy" aria-hidden="true"></i>
+                <div>
+                  <strong>Goals and Milestones</strong>
+                  <span>Use goal markers, milestone notifications, grid pagination, and completed-goal archives.</span>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-note-sticky" aria-hidden="true"></i>
+                <div>
+                  <strong>Daily Workflow Tools</strong>
+                  <span>Add journal notes, reset or restart habits, reorder rows, collapse views, and use quick actions from the context menu.</span>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-table-cells" aria-hidden="true"></i>
+                <div>
+                  <strong>Widget Coverage</strong>
+                  <span>Bring grid, bar, and text-counter widgets to the Home Screen in small, medium, and large sizes.</span>
+                </div>
+              </li>
+            </ul>
+          </section>
 
-          <h2>App Store:</h2>
-          • Available for iPhone and iPad<br />
-          • Optimized for iOS 14.0+
+          <section class="project-panel">
+            <h2><i class="fa-solid fa-code" aria-hidden="true"></i> Built With</h2>
+            <ul class="project-list project-list--compact">
+              <li>
+                <i class="fa-solid fa-cube" aria-hidden="true"></i>
+                <div><span>SwiftUI for the native iOS interface and animations.</span></div>
+              </li>
+              <li>
+                <i class="fa-solid fa-table-cells-large" aria-hidden="true"></i>
+                <div><span>WidgetKit for Home Screen widgets and persistent habit snapshots.</span></div>
+              </li>
+              <li>
+                <i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>
+                <div><span>Live Activities to surface timer progress outside the app.</span></div>
+              </li>
+              <li>
+                <i class="fa-solid fa-bell" aria-hidden="true"></i>
+                <div><span>iOS notifications to keep sessions and milestones on schedule.</span></div>
+              </li>
+            </ul>
+          </section>
+
+          <section class="project-panel">
+            <h2><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i> App Store</h2>
+            <ul class="project-list project-list--compact">
+              <li>
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                <div><span>Available for iPhone and iPad.</span></div>
+              </li>
+              <li>
+                <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+                <div><span>Designed for focus sessions, habits, widgets, and long-term consistency.</span></div>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </article>
+
+    <article class="mspPage">
+      <h1>Market Search Pro</h1>
+      <div class="mspMainBody">
+        <div class="mspMainBodyLeftSide">
+          <div class="hidden" id="mspImageDiv">
+            <div class="mspImageFrame">
+              <img class="mspImages" src="/images/marketsearchpro1.png"
+                alt="Market Search Pro homepage with event discovery and search filters" />
+            </div>
+            <div class="mspImageFrame">
+              <img class="mspImages" src="/images/marketsearchpro2.png"
+                alt="Market Search Pro vendor dashboard showing market application statuses" />
+            </div>
+            <div class="mspImageFrame">
+              <img class="mspImages" src="/images/marketsearchpro3.png"
+                alt="Market Search Pro vendor profile with gallery and product tags" />
+            </div>
+          </div>
+          <div class="mspDes project-copy">
+            <p><span>Market Search Pro</span> connects small business vendors with market event coordinators through a
+              centralized platform for event discovery, recruitment, applications, and day-to-day market management.</p>
+            <p>Vendors can browse upcoming markets, apply, manage their statuses, showcase their work through profile
+              galleries, and stay informed with notifications. Coordinators can publish listings, review vendor
+              applications, set restrictions and deadlines, invite vendors, and promote events through featured ads,
+              all while supporting mobile access, dark mode, analytics, and secure Stripe payments.</p>
+          </div>
+        </div>
+
+        <div class="mspKeyFeatures">
+          <section class="project-panel">
+            <h2><i class="fa-solid fa-store" aria-hidden="true"></i> Key Features</h2>
+            <ul class="project-list">
+              <li>
+                <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
+                <div>
+                  <strong>Event Discovery</strong>
+                  <span>Browse markets through centralized listings with location-aware search and map-style discovery.</span>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-comments" aria-hidden="true"></i>
+                <div>
+                  <strong>Real-Time Messaging</strong>
+                  <span>Keep vendors and coordinators connected throughout applications and event planning.</span>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-hand-point-up" aria-hidden="true"></i>
+                <div>
+                  <strong>Poke Notifications</strong>
+                  <span>Express interest quickly and surface activity through built-in notification flows.</span>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-chart-column" aria-hidden="true"></i>
+                <div>
+                  <strong>Profile Insights</strong>
+                  <span>See how much engagement listings and profiles are getting through platform analytics.</span>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-credit-card" aria-hidden="true"></i>
+                <div>
+                  <strong>Stripe Payments</strong>
+                  <span>Support vendor subscriptions and coordinator listing fees through one secure payment flow.</span>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <section class="project-panel">
+            <h2><i class="fa-solid fa-shop" aria-hidden="true"></i> Vendor Experience</h2>
+            <ul class="project-list">
+              <li>
+                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                <div>
+                  <strong>Search and Apply</strong>
+                  <span>Filter markets by dates, location, tags, and restrictions before applying.</span>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-clipboard-list" aria-hidden="true"></i>
+                <div>
+                  <strong>Application Management</strong>
+                  <span>Track joined, invited, applied, accepted, waitlisted, and declined markets from one dashboard.</span>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-images" aria-hidden="true"></i>
+                <div>
+                  <strong>Public Profiles</strong>
+                  <span>Showcase products with galleries, product tags, social links, and role-specific profile details.</span>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                <div>
+                  <strong>Favourites and Connections</strong>
+                  <span>Save markets for later and use Vendor Connect for tabling requests and collaboration.</span>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <section class="project-panel">
+            <h2><i class="fa-solid fa-calendar-check" aria-hidden="true"></i> Coordinator Tools</h2>
+            <ul class="project-list">
+              <li>
+                <i class="fa-solid fa-file-circle-plus" aria-hidden="true"></i>
+                <div>
+                  <strong>Create and Promote Listings</strong>
+                  <span>Publish markets, save drafts, and boost listings for stronger event visibility.</span>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-filter-circle-dollar" aria-hidden="true"></i>
+                <div>
+                  <strong>Restrictions and Deadlines</strong>
+                  <span>Set event rules, custom tags, and application cutoffs before going live.</span>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-list-check" aria-hidden="true"></i>
+                <div>
+                  <strong>Application Review</strong>
+                  <span>Accept, waitlist, decline, and manage vendor submissions from structured response views.</span>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                <div>
+                  <strong>Vendor Recruitment</strong>
+                  <span>Invite strong-fit vendors directly and manage invite activity across active listings.</span>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <section class="project-panel">
+            <h2><i class="fa-solid fa-user-shield" aria-hidden="true"></i> Account and Access</h2>
+            <ul class="project-list project-list--compact">
+              <li>
+                <i class="fa-solid fa-user-plus" aria-hidden="true"></i>
+                <div><span>Username and password or Google authentication with email verification.</span></div>
+              </li>
+              <li>
+                <i class="fa-solid fa-user-gear" aria-hidden="true"></i>
+                <div><span>Role-based onboarding for vendors and coordinators with editable profile settings.</span></div>
+              </li>
+              <li>
+                <i class="fa-solid fa-bell" aria-hidden="true"></i>
+                <div><span>Notifications, blocking, analytics, and profile customization built into the platform.</span></div>
+              </li>
+              <li>
+                <i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>
+                <div><span>Responsive browser-based access with dark mode and mobile-friendly payments.</span></div>
+              </li>
+            </ul>
+          </section>
         </div>
       </div>
     </article>
@@ -135,35 +494,87 @@
         <div class="gfMainBodyLeftSide">
           <div class="hidden" id="gfImageDiv">
             <a href="https://goodforum.ca">
-              <img class="gfImages" src="/images/postPage.png" />
+              <img class="gfImages" src="/images/postPage.png" alt="GoodForum discussion thread page" />
             </a>
             <a href="https://goodforum.ca">
-              <img id="gfHomePage" class="gfImages" src="/images/homePage.png" />
+              <img id="gfHomePage" class="gfImages" src="/images/homePage.png" alt="GoodForum home page" />
             </a>
             <a href="https://goodforum.ca">
-              <img class="gfImages" src="/images/chatsPage.png" />
+              <img class="gfImages" src="/images/chatsPage.png" alt="GoodForum chat interface" />
             </a>
           </div>
-          <div class="gfDes">
-            <span>GoodForum.</span> is a dynamic web application designed to provide a comprehensive platform for
-            interactive discussions and
-            community engagement. Built with modern web technologies, it offers users a seamless experience to connect,
-            share
-            insights, and explore diverse, positive topics that bring value to the community.
+          <div class="gfDes project-copy">
+            <p><span>GoodForum.</span> is a community-driven web application built for thoughtful discussions, private
+              conversations, and positive user engagement.</p>
+            <p>It combines real-time communication, rich media, and profile customization into a responsive experience
+              that feels welcoming on every device.</p>
           </div>
         </div>
         <div class="gfKeyFeatures">
-          <h2>Key Features:</h2>
-          • Real-time Discussions: Engage in real-time discussions on various topics of interest.<br />
-          • Positive Community: A space for users to converse about positive topics and bring value to users.<br />
-          • User Profiles: Customize your profile and connect with like-minded individuals.<br />
-          • Rich Media Support: Share images and videos to enrich discussions.<br />
-          • Responsive Design: Access GoodForum from any device, ensuring a consistent experience.<br />
-          <h2>Technologies Used:</h2>
-          • Frontend: React.js, Javascript, Material-UI, Axios, SCSS<br />
-          • Backend: Node.js, Express.js, MongoDB<br />
-          <h2>Deployment:</h2>
-          • DigitalOcean
+          <section class="project-panel">
+            <h2><i class="fa-solid fa-comments" aria-hidden="true"></i> Key Features</h2>
+            <ul class="project-list">
+              <li>
+                <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+                <div>
+                  <strong>Real-Time Discussions</strong>
+                  <span>Engage in live conversations across topics that matter to the community.</span>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                <div>
+                  <strong>Positive Community</strong>
+                  <span>Create value-driven conversations in a space designed to stay constructive.</span>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-user" aria-hidden="true"></i>
+                <div>
+                  <strong>User Profiles</strong>
+                  <span>Customize your profile and connect with like-minded people.</span>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-image" aria-hidden="true"></i>
+                <div>
+                  <strong>Rich Media Support</strong>
+                  <span>Share images and videos to make conversations more useful and expressive.</span>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>
+                <div>
+                  <strong>Responsive Design</strong>
+                  <span>Move between desktop and mobile without losing flow or functionality.</span>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <section class="project-panel">
+            <h2><i class="fa-solid fa-code" aria-hidden="true"></i> Technologies Used</h2>
+            <ul class="project-list project-list--compact">
+              <li>
+                <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+                <div><span>Frontend: React.js, JavaScript, Material UI, Axios, and SCSS.</span></div>
+              </li>
+              <li>
+                <i class="fa-solid fa-server" aria-hidden="true"></i>
+                <div><span>Backend: Node.js, Express.js, and MongoDB.</span></div>
+              </li>
+            </ul>
+          </section>
+
+          <section class="project-panel">
+            <h2><i class="fa-solid fa-cloud" aria-hidden="true"></i> Deployment</h2>
+            <ul class="project-list project-list--compact">
+              <li>
+                <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                <div><span>Deployed on DigitalOcean.</span></div>
+              </li>
+            </ul>
+          </section>
         </div>
       </div>
     </article>
@@ -341,7 +752,7 @@
       <form action="https://formsubmit.co/fdef42ee2c05662bc7e9907a45aa5a7f" method="POST">
         <input class="email" type="email" name="email" placeholder="Your Email Address" required>
         <input type="hidden" name="_subject" value="New submission!">
-        <input class="message" type="text" name="message" placeholder="write your mesage here..." required>
+        <textarea class="message" name="message" placeholder="write your message here..." required></textarea>
         <button type="submit">Send</button>
       </form>
     </div>
