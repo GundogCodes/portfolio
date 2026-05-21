@@ -809,6 +809,11 @@ code {
     flex-basis: min(72vw, 320px);
   }
 
+  #odoroImageDiv {
+    justify-content: flex-start;
+    scroll-padding-left: 0.35rem;
+  }
+
   .novakeyImages,
   .gfImages,
   .odoroImages {
